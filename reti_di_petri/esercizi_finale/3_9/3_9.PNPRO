@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="3_6" version="121">
+  <gspn name="P" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="P1" x="5.0" y="3.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="P2" x="5.0" y="11.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P3" x="5.0" y="23.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P4" x="21.0" y="23.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P7" x="5.0" y="47.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="5.55" y="7.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="initP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="5.55" y="15.0"/>
+      <transition label-x="0.5" name="whileP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.5" superposition-tags="isQt" type="EXP" x="14.55" y="23.0"/>
+      <transition label-x="-1.5" name="resetP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="5.55" y="53.0"/>
+      <transition name="T5" nservers-x="0.5" type="EXP" x="2.55" y="8.0"/>
+      <transition label-x="-1.0" name="toCzP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superpos-y="1.0" superposition-tags="isQf" type="EXP" x="5.55" y="29.0"/>
+      <place label-x="-2.5" label-y="0.0" name="P6" x="5.0" y="34.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T6" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="5.55" y="42.0"/>
+      <transition label-x="-1.5" name="T7" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superposition-tags="setPf" type="EXP" x="27.55" y="23.0"/>
+      <transition label-x="3.0" label-y="0.5" name="T8" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setPt" type="EXP" x="15.55" y="19.0"/>
+      <place label-x="2.5" label-y="0.0" name="P5" x="27.0" y="19.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="P2" kind="OUTPUT" tail="T0"/>
+      <arc head="initP" kind="INPUT" tail="P2"/>
+      <arc head="P3" kind="OUTPUT" tail="initP"/>
+      <arc head="whileP" kind="INPUT" tail="P3"/>
+      <arc head="P4" kind="OUTPUT" tail="whileP"/>
+      <arc head="resetP" kind="INPUT" tail="P7"/>
+      <arc head="P1" kind="OUTPUT" tail="resetP">
+        <point x="1.0" y="54.0"/>
+        <point x="1.0" y="4.0"/>
+      </arc>
+      <arc head="P1" kind="OUTPUT" tail="T5"/>
+      <arc head="T5" kind="INPUT" tail="P1"/>
+      <arc head="toCzP" kind="INPUT" tail="P3"/>
+      <arc head="P6" kind="OUTPUT" tail="toCzP"/>
+      <arc head="T6" kind="INPUT" tail="P6"/>
+      <arc head="P7" kind="OUTPUT" tail="T6"/>
+      <arc head="T7" kind="INPUT" tail="P4"/>
+      <arc head="P5" kind="OUTPUT" tail="T7"/>
+      <arc head="T8" kind="INPUT" tail="P5"/>
+      <arc head="P3" kind="OUTPUT" mult-k="0.0" tail="T8"/>
+    </edges>
+  </gspn>
+  <gspn name="Q" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-y="-2.0" marking="1" name="Q1" x="43.0" y="6.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="Q2" x="43.0" y="14.0"/>
+      <place label-x="3.0" label-y="0.0" name="Q3" x="43.0" y="25.0"/>
+      <place label-x="-2.5" label-y="0.5" name="Q4" x="19.0" y="28.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q7" x="43.0" y="49.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="43.55" y="10.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="initQ" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setQt" type="EXP" x="43.55" y="18.0"/>
+      <transition label-x="0.5" name="whileQ" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.5" superposition-tags="isPt" type="EXP" x="24.55" y="28.0"/>
+      <transition label-x="-1.5" name="restQ" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setQf" type="EXP" x="43.55" y="56.0"/>
+      <transition name="T5" nservers-x="0.5" type="EXP" x="48.55" y="8.0"/>
+      <transition label-x="3.0" label-y="-2.0" name="toCzQ" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superpos-y="1.0" superposition-tags="isPf" type="EXP" x="43.55" y="34.0"/>
+      <place label-x="-2.0" label-y="-0.5" name="Q6" x="43.0" y="40.0"/>
+      <transition label-x="-1.0" name="T6" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="50.55" y="45.0"/>
+      <transition label-x="-1.5" name="T7" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setQf" type="EXP" x="9.55" y="28.0"/>
+      <transition label-x="3.0" label-y="0.5" name="T8" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.0" superposition-tags="setQt" type="EXP" x="23.55" y="19.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q5" x="9.0" y="19.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="Q1"/>
+      <arc head="Q2" kind="OUTPUT" tail="T0"/>
+      <arc head="initQ" kind="INPUT" tail="Q2"/>
+      <arc head="Q3" kind="OUTPUT" tail="initQ"/>
+      <arc head="whileQ" kind="INPUT" tail="Q3"/>
+      <arc head="Q4" kind="OUTPUT" tail="whileQ"/>
+      <arc head="restQ" kind="INPUT" tail="Q7"/>
+      <arc head="Q1" kind="OUTPUT" tail="restQ">
+        <point x="52.0" y="57.0"/>
+        <point x="52.0" y="7.0"/>
+      </arc>
+      <arc head="Q1" kind="OUTPUT" tail="T5"/>
+      <arc head="T5" kind="INPUT" tail="Q1"/>
+      <arc head="toCzQ" kind="INPUT" tail="Q3"/>
+      <arc head="Q6" kind="OUTPUT" tail="toCzQ"/>
+      <arc head="T6" kind="INPUT" tail="Q6"/>
+      <arc head="Q7" kind="OUTPUT" tail="T6"/>
+      <arc head="T7" kind="INPUT" tail="Q4"/>
+      <arc head="Q5" kind="OUTPUT" tail="T7"/>
+      <arc head="T8" kind="INPUT" tail="Q5"/>
+      <arc head="Q3" kind="OUTPUT" mult-k="0.0" tail="T8"/>
+    </edges>
+  </gspn>
+  <gspn name="CP" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="1.0" label-y="2.0" name="trueP" x="18.0" y="10.0"/>
+      <place label-y="-2.5" marking="1" name="falseP" x="18.0" y="33.0"/>
+      <transition name="T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superposition-tags="setPt" type="EXP" x="16.55" y="20.0"/>
+      <transition name="T1" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setPf" type="EXP" x="10.55" y="22.0"/>
+      <transition name="T2" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="isPt" type="EXP" x="26.55" y="11.0"/>
+      <transition name="T3" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setPt" type="EXP" x="8.55" y="11.0"/>
+      <transition label-x="1.0" name="T4" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="isPf" type="EXP" x="27.55" y="34.0"/>
+      <transition name="T5" nservers-x="0.5" rotation="3.141592653589793" superposition-tags="setPf" type="EXP" x="9.55" y="33.0"/>
+    </nodes>
+    <edges>
+      <arc head="T2" kind="INPUT" tail="trueP"/>
+      <arc head="T3" kind="INPUT" tail="trueP"/>
+      <arc head="trueP" kind="OUTPUT" mult-k="0.33974609375" tail="T2"/>
+      <arc head="trueP" kind="OUTPUT" mult-k="0.99990234375" tail="T3"/>
+      <arc head="T4" kind="INPUT" tail="falseP"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="0.0" tail="T4"/>
+      <arc head="T5" kind="INPUT" tail="falseP"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="0.18740234375" tail="T5"/>
+      <arc head="T1" kind="INPUT" tail="trueP"/>
+      <arc head="falseP" kind="OUTPUT" tail="T1"/>
+      <arc head="T0" kind="INPUT" tail="falseP"/>
+      <arc head="trueP" kind="OUTPUT" tail="T0"/>
+    </edges>
+  </gspn>
+  <gspn name="CQ" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="1.0" label-y="2.0" name="trueQ" x="22.0" y="8.0"/>
+      <place label-y="-2.5" marking="1" name="falseQ" x="21.0" y="31.0"/>
+      <transition name="T0" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="setQf" type="EXP" x="26.55" y="19.0"/>
+      <transition name="T1" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="setQt" type="EXP" x="16.55" y="17.0"/>
+      <transition label-x="2.5" label-y="0.5" name="T2" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="isQt" type="EXP" x="15.55" y="3.0"/>
+      <transition name="T3" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="setQt" type="EXP" x="30.55" y="4.0"/>
+      <transition label-x="1.0" name="T4" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="isQf" type="EXP" x="13.55" y="27.0"/>
+      <transition name="T5" nservers-x="0.5" rotation="9.42477796076938" superposition-tags="setQf" type="EXP" x="26.55" y="30.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="trueQ"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="falseQ"/>
+      <arc head="trueQ" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="trueQ"/>
+      <arc head="T3" kind="INPUT" tail="trueQ"/>
+      <arc head="trueQ" kind="OUTPUT" mult-k="0.0" mult-x="1.9498291015625" mult-y="0.4498291015625" tail="T2"/>
+      <arc head="trueQ" kind="OUTPUT" mult-k="0.0" tail="T3"/>
+      <arc head="T4" kind="INPUT" tail="falseQ"/>
+      <arc head="falseQ" kind="OUTPUT" mult-k="0.0" tail="T4"/>
+      <arc head="T5" kind="INPUT" tail="falseQ"/>
+      <arc head="falseQ" kind="OUTPUT" mult-k="0.20908203125000002" tail="T5"/>
+    </edges>
+  </gspn>
+  <algebra2 align-dx="20" align-dy="20" alignment="HORIZONTAL" name="Composition" policy="BINARY_PARALLEL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
+    <bindings-list/>
+    <place-tags/>
+    <transition-tags>
+      <tag name="setPt"/>
+      <tag name="setPf"/>
+    </transition-tags>
+    <subnet netname="P"/>
+    <subnet netname="CP"/>
+  </algebra2>
+  <algebra2 alignment="HORIZONTAL" name="Composition 2" policy="BINARY_PARALLEL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <bindings-list/>
+    <place-tags/>
+    <transition-tags>
+      <tag name="setQt"/>
+      <tag name="setQf"/>
+    </transition-tags>
+    <subnet netname="CQ"/>
+    <subnet netname="Q"/>
+  </algebra2>
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="P1" x="7.0" y="5.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="P2" x="7.0" y="13.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P3" x="7.0" y="21.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P4" x="17.0" y="26.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P7" x="7.0" y="42.0"/>
+      <place label-x="-2.5" label-y="0.0" name="P6" x="7.0" y="32.0"/>
+      <place name="P5" x="17.0" y="35.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueP" x="40.0" y="19.0"/>
+      <place label-y="-2.5" marking="1" name="falseP" x="51.0" y="27.0"/>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="Q1" x="107.0" y="5.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="Q2" x="107.0" y="13.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q3" x="107.0" y="21.0"/>
+      <place label-x="-2.5" label-y="0.5" name="Q4" x="100.0" y="25.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q7" x="107.0" y="41.0"/>
+      <place label-x="-2.0" label-y="-0.5" name="Q6" x="107.0" y="31.0"/>
+      <place label-x="1.5" label-y="-0.5" name="Q5" x="100.0" y="35.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueQ" x="80.0" y="39.0"/>
+      <place label-y="-2.5" marking="1" name="falseQ" x="78.0" y="12.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="7.55" y="9.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T6" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="7.55" y="37.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="initP_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="7.55" y="17.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="initP_T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="10.55" y="20.0"/>
+      <transition label-x="-1.5" name="T4_T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="7.55" y="48.0"/>
+      <transition label-x="-1.5" name="T4_T5" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="10.55" y="51.0"/>
+      <transition label-x="-1.5" name="T7_T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superposition-tags="setPf" type="EXP" x="17.55" y="30.0"/>
+      <transition label-x="-1.5" name="T7_T5" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superposition-tags="setPf" type="EXP" x="20.55" y="33.0"/>
+      <transition label-x="0.5" name="T8_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setPt" type="EXP" x="17.55" y="43.0"/>
+      <transition label-x="0.5" name="T8_T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setPt" type="EXP" x="23.55" y="46.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0_0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="107.55" y="9.0"/>
+      <transition label-x="-1.0" name="T6_0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="107.55" y="36.0"/>
+      <transition label-x="4.0" label-y="-2.5" name="initQ_T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setQt" type="EXP" x="107.55" y="17.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="initQ_T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setQt" type="EXP" x="74.55" y="31.0"/>
+      <transition label-x="-1.5" name="T4_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setQf" type="EXP" x="95.55" y="50.0"/>
+      <transition label-x="-1.5" name="T4_T5_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setQf" type="EXP" x="110.55" y="51.0"/>
+      <transition label-x="-1.5" name="T7_T0" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setQf" type="EXP" x="100.55" y="30.0"/>
+      <transition label-x="-1.5" name="T7_T5_0" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setQf" type="EXP" x="89.55" y="17.0"/>
+      <transition label-x="3.0" label-y="2.5" name="T8_T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.0" superposition-tags="setQt" type="EXP" x="77.55" y="22.0"/>
+      <transition label-x="3.0" label-y="0.5" name="T8_T3_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.0" superposition-tags="setQt" type="EXP" x="97.55" y="42.0"/>
+      <transition label-x="1.0" name="isPf_T4_plus_T3_0" nservers-x="0.5" superposition-tags="isPf" type="EXP" x="107.55" y="26.0"/>
+      <transition label-x="0.5" name="isQt_whileP_plus_T2_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.5" superposition-tags="isQt" type="EXP" x="45.55" y="32.0"/>
+      <transition label-x="-1.0" name="isQf_T3_plus_T4_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superpos-y="1.0" superposition-tags="isQf" type="EXP" x="7.55" y="27.0"/>
+      <transition name="isPt_T2_plus_whileQ" nservers-x="0.5" superposition-tags="isPt" type="EXP" x="100.55" y="20.0"/>
+    </nodes>
+    <edges>
+      <arc head="falseP" kind="OUTPUT" tail="T4_T5">
+        <point x="57.5" y="31.0"/>
+      </arc>
+      <arc head="T4_T5_0" kind="INPUT" tail="falseQ"/>
+      <arc head="T4_T1" kind="INPUT" tail="trueP"/>
+      <arc head="T7_T1" kind="INPUT" tail="P4"/>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="P4" kind="OUTPUT" tail="isQt_whileP_plus_T2_0"/>
+      <arc head="Q3" kind="OUTPUT" tail="T8_T1"/>
+      <arc head="isQf_T3_plus_T4_0" kind="INPUT" tail="P3"/>
+      <arc head="T0_0" kind="INPUT" tail="Q1"/>
+      <arc head="Q3" kind="OUTPUT" tail="initQ_T3"/>
+      <arc head="T6_0" kind="INPUT" tail="Q6"/>
+      <arc head="T8_T3_0" kind="INPUT" tail="Q5"/>
+      <arc head="Q2" kind="OUTPUT" tail="T0_0"/>
+      <arc head="Q5" kind="OUTPUT" tail="T7_T5_0"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T4_T5_0"/>
+      <arc head="trueQ" kind="OUTPUT" tail="T8_T3_0"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T7_T5_0"/>
+      <arc head="Q4" kind="OUTPUT" tail="isPt_T2_plus_whileQ"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T7_T0"/>
+      <arc head="P5" kind="OUTPUT" tail="T7_T5"/>
+      <arc head="falseP" kind="OUTPUT" tail="isPf_T4_plus_T3_0">
+        <point x="62.5" y="26.0"/>
+      </arc>
+      <arc head="falseQ" kind="OUTPUT" tail="T4_T0"/>
+      <arc head="isPf_T4_plus_T3_0" kind="INPUT" tail="falseP"/>
+      <arc head="trueP" kind="OUTPUT" tail="isPt_T2_plus_whileQ">
+        <point x="34.0" y="17.5"/>
+      </arc>
+      <arc head="trueP" kind="OUTPUT" tail="initP_T0"/>
+      <arc head="T4_T5_0" kind="INPUT" tail="Q7"/>
+      <arc head="trueQ" kind="OUTPUT" tail="initQ_T3"/>
+      <arc head="Q1" kind="OUTPUT" tail="T4_T0">
+        <point x="114.5" y="49.0"/>
+        <point x="114.5" y="6.0"/>
+      </arc>
+      <arc head="Q7" kind="OUTPUT" tail="T6_0"/>
+      <arc head="P3" kind="OUTPUT" tail="initP_T0"/>
+      <arc head="P5" kind="OUTPUT" tail="T7_T1"/>
+      <arc head="T4_T0" kind="INPUT" tail="Q7"/>
+      <arc head="T7_T5_0" kind="INPUT" tail="falseQ"/>
+      <arc head="initP_T0" kind="INPUT" tail="falseP"/>
+      <arc head="Q3" kind="OUTPUT" tail="initQ_T1"/>
+      <arc head="T4_T5" kind="INPUT" tail="falseP"/>
+      <arc head="trueQ" kind="OUTPUT" tail="initQ_T1"/>
+      <arc head="initQ_T1" kind="INPUT" tail="falseQ"/>
+      <arc head="T8_T0" kind="INPUT" tail="falseP"/>
+      <arc head="trueP" kind="OUTPUT" tail="T8_T0"/>
+      <arc head="P3" kind="OUTPUT" tail="T8_T0"/>
+      <arc head="T4_T5" kind="INPUT" tail="P7"/>
+      <arc head="T4_T1" kind="INPUT" tail="P7"/>
+      <arc head="T8_T1" kind="INPUT" tail="falseQ"/>
+      <arc head="initP_T0" kind="INPUT" tail="P2"/>
+      <arc head="trueQ" kind="OUTPUT" tail="T8_T1"/>
+      <arc head="isQf_T3_plus_T4_0" kind="INPUT" tail="falseQ"/>
+      <arc head="T8_T3" kind="INPUT" tail="trueP"/>
+      <arc head="Q6" kind="OUTPUT" tail="isPf_T4_plus_T3_0"/>
+      <arc head="initP_T3" kind="INPUT" tail="P2"/>
+      <arc head="P7" kind="OUTPUT" tail="T6"/>
+      <arc head="T7_T0" kind="INPUT" tail="trueQ"/>
+      <arc head="P3" kind="OUTPUT" tail="T8_T3"/>
+      <arc head="T7_T5_0" kind="INPUT" tail="Q4"/>
+      <arc head="T4_T0" kind="INPUT" tail="trueQ"/>
+      <arc head="isQt_whileP_plus_T2_0" kind="INPUT" tail="trueQ"/>
+      <arc head="P2" kind="OUTPUT" tail="T0"/>
+      <arc head="falseP" kind="OUTPUT" tail="T4_T1"/>
+      <arc head="Q5" kind="OUTPUT" tail="T7_T0"/>
+      <arc head="trueP" kind="OUTPUT" tail="T8_T3">
+        <point x="37.0" y="32.5"/>
+      </arc>
+      <arc head="falseQ" kind="OUTPUT" tail="isQf_T3_plus_T4_0">
+        <point x="67.5" y="14.000000000000002"/>
+      </arc>
+      <arc head="T7_T5" kind="INPUT" tail="P4"/>
+      <arc head="initQ_T1" kind="INPUT" tail="Q2"/>
+      <arc head="T7_T1" kind="INPUT" tail="trueP"/>
+      <arc head="T8_T3" kind="INPUT" tail="P5"/>
+      <arc head="initP_T3" kind="INPUT" tail="trueP"/>
+      <arc head="isPf_T4_plus_T3_0" kind="INPUT" tail="Q3"/>
+      <arc head="T7_T0" kind="INPUT" tail="Q4"/>
+      <arc head="isPt_T2_plus_whileQ" kind="INPUT" tail="Q3"/>
+      <arc head="T7_T5" kind="INPUT" tail="falseP"/>
+      <arc head="P6" kind="OUTPUT" tail="isQf_T3_plus_T4_0"/>
+      <arc head="Q1" kind="OUTPUT" tail="T4_T5_0">
+        <point x="114.5" y="49.0"/>
+        <point x="114.5" y="6.0"/>
+      </arc>
+      <arc head="trueP" kind="OUTPUT" tail="initP_T3">
+        <point x="37.0" y="32.5"/>
+      </arc>
+      <arc head="Q3" kind="OUTPUT" tail="T8_T3_0"/>
+      <arc head="isPt_T2_plus_whileQ" kind="INPUT" tail="trueP"/>
+      <arc head="initQ_T3" kind="INPUT" tail="Q2"/>
+      <arc head="falseP" kind="OUTPUT" tail="T7_T1"/>
+      <arc head="isQt_whileP_plus_T2_0" kind="INPUT" tail="P3"/>
+      <arc head="falseP" kind="OUTPUT" tail="T7_T5">
+        <point x="57.5" y="31.0"/>
+      </arc>
+      <arc head="P3" kind="OUTPUT" tail="initP_T3"/>
+      <arc head="T8_T1" kind="INPUT" tail="Q5"/>
+      <arc head="T8_T3_0" kind="INPUT" tail="trueQ"/>
+      <arc head="trueQ" kind="OUTPUT" tail="isQt_whileP_plus_T2_0">
+        <point x="73.0" y="40.5"/>
+      </arc>
+      <arc head="T6" kind="INPUT" tail="P6"/>
+      <arc head="T8_T0" kind="INPUT" tail="P5"/>
+      <arc head="initQ_T3" kind="INPUT" tail="trueQ"/>
+      <arc head="P1" kind="OUTPUT" tail="T4_T1">
+        <point x="4.0" y="49.0"/>
+        <point x="4.0" y="6.0"/>
+      </arc>
+      <arc head="P1" kind="OUTPUT" tail="T4_T5">
+        <point x="4.0" y="49.0"/>
+        <point x="4.0" y="6.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <gspn name="P_CP" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="P1" x="5.0" y="3.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="P2" x="5.0" y="11.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P3" x="5.0" y="23.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P4" x="25.0" y="33.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P7" x="6.0" y="49.0"/>
+      <place label-x="2.5" label-y="0.0" name="P6" x="2.0" y="40.0"/>
+      <place label-x="3.0" label-y="0.0" name="P5" x="26.0" y="23.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueP" x="54.0" y="10.0"/>
+      <place label-y="-2.5" marking="1" name="falseP" x="56.0" y="37.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="5.55" y="7.0"/>
+      <transition label-x="0.5" name="whileP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.0" superpos-y="-1.0" superposition-tags="isQt" type="EXP" x="15.55" y="33.0"/>
+      <transition name="T5" nservers-x="0.5" type="EXP" x="2.55" y="8.0"/>
+      <transition label-x="-1.0" name="toCzP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superpos-y="1.0" superposition-tags="isQf" type="EXP" x="7.55" y="35.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T6" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="6.55" y="46.0"/>
+      <transition name="T2" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="isPt" type="EXP" x="62.55" y="11.0"/>
+      <transition label-x="1.0" name="T4" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="isPf" type="EXP" x="63.55" y="34.0"/>
+      <transition label-x="-2.5" name="toWP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="19.55" y="10.0"/>
+      <transition label-x="-3.0" label-y="-2.0" name="toWPs" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="5.55" y="17.0"/>
+      <transition label-x="3.0" label-y="0.5" name="endWP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setPt" type="EXP" x="17.55" y="23.0"/>
+      <transition label-x="-2.0" label-y="1.5" name="endWs" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="4.0" superpos-y="-0.5" superposition-tags="setPt" type="EXP" x="18.55" y="19.0"/>
+      <transition label-x="-1.5" name="resetP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.5" superpos-y="1.5" superposition-tags="setPf" type="EXP" x="30.55" y="54.0"/>
+      <transition label-x="-1.5" name="resetPs" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="26.55" y="49.0"/>
+      <transition label-x="-1.5" name="setPf" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superposition-tags="setPf" type="EXP" x="33.55" y="27.0"/>
+      <transition label-x="-1.5" name="setPfs" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="setPf" type="EXP" x="25.55" y="27.0"/>
+    </nodes>
+    <edges>
+      <arc head="setPf" kind="INPUT" tail="trueP"/>
+      <arc head="setPfs" kind="INPUT" tail="P4"/>
+      <arc head="T5" kind="INPUT" tail="P1"/>
+      <arc head="P3" kind="OUTPUT" tail="endWP"/>
+      <arc head="P3" kind="OUTPUT" tail="toWP"/>
+      <arc head="resetPs" kind="INPUT" tail="P7"/>
+      <arc head="falseP" kind="OUTPUT" tail="setPfs"/>
+      <arc head="trueP" kind="OUTPUT" tail="toWP"/>
+      <arc head="toWPs" kind="INPUT" tail="trueP"/>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="1.1389648437500002" tail="resetP">
+        <point x="41.9408203125" y="47.84638671875"/>
+      </arc>
+      <arc head="trueP" kind="OUTPUT" tail="T2"/>
+      <arc head="endWP" kind="INPUT" mult-k="0.9502929687499999" tail="falseP">
+        <point x="40.0" y="25.5"/>
+        <point x="34.0" y="21.0"/>
+        <point x="31.0" y="19.0"/>
+      </arc>
+      <arc head="resetP" kind="INPUT" mult-k="1.2926757812499998" tail="P7">
+        <point x="14.0" y="54.5"/>
+      </arc>
+      <arc head="trueP" kind="OUTPUT" mult-k="2.26728515625" tail="endWP">
+        <point x="28.5" y="19.5"/>
+        <point x="30.008885466882976" y="19.016017869113007"/>
+      </arc>
+      <arc head="endWP" kind="INPUT" tail="P5"/>
+      <arc head="P1" kind="OUTPUT" mult-k="1.36669921875" tail="resetPs">
+        <point x="22.0" y="55.0"/>
+        <point x="1.0" y="54.0"/>
+        <point x="1.0" y="4.0"/>
+      </arc>
+      <arc head="setPfs" kind="INPUT" tail="falseP"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="1.02822265625" tail="resetPs">
+        <point x="43.5" y="47.0"/>
+      </arc>
+      <arc head="whileP" kind="INPUT" tail="P3"/>
+      <arc head="P7" kind="OUTPUT" tail="T6"/>
+      <arc head="T4" kind="INPUT" tail="falseP"/>
+      <arc head="setPf" kind="INPUT" tail="P4"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="1.3934570312499996" tail="setPf">
+        <point x="36.5" y="32.0"/>
+      </arc>
+      <arc head="P5" kind="OUTPUT" tail="setPfs"/>
+      <arc head="P3" kind="OUTPUT" tail="toWPs"/>
+      <arc head="P2" kind="OUTPUT" tail="T0"/>
+      <arc head="toWPs" kind="INPUT" tail="P2"/>
+      <arc head="P4" kind="OUTPUT" tail="whileP"/>
+      <arc head="falseP" kind="OUTPUT" tail="T4"/>
+      <arc head="T6" kind="INPUT" tail="P6"/>
+      <arc head="P3" kind="OUTPUT" tail="endWs"/>
+      <arc head="endWs" kind="INPUT" tail="P5"/>
+      <arc head="resetPs" kind="INPUT" mult-k="0.8756835937499999" tail="falseP">
+        <point x="43.0" y="47.0"/>
+      </arc>
+      <arc head="trueP" kind="OUTPUT" mult-k="1.3424804687500003" tail="endWs">
+        <point x="29.0" y="14.5"/>
+      </arc>
+      <arc head="endWs" kind="INPUT" mult-k="0.6153320312500001" tail="trueP">
+        <point x="27.8982421875" y="14.682714843749999"/>
+      </arc>
+      <arc head="P1" kind="OUTPUT" tail="T5"/>
+      <arc head="resetP" kind="INPUT" tail="trueP"/>
+      <arc head="toWP" kind="INPUT" tail="P2"/>
+      <arc head="P5" kind="OUTPUT" tail="setPf"/>
+      <arc head="P6" kind="OUTPUT" tail="toCzP"/>
+      <arc head="T2" kind="INPUT" tail="trueP"/>
+      <arc head="toCzP" kind="INPUT" tail="P3"/>
+      <arc head="P1" kind="OUTPUT" tail="resetP">
+        <point x="1.0" y="54.0"/>
+        <point x="1.0" y="4.0"/>
+      </arc>
+      <arc head="trueP" kind="OUTPUT" tail="toWPs"/>
+      <arc head="toWP" kind="INPUT" mult-k="0.7079101562500001" tail="falseP">
+        <point x="30.5" y="18.5"/>
+      </arc>
+    </edges>
+  </gspn>
+  <gspn name="CQ_Q" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="1.0" label-y="2.0" name="trueQ" x="22.0" y="8.0"/>
+      <place label-y="-2.5" marking="1" name="falseQ" x="22.0" y="31.0"/>
+      <place label-y="-2.0" marking="1" name="Q1" x="69.0" y="6.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="Q2" x="69.0" y="14.0"/>
+      <place label-x="3.0" label-y="0.0" name="Q3" x="69.0" y="26.0"/>
+      <place label-x="-2.5" label-y="0.5" name="Q4" x="49.0" y="31.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q7" x="69.0" y="49.0"/>
+      <place label-x="-2.0" label-y="-0.5" name="Q6" x="69.0" y="40.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q5" x="36.0" y="17.0"/>
+      <transition label-x="2.5" label-y="0.5" name="T2" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="isQt" type="EXP" x="15.55" y="3.0"/>
+      <transition label-x="1.0" name="T4" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="isQf" type="EXP" x="3.55" y="31.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0_0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="69.55" y="10.0"/>
+      <transition label-x="0.5" name="whileQ" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.5" superposition-tags="isPt" type="EXP" x="57.55" y="31.0"/>
+      <transition name="T5_0" nservers-x="0.5" type="EXP" x="74.55" y="9.0"/>
+      <transition label-x="3.0" label-y="-2.0" name="toCzQ" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superpos-y="1.0" superposition-tags="isPf" type="EXP" x="69.55" y="34.0"/>
+      <transition label-x="-1.0" name="T6" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="69.55" y="44.0"/>
+      <transition name="toWq" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="setQt" type="EXP" x="58.55" y="16.0"/>
+      <transition name="setQt" nservers-x="0.5" rotation="7.853981633974483" superpos-x="1.0" superpos-y="3.0" superposition-tags="setQt" type="EXP" x="35.55" y="11.0"/>
+      <transition label-x="2.5" name="toWqs" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="setQt" type="EXP" x="69.55" y="19.0"/>
+      <transition name="setQts" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="setQt" type="EXP" x="28.55" y="12.0"/>
+      <transition name="restQ" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="setQf" type="EXP" x="40.55" y="47.0"/>
+      <transition label-x="2.0" label-y="2.5" name="setQf" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superpos-y="1.0" superposition-tags="setQf" type="EXP" x="34.55" y="35.0"/>
+      <transition name="restQs" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setQf" type="EXP" x="46.55" y="52.0"/>
+      <transition height="4.0" label-x="2.5" label-y="-0.5" name="setQfs" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setQf" type="EXP" x="36.55" y="30.0"/>
+    </nodes>
+    <edges>
+      <arc head="Q2" kind="OUTPUT" tail="T0_0"/>
+      <arc head="toCzQ" kind="INPUT" tail="Q3"/>
+      <arc head="T6" kind="INPUT" tail="Q6"/>
+      <arc head="Q4" kind="OUTPUT" tail="whileQ"/>
+      <arc head="setQfs" kind="INPUT" mult-k="1.22353515625" tail="Q4">
+        <point x="44.5" y="32.5"/>
+      </arc>
+      <arc head="restQs" kind="INPUT" tail="Q7"/>
+      <arc head="Q1" kind="OUTPUT" tail="restQs">
+        <point x="77.0" y="57.0"/>
+        <point x="77.0" y="7.0"/>
+      </arc>
+      <arc head="Q5" kind="OUTPUT" mult-k="2.5915039062500003" tail="setQf">
+        <point x="40.9373616485863" y="32.68791505424112"/>
+        <point x="42.0" y="26.5"/>
+        <point x="36.5" y="27.0"/>
+      </arc>
+      <arc head="Q7" kind="OUTPUT" tail="T6"/>
+      <arc head="whileQ" kind="INPUT" tail="Q3"/>
+      <arc head="setQts" kind="INPUT" tail="Q5"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T4"/>
+      <arc head="falseQ" kind="OUTPUT" tail="setQfs"/>
+      <arc head="trueQ" kind="OUTPUT" tail="T2"/>
+      <arc head="Q6" kind="OUTPUT" tail="toCzQ"/>
+      <arc head="Q5" kind="OUTPUT" tail="setQfs"/>
+      <arc head="restQ" kind="INPUT" tail="Q7"/>
+      <arc head="Q1" kind="OUTPUT" tail="T5_0"/>
+      <arc head="falseQ" kind="OUTPUT" tail="restQs"/>
+      <arc head="trueQ" kind="OUTPUT" mult-k="0.0" tail="setQts"/>
+      <arc head="trueQ" kind="OUTPUT" mult-k="0.7375976562500001" tail="toWq">
+        <point x="31.5" y="11.0"/>
+      </arc>
+      <arc head="T0_0" kind="INPUT" tail="Q1"/>
+      <arc head="trueQ" kind="OUTPUT" tail="setQt"/>
+      <arc head="restQs" kind="INPUT" tail="falseQ"/>
+      <arc head="toWqs" kind="INPUT" tail="Q2"/>
+      <arc head="setQf" kind="INPUT" mult-k="1.2848632812499998" tail="Q4">
+        <point x="45.0" y="32.5"/>
+      </arc>
+      <arc head="restQ" kind="INPUT" mult-k="0.6973632812500001" tail="trueQ">
+        <point x="10.113574218750003" y="44.16015625000001"/>
+      </arc>
+      <arc head="falseQ" kind="OUTPUT" tail="restQ"/>
+      <arc head="toWq" kind="INPUT" tail="Q2"/>
+      <arc head="setQf" kind="INPUT" mult-k="0.81416015625" tail="trueQ">
+        <point x="18.0" y="36.0"/>
+      </arc>
+      <arc head="T2" kind="INPUT" tail="trueQ"/>
+      <arc head="falseQ" kind="OUTPUT" tail="setQf"/>
+      <arc head="trueQ" kind="OUTPUT" tail="toWqs"/>
+      <arc head="Q3" kind="OUTPUT" mult-k="2.2073242187499997" tail="setQts">
+        <point x="43.68342080096487" y="15.882748444801805"/>
+        <point x="57.5" y="21.5"/>
+      </arc>
+      <arc head="Q3" kind="OUTPUT" tail="toWq"/>
+      <arc head="T5_0" kind="INPUT" tail="Q1"/>
+      <arc head="setQt" kind="INPUT" mult-k="0.0" tail="Q5"/>
+      <arc head="Q3" kind="OUTPUT" tail="setQt"/>
+      <arc head="setQts" kind="INPUT" mult-k="0.99990234375" tail="trueQ"/>
+      <arc head="toWqs" kind="INPUT" tail="trueQ"/>
+      <arc head="setQt" kind="INPUT" tail="falseQ"/>
+      <arc head="Q1" kind="OUTPUT" mult-k="1.4518554687500003" tail="restQ">
+        <point x="44.0" y="55.0"/>
+        <point x="77.0" y="57.0"/>
+        <point x="77.0" y="7.0"/>
+      </arc>
+      <arc head="Q3" kind="OUTPUT" tail="toWqs"/>
+      <arc head="toWq" kind="INPUT" mult-k="1.3245117187499997" tail="falseQ">
+        <point x="23.0" y="24.5"/>
+      </arc>
+      <arc head="T4" kind="INPUT" tail="falseQ"/>
+      <arc head="setQfs" kind="INPUT" tail="falseQ"/>
+    </edges>
+  </gspn>
+  <algebra2 alignment="HORIZONTAL" name="Composition 3" policy="BINARY_PARALLEL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="50">
+    <bindings-list/>
+    <place-tags/>
+    <transition-tags>
+      <tag name="isPf"/>
+      <tag name="isQt"/>
+      <tag name="isQf"/>
+      <tag name="isPt"/>
+    </transition-tags>
+    <subnet netname="P_CP"/>
+    <subnet netname="CQ_Q"/>
+  </algebra2>
+  <measures gspn-name="PT" log-uuid="0fe8bb9d-be67-4d79-b7c1-bc4bc0eb2693" name="CTL model checking of PT" rapid-type="CTL_MODEL_CHECKING" simplified-UI="true">
+    <assignments/>
+    <rgmedd2/>
+    <formulas>
+      <formula language="STAT"/>
+      <formula comment="mutex" comment-shown="true" expr="G( (#P6==0 &amp;&amp; #Q6==1)||(#P6==1 &amp;&amp; #Q6==0)||(#P6==0 &amp;&amp; #Q6==0))" language="LTL"/>
+      <formula comment="mutex " comment-shown="true" expr="AG( (#P6==0 &amp;&amp; #Q6==1)||(#P6==1 &amp;&amp; #Q6==0)||(#P6==0 &amp;&amp; #Q6==0))" language="CTL"/>
+      <formula comment="deadlock" comment-shown="true" expr=" G(#P3==1 -&gt; F (#P6==1)) &amp;&amp; (#Q3==1 -&gt; F (#Q6==1))" language="LTL"/>
+      <formula comment="deadlock" comment-shown="true" expr=" AG((#P2==1 || #Q2==1)-&gt; AF (#P6==1|| #Q6==1))" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="false">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="starvation" comment-shown="true" expr="G((#P3 ==1 -&gt;F(#P6 ==1)) &amp;&amp; (#Q3 ==1 -&gt;F(#Q6==1)))" language="LTL"/>
+      <formula comment="starvation" comment-shown="true" expr="AG((#P3 ==1 -&gt;EF(#P6 ==1) )&amp;&amp; (#Q3 ==1 -&gt;EF(#Q6 ==1)))" language="CTL"/>
+      <formula expr="AG(((#P3 ==1 ) -&gt;AF(#P6 ==1 || #Q6==1) ))" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="false">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="Reversibilità" comment-shown="true" expr="AG(#P2&gt;0 -&gt; EF(#P1&gt;0)) &amp;&amp; AG(#P3&gt;0 -&gt; EF(#P1&gt;0)) &amp;&amp; AG(#P4&gt;0 -&gt; EF(#P1&gt;0)) &amp;&amp; AG(#P5&gt;0 -&gt; EF(#P1&gt;0)) &amp;&amp; AG(#P6&gt;0 -&gt; EF(#P1&gt;0)) &amp;&amp; AG(#P7&gt;0 -&gt; EF(#P1&gt;0)) &amp;&amp; AG(#trueP&gt;0 -&gt; EF(#falseP &gt; 0)) &amp;&amp; AG(#Q2&gt;0 -&gt; EF(#Q1&gt;0)) &amp;&amp; AG(#Q3&gt;0 -&gt; EF(#Q1&gt;0)) &amp;&amp; AG(#Q4&gt;0 -&gt; EF(#Q1&gt;0)) &amp;&amp; AG(#Q5&gt;0 -&gt; EF(#Q1&gt;0)) &amp;&amp; AG(#Q6&gt;0 -&gt; EF(#Q1&gt;0)) &amp;&amp; AG(#Q7&gt;0 -&gt; EF(#Q1&gt;0)) &amp;&amp; AG(#trueQ&gt;0 -&gt; EF(#falseQ &gt; 0)) " language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 45/45">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+    </formulas>
+  </measures>
+  <gspn name="Sistema" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="P1" text-size="LARGE" x="5.0" y="3.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="P2" text-size="LARGE" x="5.0" y="11.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P3" text-size="LARGE" x="5.0" y="23.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P4" text-size="LARGE" x="25.0" y="33.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P7" text-size="LARGE" x="5.0" y="49.0"/>
+      <place label-x="2.5" label-y="0.0" name="P6" text-size="LARGE" x="5.0" y="40.0"/>
+      <place label-x="3.0" label-y="0.0" name="P5" text-size="LARGE" x="26.0" y="23.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueP" text-size="LARGE" x="54.0" y="10.0"/>
+      <place label-y="-2.5" marking="1" name="falseP" text-size="LARGE" x="58.0" y="36.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueQ" text-size="LARGE" x="93.0" y="8.0"/>
+      <place label-y="-2.5" marking="1" name="falseQ" text-size="LARGE" x="93.0" y="31.0"/>
+      <place label-y="-2.0" marking="1" name="Q1" text-size="LARGE" x="140.0" y="6.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="Q2" text-size="LARGE" x="140.0" y="14.0"/>
+      <place label-x="3.0" label-y="0.0" name="Q3" text-size="LARGE" x="140.0" y="26.0"/>
+      <place label-x="-2.5" label-y="0.5" name="Q4" text-size="LARGE" x="120.0" y="31.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q7" text-size="LARGE" x="140.0" y="49.0"/>
+      <place label-x="-2.0" label-y="-0.5" name="Q6" text-size="LARGE" x="140.0" y="40.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q5" text-size="LARGE" x="107.0" y="17.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" text-size="LARGE" type="EXP" x="5.55" y="7.0"/>
+      <transition name="T5" nservers-x="0.5" text-size="LARGE" type="EXP" x="2.55" y="8.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T6" nservers-x="0.5" rotation="1.5707963267948966" text-size="LARGE" type="EXP" x="5.55" y="44.0"/>
+      <transition label-x="-2.5" name="toWP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="-0.5" superposition-tags="setPt" text-size="LARGE" type="EXP" x="19.55" y="10.0"/>
+      <transition label-x="-3.0" label-y="-2.0" name="toWPs" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" text-size="LARGE" type="EXP" x="5.55" y="17.0"/>
+      <transition label-x="3.0" label-y="0.5" name="endWP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setPt" text-size="LARGE" type="EXP" x="17.55" y="23.0"/>
+      <transition label-x="-2.0" label-y="1.5" name="endWs" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="4.0" superpos-y="-0.5" superposition-tags="setPt" text-size="LARGE" type="EXP" x="18.55" y="19.0"/>
+      <transition label-x="-1.5" name="resetP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.5" superpos-y="1.5" superposition-tags="setPf" text-size="LARGE" type="EXP" x="30.55" y="54.0"/>
+      <transition label-x="-1.5" name="resetPs" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" text-size="LARGE" type="EXP" x="26.55" y="49.0"/>
+      <transition label-x="-1.5" name="setPf" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superposition-tags="setPf" text-size="LARGE" type="EXP" x="33.55" y="27.0"/>
+      <transition label-x="-1.5" name="setPfs" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.5" superpos-y="0.0" superposition-tags="setPf" text-size="LARGE" type="EXP" x="25.55" y="27.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0_0" nservers-x="0.5" rotation="1.5707963267948966" text-size="LARGE" type="EXP" x="140.55" y="10.0"/>
+      <transition name="T5_0" nservers-x="0.5" text-size="LARGE" type="EXP" x="145.55" y="9.0"/>
+      <transition label-x="-1.0" name="T6_0" nservers-x="0.5" rotation="1.5707963267948966" text-size="LARGE" type="EXP" x="140.55" y="44.0"/>
+      <transition name="toWq" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="setQt" text-size="LARGE" type="EXP" x="129.55" y="16.0"/>
+      <transition name="setQt" nservers-x="0.5" rotation="7.853981633974483" superpos-x="1.0" superpos-y="3.0" superposition-tags="setQt" text-size="LARGE" type="EXP" x="106.55" y="11.0"/>
+      <transition label-x="2.5" name="toWqs" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="setQt" text-size="LARGE" type="EXP" x="140.55" y="19.0"/>
+      <transition name="setQts" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="setQt" text-size="LARGE" type="EXP" x="99.55" y="12.0"/>
+      <transition name="restQ" nservers-x="0.5" rotation="7.853981633974483" superposition-tags="setQf" text-size="LARGE" type="EXP" x="111.55" y="47.0"/>
+      <transition label-x="2.0" label-y="1.5" name="setQf" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superpos-y="1.0" superposition-tags="setQf" text-size="LARGE" type="EXP" x="105.55" y="35.0"/>
+      <transition name="restQs" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setQf" text-size="LARGE" type="EXP" x="117.55" y="52.0"/>
+      <transition height="4.0" label-x="2.5" label-y="-0.5" name="setQfs" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setQf" text-size="LARGE" type="EXP" x="107.55" y="30.0"/>
+      <transition label-x="3.0" name="toCzQ" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.5" superposition-tags="isPf" text-size="LARGE" type="EXP" x="140.55" y="33.0"/>
+      <transition label-x="0.5" label-y="-3.5" name="whileP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.0" superpos-y="-1.0" superposition-tags="isQt" text-size="LARGE" type="EXP" x="13.55" y="29.0"/>
+      <transition label-x="-1.0" name="toCzP" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superpos-y="1.0" superposition-tags="isQf" text-size="LARGE" type="EXP" x="5.55" y="33.0"/>
+      <transition name="whileQ" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="isPt" text-size="LARGE" type="EXP" x="95.55000000000001" y="21.0"/>
+    </nodes>
+    <edges>
+      <arc head="toCzQ" kind="INPUT" mult-k="0.7854492187500001" tail="falseP" text-size="LARGE">
+        <point x="111.0" y="38.5"/>
+      </arc>
+      <arc head="trueQ" kind="OUTPUT" tail="setQt" text-size="LARGE"/>
+      <arc head="falseP" kind="OUTPUT" tail="setPfs" text-size="LARGE"/>
+      <arc head="whileP" kind="INPUT" tail="P3" text-size="LARGE"/>
+      <arc head="falseP" kind="OUTPUT" tail="setPf" text-size="LARGE">
+        <point x="37.5" y="31.0"/>
+      </arc>
+      <arc head="trueP" kind="OUTPUT" tail="endWP" text-size="LARGE">
+        <point x="28.5" y="19.5"/>
+        <point x="30.008885466882976" y="19.016017869113007"/>
+      </arc>
+      <arc head="P1" kind="OUTPUT" tail="resetP" text-size="LARGE">
+        <point x="1.0" y="54.0"/>
+        <point x="1.0" y="4.0"/>
+      </arc>
+      <arc head="setPf" kind="INPUT" tail="P4" text-size="LARGE"/>
+      <arc broken="true" head="whileP" kind="INPUT" tail="trueQ" text-size="LARGE"/>
+      <arc head="Q3" kind="OUTPUT" tail="toWqs" text-size="LARGE"/>
+      <arc head="setQfs" kind="INPUT" tail="Q4" text-size="LARGE">
+        <point x="115.5" y="32.5"/>
+      </arc>
+      <arc head="falseQ" kind="OUTPUT" tail="setQf" text-size="LARGE"/>
+      <arc head="setPfs" kind="INPUT" tail="P4" text-size="LARGE"/>
+      <arc head="toWP" kind="INPUT" tail="falseP" text-size="LARGE">
+        <point x="30.5" y="18.5"/>
+      </arc>
+      <arc head="restQ" kind="INPUT" tail="Q7" text-size="LARGE"/>
+      <arc head="P4" kind="OUTPUT" tail="whileP" text-size="LARGE"/>
+      <arc head="trueP" kind="OUTPUT" tail="toWP" text-size="LARGE"/>
+      <arc head="T5_0" kind="INPUT" tail="Q1" text-size="LARGE"/>
+      <arc head="toCzP" kind="INPUT" mult-k="1.93896484375" tail="falseQ" text-size="LARGE">
+        <point x="84.0" y="39.0"/>
+        <point x="39.0" y="43.5"/>
+      </arc>
+      <arc head="P1" kind="OUTPUT" tail="T5" text-size="LARGE"/>
+      <arc head="toCzQ" kind="INPUT" tail="Q3" text-size="LARGE"/>
+      <arc head="trueQ" kind="OUTPUT" tail="toWqs" text-size="LARGE"/>
+      <arc head="endWP" kind="INPUT" tail="P5" text-size="LARGE"/>
+      <arc head="P5" kind="OUTPUT" tail="setPf" text-size="LARGE"/>
+      <arc head="P1" kind="OUTPUT" tail="resetPs" text-size="LARGE">
+        <point x="22.0" y="55.0"/>
+        <point x="1.0" y="54.0"/>
+        <point x="1.0" y="4.0"/>
+      </arc>
+      <arc head="setQfs" kind="INPUT" tail="falseQ" text-size="LARGE"/>
+      <arc head="restQs" kind="INPUT" tail="Q7" text-size="LARGE"/>
+      <arc head="toWq" kind="INPUT" tail="Q2" text-size="LARGE"/>
+      <arc head="P3" kind="OUTPUT" tail="endWs" text-size="LARGE"/>
+      <arc head="P3" kind="OUTPUT" tail="toWPs" text-size="LARGE"/>
+      <arc head="falseP" kind="OUTPUT" tail="resetPs" text-size="LARGE">
+        <point x="43.5" y="47.0"/>
+      </arc>
+      <arc head="resetP" kind="INPUT" tail="P7" text-size="LARGE">
+        <point x="14.0" y="54.5"/>
+      </arc>
+      <arc head="falseQ" kind="OUTPUT" tail="setQfs" text-size="LARGE"/>
+      <arc head="T5" kind="INPUT" tail="P1" text-size="LARGE"/>
+      <arc head="P3" kind="OUTPUT" tail="endWP" text-size="LARGE"/>
+      <arc head="Q7" kind="OUTPUT" tail="T6_0" text-size="LARGE"/>
+      <arc head="setPf" kind="INPUT" tail="trueP" text-size="LARGE"/>
+      <arc broken="true" head="falseQ" kind="OUTPUT" mult-k="1.3346679687499998" tail="toCzP" text-size="LARGE">
+        <point x="38.5" y="43.5"/>
+        <point x="84.0" y="39.0"/>
+      </arc>
+      <arc head="endWs" kind="INPUT" tail="P5" text-size="LARGE"/>
+      <arc head="falseQ" kind="OUTPUT" tail="restQ" text-size="LARGE"/>
+      <arc head="toWqs" kind="INPUT" tail="trueQ" text-size="LARGE"/>
+      <arc head="toWqs" kind="INPUT" tail="Q2" text-size="LARGE"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="1.2135742187499998" tail="toCzQ" text-size="LARGE">
+        <point x="111.0" y="38.5"/>
+      </arc>
+      <arc head="falseP" kind="OUTPUT" tail="resetP" text-size="LARGE">
+        <point x="41.9408203125" y="47.84638671875"/>
+      </arc>
+      <arc head="resetPs" kind="INPUT" tail="P7" text-size="LARGE"/>
+      <arc head="endWP" kind="INPUT" tail="falseP" text-size="LARGE">
+        <point x="40.5" y="25.0"/>
+        <point x="34.0" y="21.0"/>
+        <point x="30.0" y="19.0"/>
+      </arc>
+      <arc head="setQts" kind="INPUT" tail="Q5" text-size="LARGE"/>
+      <arc head="T6" kind="INPUT" tail="P6" text-size="LARGE"/>
+      <arc head="Q6" kind="OUTPUT" tail="toCzQ" text-size="LARGE"/>
+      <arc head="P6" kind="OUTPUT" tail="toCzP" text-size="LARGE"/>
+      <arc head="setPfs" kind="INPUT" tail="falseP" text-size="LARGE"/>
+      <arc head="resetPs" kind="INPUT" tail="falseP" text-size="LARGE">
+        <point x="43.0" y="47.0"/>
+      </arc>
+      <arc head="Q3" kind="OUTPUT" tail="setQt" text-size="LARGE"/>
+      <arc head="setQts" kind="INPUT" tail="trueQ" text-size="LARGE"/>
+      <arc head="Q1" kind="OUTPUT" tail="restQs" text-size="LARGE">
+        <point x="148.0" y="57.0"/>
+        <point x="148.0" y="7.0"/>
+      </arc>
+      <arc head="toWP" kind="INPUT" tail="P2" text-size="LARGE"/>
+      <arc head="whileQ" kind="INPUT" tail="Q3" text-size="LARGE"/>
+      <arc head="Q1" kind="OUTPUT" tail="restQ" text-size="LARGE">
+        <point x="115.0" y="55.0"/>
+        <point x="148.0" y="57.0"/>
+        <point x="148.0" y="7.0"/>
+      </arc>
+      <arc head="toWPs" kind="INPUT" tail="trueP" text-size="LARGE"/>
+      <arc head="toWPs" kind="INPUT" tail="P2" text-size="LARGE"/>
+      <arc head="endWs" kind="INPUT" tail="trueP" text-size="LARGE">
+        <point x="27.8982421875" y="14.682714843749999"/>
+      </arc>
+      <arc head="T6_0" kind="INPUT" tail="Q6" text-size="LARGE"/>
+      <arc head="resetP" kind="INPUT" tail="trueP" text-size="LARGE"/>
+      <arc head="setQf" kind="INPUT" mult-k="1.59423828125" tail="trueQ" text-size="LARGE">
+        <point x="91.5" y="16.0"/>
+        <point x="88.0" y="26.0"/>
+        <point x="85.0" y="34.0"/>
+        <point x="89.0" y="36.0"/>
+      </arc>
+      <arc head="Q2" kind="OUTPUT" tail="T0_0" text-size="LARGE"/>
+      <arc head="Q1" kind="OUTPUT" tail="T5_0" text-size="LARGE"/>
+      <arc head="whileQ" kind="INPUT" tail="trueP" text-size="LARGE"/>
+      <arc head="P7" kind="OUTPUT" tail="T6" text-size="LARGE"/>
+      <arc head="trueQ" kind="OUTPUT" mult-k="1.3811523437500002" tail="whileP" text-size="LARGE">
+        <point x="31.5" y="35.5"/>
+      </arc>
+      <arc head="Q4" kind="OUTPUT" tail="whileQ" text-size="LARGE"/>
+      <arc head="T0_0" kind="INPUT" tail="Q1" text-size="LARGE"/>
+      <arc head="trueP" kind="OUTPUT" tail="toWPs" text-size="LARGE"/>
+      <arc head="restQs" kind="INPUT" tail="falseQ" text-size="LARGE"/>
+      <arc head="Q5" kind="OUTPUT" tail="setQf" text-size="LARGE">
+        <point x="111.93736164858629" y="32.68791505424112"/>
+        <point x="113.0" y="26.5"/>
+        <point x="107.5" y="27.0"/>
+      </arc>
+      <arc head="setQt" kind="INPUT" tail="falseQ" text-size="LARGE"/>
+      <arc head="trueQ" kind="OUTPUT" tail="setQts" text-size="LARGE"/>
+      <arc head="setQt" kind="INPUT" tail="Q5" text-size="LARGE"/>
+      <arc head="T0" kind="INPUT" tail="P1" text-size="LARGE"/>
+      <arc head="trueQ" kind="OUTPUT" tail="toWq" text-size="LARGE">
+        <point x="102.5" y="11.0"/>
+      </arc>
+      <arc head="trueP" kind="OUTPUT" tail="endWs" text-size="LARGE">
+        <point x="29.0" y="14.5"/>
+      </arc>
+      <arc head="P5" kind="OUTPUT" tail="setPfs" text-size="LARGE"/>
+      <arc head="Q5" kind="OUTPUT" tail="setQfs" text-size="LARGE"/>
+      <arc head="trueP" kind="OUTPUT" tail="whileQ" text-size="LARGE"/>
+      <arc head="falseQ" kind="OUTPUT" tail="restQs" text-size="LARGE"/>
+      <arc head="Q3" kind="OUTPUT" tail="setQts" text-size="LARGE">
+        <point x="114.68342080096487" y="15.882748444801805"/>
+        <point x="128.5" y="21.5"/>
+      </arc>
+      <arc head="toWq" kind="INPUT" tail="falseQ" text-size="LARGE">
+        <point x="99.0" y="25.0"/>
+      </arc>
+      <arc head="P3" kind="OUTPUT" tail="toWP" text-size="LARGE"/>
+      <arc head="restQ" kind="INPUT" mult-k="1.40341796875" tail="trueQ" text-size="LARGE">
+        <point x="91.91376167591068" y="14.692227363498095"/>
+        <point x="81.11357421875" y="44.16015625000001"/>
+      </arc>
+      <arc head="toCzP" kind="INPUT" tail="P3" text-size="LARGE"/>
+      <arc head="Q3" kind="OUTPUT" tail="toWq" text-size="LARGE"/>
+      <arc head="P2" kind="OUTPUT" tail="T0" text-size="LARGE"/>
+      <arc head="setQf" kind="INPUT" tail="Q4" text-size="LARGE">
+        <point x="116.0" y="32.5"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="Sistema" log-uuid="9c865865-f1be-4d09-a734-c4f475f41c23" name="CTL model checking of Sistema" rapid-type="CTL_MODEL_CHECKING" simplified-UI="true">
+    <assignments/>
+    <rgmedd2/>
+    <formulas>
+      <formula language="STAT"/>
+      <formula comment="mutex" comment-shown="true" expr="G( (#P6==0 &amp;&amp; #Q6==1)||(#P6==1 &amp;&amp; #Q6==0)||(#P6==0 &amp;&amp; #Q6==0))" language="LTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="mutex " comment-shown="true" expr="AG( (#P6==0 &amp;&amp; #Q6==1)||(#P6==1 &amp;&amp; #Q6==0)||(#P6==0 &amp;&amp; #Q6==0))" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 45/45">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="deadlock" comment-shown="true" expr=" ((#P3&gt;0 || #Q3&gt;0)-&gt;F(#P6&gt;0 || #Q6&gt;0 ))" language="LTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="deadlock" comment-shown="true" expr=" AG((#P3&gt;0 || #Q3&gt;0)-&gt;EF(#P6&gt;0 || #Q6&gt;0 ))" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 45/45">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="starvation" comment-shown="true" expr="G((#P3 ==1 -&gt;F(#P6 ==1)) &amp;&amp; (#Q3 ==1 -&gt;F(#Q6==1)))" language="LTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="false">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="starvation" comment-shown="true" expr="AG((#P3 ==1 -&gt;AF(#P6 ==1) )&amp;&amp; (#Q3 ==1 -&gt;AF(#Q6 ==1)))" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="false 0/45">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="Reversibilita" comment-shown="true" expr="AG(#P2&gt;0 -&gt;EF(#P1 &gt;0)) &amp;&amp; AG(#P3&gt;0 -&gt;EF(#P1 &gt;0)) &amp;&amp; AG(#P4&gt;0 -&gt;EF(#P1 &gt;0)) &amp;&amp; AG(#P5&gt;0 -&gt;EF(#P1 &gt;0)) &amp;&amp; AG(#P6&gt;0 -&gt;EF(#P1 &gt;0)) &amp;&amp; AG(#P7&gt;0 -&gt;EF(#P1 &gt;0)) " language="CTL"/>
+      <formula expr="AG(#P2 ==1)-&gt;AF(#P6&gt;0) &amp;&amp; AG(#Q2 ==1)-&gt;AF(#Q6&gt;0)" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 45/45">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula expr="AG(#P3==1|| #Q3==1)  -&gt; AF (#P6==1|| #Q6==1) " language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 45/45">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+    </formulas>
+  </measures>
+  <resource-list>
+    <document-log uuid="9c865865-f1be-4d09-a734-c4f475f41c23">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAKV0AOMbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxEU1BOLVRvb2wuZXhlIiAtbG9hZCAiQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM185XDNfOS1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgU2lzdGVtYS5zb2x1dGlvblxTaXN0ZW1hIiAtcGJhc2lzIC1kZXRlY3QtZXhwIC1wc2ZsIC1ibmQgCnQAnhtbMW0bWzRtTE9BRElORyBQRVRSSSBORVQgQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM185XDNfOS1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgU2lzdGVtYS5zb2x1dGlvblxTaXN0ZW1hIChuZXQvZGVmKS4uLhtbMjJtG1syNG0KdAAPTUFSS0lORyBQQVI6IDAKdAAQUExBQ0VTOiAgICAgIDE4CnQAD1JBVEUgUEFSOiAgICAwCnQAEFRSQU5TSVRJT05TOiAyNgp0AA9NRUFTVVJFUzogICAgMAp0AChMT0FESU5HIFRJTUU6IFtVc2VyIDAuMDAwcywgU3lzIDAuMDAwc10KdAABCnQAAQp0AB5DT01QVVRJTkcgUExBQ0UgRkxPVyBCQVNJUy4uLgp0ABJNPTI2LCBOPTE4LCBOMD0xOAp0AE9Db21wdXRhdGlvbiBvZiBGbG93IGJhc2lzOiBjb21wbGV0ZWQgaW4gMTQgc3RlcHMsIHxLfD00LiAgICAgICAgICAgICAgICAgICAgICAKdAApRk9VTkQgNCBWRUNUT1JTIElOIFRIRSBQTEFDRSBGTE9XIEJBU0lTLgp0AAEKdAABCnQAJ0FsbCBwbGFjZXMgYXJlIGNvdmVyZWQgYnkgc29tZSBQLWZsb3cuCnQAAQp0ACZUT1RBTCBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQAJ0FWT0lEIEVYUE9ORU5USUFMIEdST1dUSCBPRiBTRU1JRkxPV1MuCnQAHUNPTVBVVElORyBQTEFDRSBTRU1JRkxPV1MuLi4KdAASTT0yNiwgTj0xOCwgTjA9MTgKdABNR2VuZXJhdGlvbiBvZiBTZW1pZmxvd3M6IGNvbXBsZXRlZCBpbiAxNCBzdGVwcywgfEt8PTQuICAgICAgICAgICAgICAgICAgICAgIAp0ABlGT1VORCA0IFBMQUNFIFNFTUlGTE9XUy4KdAABCnQAAQp0ACtBbGwgcGxhY2VzIGFyZSBjb3ZlcmVkIGJ5IHNvbWUgUC1zZW1pZmxvdy4KdAABCnQAJlRPVEFMIFRJTUU6IFtVc2VyIDAuMDAwcywgU3lzIDAuMDAwc10KdAAsQ09NUFVUSU5HIFBMQUNFIEJPVU5EUyBGUk9NIFAtU0VNSUZMT1dTIC4uLgp0ACcbWzBYG1szMm0gUFJPQ0VTUyBFWElURUQgTk9STUFMTFkuG1swbQp0AOIbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxEU1BOLVRvb2wuZXhlIiAtbG9hZCAiQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM185XDNfOS1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgU2lzdGVtYS5zb2x1dGlvblxTaXN0ZW1hIiAtbG9hZC1ibmQgLXRpbWVvdXQgNSAtaWxwLWJuZCAKdACeG1sxbRtbNG1MT0FESU5HIFBFVFJJIE5FVCBDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzlcM185LUNUTCBtb2RlbCBjaGVja2luZyBvZiBTaXN0ZW1hLnNvbHV0aW9uXFNpc3RlbWEgKG5ldC9kZWYpLi4uG1syMm0bWzI0bQp0AA9NQVJLSU5HIFBBUjogMAp0ABBQTEFDRVM6ICAgICAgMTgKdAAPUkFURSBQQVI6ICAgIDAKdAAQVFJBTlNJVElPTlM6IDI2CnQAD01FQVNVUkVTOiAgICAwCnQAKExPQURJTkcgVElNRTogW1VzZXIgMC4wMDBzLCBTeXMgMC4wMDBzXQp0AAEKdAABCnQAFUxPQURJTkcgQk5EIEZJTEUgLi4uCnQAIFNjaGVkdWxlZCB0aW1lb3V0IG9mIDUgc2Vjb25kcy4KdAAlQ09NUFVUSU5HIFBMQUNFIEJPVU5EUyBVU0lORyBJTFAgLi4uCnQAGEFsbCBwbGFjZXMgYXJlIGJvdW5kZWQuCnEAfgAgdADOG1swbUVYRUM6ICJDOlxQcm9ncmFtIEZpbGVzXEdyZWF0U1BOXGFwcFxwb3J0YWJsZV9ncmVhdHNwblxiaW5cUkdNRURENS5leGUiICJDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzlcM185LUNUTCBtb2RlbCBjaGVja2luZyBvZiBTaXN0ZW1hLnNvbHV0aW9uXFNpc3RlbWEiIC1NRVRBIC1zYXRzZXRzIC1DIAp0ACBSYW5kb20gc2VlZHM6IDE3MjA5NDUzODAgNzIwOTA0CnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAARR3JlYXRTUE4vTWVkZGx5Lgp0ADggIENvcHlyaWdodCAoQykgMTk4Ny0yMDIyLCBVbml2ZXJzaXR5IG9mIFRvcmlubywgSXRhbHkuCnQALyAgd2Vic2l0ZTogaHR0cHM6Ly9naXRodWIuY29tL2dyZWF0c3BuL1NPVVJDRVMKdAAxICBTZW5kIGZpbGVzIG5ldG5hbWUubmV0LCAuZGVmIHRvIGUtbWFpbCBhZGRyZXNzCnQALyAgYW1wYXJvcmUoYXQpZGkudW5pdG8uaXQgaWYgeW91IGZpbmQgYW55IGJ1Zy4KdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0AB9CYXNlZCBvbiBNRURETFkgdmVyc2lvbiAwLjE3LjEKdABGICBDb3B5cmlnaHQgKEMpIDIwMDksIElvd2EgU3RhdGUgVW5pdmVyc2l0eSBSZXNlYXJjaCBGb3VuZGF0aW9uLCBJbmMuCnQALSAgd2Vic2l0ZTogaHR0cHM6Ly9hc21pbmVyLmdpdGh1Yi5pby9tZWRkbHkvCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAApVXNpbmcgcGVyLWV2ZW50IHNhdHVyYXRpb24gKHNhdC1wcmVnZW4pLgp0ABBQcm9jZXNzIElEOiAyMTEKdAB5TU9ERUwgTkFNRTogQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM185XDNfOS1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgU2lzdGVtYS5zb2x1dGlvblxTaXN0ZW1hCnQAHSAgMTggcGxhY2VzLCAyNiB0cmFuc2l0aW9ucy4KdAAlVXNlZCBNZW1vcnkgZm9yIGVuY29kaW5nIG5ldDogODY4OEtCCnQAg09wZW5pbmcgZmlsZTogQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM185XDNfOS1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgU2lzdGVtYS5zb2x1dGlvblxTaXN0ZW1hLmJuZCBPSy4KdACGT3BlbmluZyBmaWxlOiBDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzlcM185LUNUTCBtb2RlbCBjaGVja2luZyBvZiBTaXN0ZW1hLnNvbHV0aW9uXFNpc3RlbWEuaWxwYm5kIE9LLgp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gTU9ERUwgU1RBVElTVElDUyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAF1BMQUNFUzogICAgICAgICAgICAgMTgKdAAXVFJBTlNJVElPTlM6ICAgICAgICAyNgp0ABdJTlBVVCBBUkNTOiAgICAgICAgIDMyCnQAF09VVFBVVCBBUkNTOiAgICAgICAgMzIKdAAWSU5ISUIgQVJDUzogICAgICAgICAwCnQAF1RFU1QgQVJDUzogICAgICAgICAgMTQKdAAWTlVNIE0wIFRPS0VOUzogICAgICA0CnQAFklOVkFSSUFOVFM6ICAgICAgICAgNAp0ABZQLVNFTUlGTE9XUzogICAgICAgIDQKdAAWTUFYIElOVkFSSUFOVCBDQVJEOiAxCnQAFklTIFVORk9MRElORzogICAgICAgMAp0ABdCT1VOREVEIFBMQUNFUzogICAgIDE4CnQAFlVOQk9VTkRFRCBQTEFDRVM6ICAgMAp0ABZNQVggUExBQ0UgQk9VTkQ6ICAgIDEKdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gVkFSSUFCTEUgT1JERVIgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAA8VmFyaWFibGUgb3JkZXIgbWV0aG9kOiBNZXRhLWhldXJpc3RpYyB1c2luZyB3ZWlnaHRlZCBzY29yZS4KdAA5TWV0YS1oZXVyaXN0aWM6IHNlbGVjdGluZyBtZXRob2QgR1ArRm9yY2Ugd2l0aCBzY29yZTogODcKdAAiVGltZSB0byBjb21wdXRlIHZhcmlhYmxlIG9yZGVyOiAwCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09IFNUQVJUIEZJUklORyBSVUxFUyBFTkNPRElORyA9PT09PT09PT09PT09PT09PT09PT09PT09CnQAGkNyZWF0aW5nIGFsbCBldmVudCBOU0ZzLi4KdAAsRW5jb2RlZCAyNiB0cmFuc2l0aW9uIGluIDEgcHJpb3JpdHkgZ3JvdXBzLgp0ABpUaW1lIHRvIGJ1aWxkIGFsbCBOU0ZzOiAwCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09IFJFQUNIQUJJTElUWSBTRVQgR0VORVJBVElPTiA9PT09PT09PT09PT09PT09PT09PT09PT09CnQAFVNwbGl0OiBTcGxpdFN1YnRyYWN0CnQAF1N0YXJ0IFJTIGNvbnN0cnVjdGlvbi4KdAAWUlMgZ2VuZXJhdGlvbiB0aW1lOiAwCnQAHUNvbXB1dGluZyB2YXJpYWJsZSBib3VuZHMuLi4KdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IE1FTU9SWSA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAAqIENhcmRpbmFsaXR5KFJTKTogICAgICAgICA0NSAgICAgICAgICAgICAKdAAqIE1heCB0b2tlbnMgeCBtYXJraW5nOiAgICA0ICAgICAgICAgICAgICAKdAAqIE1heCB0b2tlbnMgaW4gcGxhY2U6ICAgICAxICAgICAgICAgICAgICAKdAAqIE1heCB0b2tlbnMgaW4gbGV2ZWxzOiAgICAxICAgICAgICAgICAgICAKdAAoIFRvdGFsIE1lbW9yeSBVc2VkOiAgICAgICAxMDI4NCBLQnl0ZXMuCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IE1PREVMIENIRUNLSU5HID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAOE1FQVNVUkUwOgkgQUcoI1AzPT0xfHwgI1EzPT0xKSAgLT4gQUYgKCNQNj09MXx8ICNRNj09MSkKdAAbQnVpbGRpbmcgbW9ub2xpdGhpYyBOU0YuLi4KdABcUHJvY2Vzc2luZzogKChBIChHICgoUDMgPSAxKSBvciAoUTMgPSAxKSkpKSBpbXBseSAoQSAoRiAoKFA2ID0gMSkgb3IgKFE2ID0gMSkpKSkpICAtPiAgYm9vbAp0ACxFdmFsOiAoQSAoRyAoKFAzID0gMSkgb3IgKFEzID0gMSkpKSkgIFNUQVRFCnQACUV2YWw6IFAzCnQAFCAgICAgIDAuMDAwMDAwIHNlYy4KdAATRXZhbDogKFAzID0gMSkgIEFQCnQAKCAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gNwp0AAlFdmFsOiBRMwp0ABQgICAgICAwLjAwMDAwMCBzZWMuCnQAE0V2YWw6IChRMyA9IDEpICBBUAp0ACggICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDcKdAAqRXZhbDogKChQMyA9IDEpIG9yIChRMyA9IDEpKSAgU1RBVEUgIFBBVEgKdAApICAgICAgMC4wMDAwMDAgc2VjLiAgcG90ZW50aWFsIGNhcmQgPSAxMwp0ACBFRjogc3RlcD0xLCAgU0FUIHNpemU9NzEuMDAwMDAwCnQAIUVGOiBzdGVwPTIsICBTQVQgc2l6ZT0xMjMuMDAwMDAwCnQAIUVGOiBzdGVwPTMsICBTQVQgc2l6ZT0xNjEuMDAwMDAwCnQAIUVGOiBzdGVwPTQsICBTQVQgc2l6ZT0xODQuMDAwMDAwCnQAIUVGOiBzdGVwPTUsICBTQVQgc2l6ZT0xOTQuMDAwMDAwCnQAIUVGOiBzdGVwPTYsICBTQVQgc2l6ZT0xOTYuMDAwMDAwCnQAIUVGOiBzdGVwPTcsICBTQVQgc2l6ZT0xOTYuMDAwMDAwCnQAKCAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gMAp0ACxFdmFsOiAoQSAoRiAoKFA2ID0gMSkgb3IgKFE2ID0gMSkpKSkgIFNUQVRFCnQACUV2YWw6IFA2CnQAFCAgICAgIDAuMDAwMDAwIHNlYy4KdAATRXZhbDogKFA2ID0gMSkgIEFQCnQAKCAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gNQp0AAlFdmFsOiBRNgp0ABQgICAgICAwLjAwMDAwMCBzZWMuCnQAE0V2YWw6IChRNiA9IDEpICBBUAp0ACggICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDUKdAAqRXZhbDogKChQNiA9IDEpIG9yIChRNiA9IDEpKSAgU1RBVEUgIFBBVEgKdAApICAgICAgMC4wMDAwMDAgc2VjLiAgcG90ZW50aWFsIGNhcmQgPSAxMAp0ACBFRzogc3RlcD0xLCAgU0FUIHNpemU9MzUuMDAwMDAwCnQAKSAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gMTAKdABYRXZhbDogKChBIChHICgoUDMgPSAxKSBvciAoUTMgPSAxKSkpKSBpbXBseSAoQSAoRiAoKFA2ID0gMSkgb3IgKFE2ID0gMSkpKSkpICBUT1AgIFNUQVRFCnQALiAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gNDUgKFJTKQp0AAEKdABQLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp0ABJGb3JtdWxhOiBNRUFTVVJFMAp0AEggICgoQSAoRyAoKFAzID0gMSkgb3IgKFEzID0gMSkpKSkgaW1wbHkgKEEgKEYgKChQNiA9IDEpIG9yIChRNiA9IDEpKSkpKQp0AA5MYW5ndWFnZTogQ1RMCnQAFUV2YWx1YXRpb246IHRydWUgICAgCnQAB1NBVD00NQp0ABtFdmFsdWF0aW9uIHRpbWU6IDAuMDAwIHNlYwp0AFAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnQAAQp0ABZGb3JtdWxhIGNhY2hlIHNpemU6IDAKdAAET2suCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gVElNRSA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAJSBWYXJpYWJsZSBvcmRlciBUaW1lOiAgIDAuMDAwICAgc2VjLgp0ACUgUlMgR2VuZXJhdGlvbiBUaW1lOiAgICAwLjAwMCAgIHNlYy4KdAAlIFRvdGFsIFJTIFRpbWU6ICAgICAgICAgMC4wMDAgICBzZWMuCnQAJSBTdGF0aXN0aWNzIFRpbWU6ICAgICAgIDAuMDAwICAgc2VjLgp0ACUgTW9kZWwgQ2hlY2tpbmcgVGltZTogICAwLjAwMCAgIHNlYy4KdAAlIFRvdGFsIFRpbWU6ICAgICAgICAgICAgMC4wMDAgICBzZWMuCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KcQB+ACB4c3EAfgAAdwQAAAClc3IAEWphdmEubGFuZy5Cb29sZWFuzSBygNWc+u4CAAFaAAV2YWx1ZXhwAXEAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKdxAH4Ap3EAfgCncQB+AKd4</document-log>
+    <document-log uuid="0fe8bb9d-be67-4d79-b7c1-bc4bc0eb2693">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAUl0ANkbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxEU1BOLVRvb2wuZXhlIiAtbG9hZCAiQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM185XDNfOS1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgUFQuc29sdXRpb25cUFQiIC1wYmFzaXMgLWRldGVjdC1leHAgLXBzZmwgLWJuZCAKdACUG1sxbRtbNG1MT0FESU5HIFBFVFJJIE5FVCBDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzlcM185LUNUTCBtb2RlbCBjaGVja2luZyBvZiBQVC5zb2x1dGlvblxQVCAobmV0L2RlZikuLi4bWzIybRtbMjRtCnQAD01BUktJTkcgUEFSOiAwCnQAEFBMQUNFUzogICAgICAxOAp0AA9SQVRFIFBBUjogICAgMAp0ABBUUkFOU0lUSU9OUzogMjQKdAAPTUVBU1VSRVM6ICAgIDAKdAAoTE9BRElORyBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQAAQp0AAEKdAAeQ09NUFVUSU5HIFBMQUNFIEZMT1cgQkFTSVMuLi4KdAASTT0yNCwgTj0xOCwgTjA9MTgKdABPQ29tcHV0YXRpb24gb2YgRmxvdyBiYXNpczogY29tcGxldGVkIGluIDE0IHN0ZXBzLCB8S3w9NC4gICAgICAgICAgICAgICAgICAgICAgCnQAKUZPVU5EIDQgVkVDVE9SUyBJTiBUSEUgUExBQ0UgRkxPVyBCQVNJUy4KdAABCnQAAQp0ACdBbGwgcGxhY2VzIGFyZSBjb3ZlcmVkIGJ5IHNvbWUgUC1mbG93Lgp0AAEKdAAmVE9UQUwgVElNRTogW1VzZXIgMC4wMDBzLCBTeXMgMC4wMDBzXQp0ACdBVk9JRCBFWFBPTkVOVElBTCBHUk9XVEggT0YgU0VNSUZMT1dTLgp0AB1DT01QVVRJTkcgUExBQ0UgU0VNSUZMT1dTLi4uCnQAEk09MjQsIE49MTgsIE4wPTE4CnQATUdlbmVyYXRpb24gb2YgU2VtaWZsb3dzOiBjb21wbGV0ZWQgaW4gMTQgc3RlcHMsIHxLfD00LiAgICAgICAgICAgICAgICAgICAgICAKdAAZRk9VTkQgNCBQTEFDRSBTRU1JRkxPV1MuCnQAAQp0AAEKdAArQWxsIHBsYWNlcyBhcmUgY292ZXJlZCBieSBzb21lIFAtc2VtaWZsb3cuCnQAAQp0ACZUT1RBTCBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQALENPTVBVVElORyBQTEFDRSBCT1VORFMgRlJPTSBQLVNFTUlGTE9XUyAuLi4KdAAnG1swWBtbMzJtIFBST0NFU1MgRVhJVEVEIE5PUk1BTExZLhtbMG0KdADYG1swbUVYRUM6ICJDOlxQcm9ncmFtIEZpbGVzXEdyZWF0U1BOXGFwcFxwb3J0YWJsZV9ncmVhdHNwblxiaW5cRFNQTi1Ub29sLmV4ZSIgLWxvYWQgIkM6XFVzZXJzXFV0ZW50ZVxEZXNrdG9wXHJldGlfZGlfcGV0cmlcZXNlcmNpemlfZmluYWxlXDNfOVwzXzktQ1RMIG1vZGVsIGNoZWNraW5nIG9mIFBULnNvbHV0aW9uXFBUIiAtbG9hZC1ibmQgLXRpbWVvdXQgNSAtaWxwLWJuZCAKdACUG1sxbRtbNG1MT0FESU5HIFBFVFJJIE5FVCBDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzlcM185LUNUTCBtb2RlbCBjaGVja2luZyBvZiBQVC5zb2x1dGlvblxQVCAobmV0L2RlZikuLi4bWzIybRtbMjRtCnQAD01BUktJTkcgUEFSOiAwCnQAEFBMQUNFUzogICAgICAxOAp0AA9SQVRFIFBBUjogICAgMAp0ABBUUkFOU0lUSU9OUzogMjQKdAAPTUVBU1VSRVM6ICAgIDAKdAAoTE9BRElORyBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQAAQp0AAEKdAAVTE9BRElORyBCTkQgRklMRSAuLi4KdAAgU2NoZWR1bGVkIHRpbWVvdXQgb2YgNSBzZWNvbmRzLgp0ACVDT01QVVRJTkcgUExBQ0UgQk9VTkRTIFVTSU5HIElMUCAuLi4KdAAYQWxsIHBsYWNlcyBhcmUgYm91bmRlZC4KcQB+ACB0AMQbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxSR01FREQ1LmV4ZSIgIkM6XFVzZXJzXFV0ZW50ZVxEZXNrdG9wXHJldGlfZGlfcGV0cmlcZXNlcmNpemlfZmluYWxlXDNfOVwzXzktQ1RMIG1vZGVsIGNoZWNraW5nIG9mIFBULnNvbHV0aW9uXFBUIiAtTUVUQSAtc2F0c2V0cyAtQyAKdAAgUmFuZG9tIHNlZWRzOiAxNzE5NTk0MjU3IDgxMDM1MQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAEUdyZWF0U1BOL01lZGRseS4KdAA4ICBDb3B5cmlnaHQgKEMpIDE5ODctMjAyMiwgVW5pdmVyc2l0eSBvZiBUb3Jpbm8sIEl0YWx5Lgp0AC8gIHdlYnNpdGU6IGh0dHBzOi8vZ2l0aHViLmNvbS9ncmVhdHNwbi9TT1VSQ0VTCnQAMSAgU2VuZCBmaWxlcyBuZXRuYW1lLm5ldCwgLmRlZiB0byBlLW1haWwgYWRkcmVzcwp0AC8gIGFtcGFyb3JlKGF0KWRpLnVuaXRvLml0IGlmIHlvdSBmaW5kIGFueSBidWcuCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAAfQmFzZWQgb24gTUVERExZIHZlcnNpb24gMC4xNy4xCnQARiAgQ29weXJpZ2h0IChDKSAyMDA5LCBJb3dhIFN0YXRlIFVuaXZlcnNpdHkgUmVzZWFyY2ggRm91bmRhdGlvbiwgSW5jLgp0AC0gIHdlYnNpdGU6IGh0dHBzOi8vYXNtaW5lci5naXRodWIuaW8vbWVkZGx5Lwp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAKVVzaW5nIHBlci1ldmVudCBzYXR1cmF0aW9uIChzYXQtcHJlZ2VuKS4KdAARUHJvY2VzcyBJRDogMTg2NAp0AG9NT0RFTCBOQU1FOiBDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzlcM185LUNUTCBtb2RlbCBjaGVja2luZyBvZiBQVC5zb2x1dGlvblxQVAp0AB0gIDE4IHBsYWNlcywgMjQgdHJhbnNpdGlvbnMuCnQAJVVzZWQgTWVtb3J5IGZvciBlbmNvZGluZyBuZXQ6IDg3NDRLQgp0AHlPcGVuaW5nIGZpbGU6IEM6XFVzZXJzXFV0ZW50ZVxEZXNrdG9wXHJldGlfZGlfcGV0cmlcZXNlcmNpemlfZmluYWxlXDNfOVwzXzktQ1RMIG1vZGVsIGNoZWNraW5nIG9mIFBULnNvbHV0aW9uXFBULmJuZCBPSy4KdAB8T3BlbmluZyBmaWxlOiBDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzlcM185LUNUTCBtb2RlbCBjaGVja2luZyBvZiBQVC5zb2x1dGlvblxQVC5pbHBibmQgT0suCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSBNT0RFTCBTVEFUSVNUSUNTID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAAXUExBQ0VTOiAgICAgICAgICAgICAxOAp0ABdUUkFOU0lUSU9OUzogICAgICAgIDI0CnQAF0lOUFVUIEFSQ1M6ICAgICAgICAgMzIKdAAXT1VUUFVUIEFSQ1M6ICAgICAgICAzMgp0ABZJTkhJQiBBUkNTOiAgICAgICAgIDAKdAAXVEVTVCBBUkNTOiAgICAgICAgICAxMgp0ABZOVU0gTTAgVE9LRU5TOiAgICAgIDQKdAAWSU5WQVJJQU5UUzogICAgICAgICA0CnQAFlAtU0VNSUZMT1dTOiAgICAgICAgNAp0ABZNQVggSU5WQVJJQU5UIENBUkQ6IDEKdAAWSVMgVU5GT0xESU5HOiAgICAgICAwCnQAF0JPVU5ERUQgUExBQ0VTOiAgICAgMTgKdAAWVU5CT1VOREVEIFBMQUNFUzogICAwCnQAFk1BWCBQTEFDRSBCT1VORDogICAgMQp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSBWQVJJQUJMRSBPUkRFUiA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0ADxWYXJpYWJsZSBvcmRlciBtZXRob2Q6IE1ldGEtaGV1cmlzdGljIHVzaW5nIHdlaWdodGVkIHNjb3JlLgp0ADlNZXRhLWhldXJpc3RpYzogc2VsZWN0aW5nIG1ldGhvZCBHUCtGb3JjZSB3aXRoIHNjb3JlOiA4Nwp0ACJUaW1lIHRvIGNvbXB1dGUgdmFyaWFibGUgb3JkZXI6IDAKdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT0gU1RBUlQgRklSSU5HIFJVTEVTIEVOQ09ESU5HID09PT09PT09PT09PT09PT09PT09PT09PT0KdAAaQ3JlYXRpbmcgYWxsIGV2ZW50IE5TRnMuLgp0ACxFbmNvZGVkIDI0IHRyYW5zaXRpb24gaW4gMSBwcmlvcml0eSBncm91cHMuCnQAGlRpbWUgdG8gYnVpbGQgYWxsIE5TRnM6IDAKdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT0gUkVBQ0hBQklMSVRZIFNFVCBHRU5FUkFUSU9OID09PT09PT09PT09PT09PT09PT09PT09PT0KdAAVU3BsaXQ6IFNwbGl0U3VidHJhY3QKdAAXU3RhcnQgUlMgY29uc3RydWN0aW9uLgp0ABZSUyBnZW5lcmF0aW9uIHRpbWU6IDAKdAAdQ29tcHV0aW5nIHZhcmlhYmxlIGJvdW5kcy4uLgp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gTUVNT1JZID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0ACogQ2FyZGluYWxpdHkoUlMpOiAgICAgICAgIDQ1ICAgICAgICAgICAgIAp0ACogTWF4IHRva2VucyB4IG1hcmtpbmc6ICAgIDQgICAgICAgICAgICAgIAp0ACogTWF4IHRva2VucyBpbiBwbGFjZTogICAgIDEgICAgICAgICAgICAgIAp0ACogTWF4IHRva2VucyBpbiBsZXZlbHM6ICAgIDEgICAgICAgICAgICAgIAp0ACggVG90YWwgTWVtb3J5IFVzZWQ6ICAgICAgIDEwMzM2IEtCeXRlcy4KdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gTU9ERUwgQ0hFQ0tJTkcgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAGGTUVBU1VSRTA6CSBBRygjUDI+MCAtPiBFRigjUDE+MCkpICYmIEFHKCNQMz4wIC0+IEVGKCNQMT4wKSkgJiYgQUcoI1A0PjAgLT4gRUYoI1AxPjApKSAmJiBBRygjUDU+MCAtPiBFRigjUDE+MCkpICYmIEFHKCNQNj4wIC0+IEVGKCNQMT4wKSkgJiYgQUcoI1A3PjAgLT4gRUYoI1AxPjApKSAmJiBBRygjdHJ1ZVA+MCAtPiBFRigjZmFsc2VQID4gMCkpICYmIEFHKCNRMj4wIC0+IEVGKCNRMT4wKSkgJiYgQUcoI1EzPjAgLT4gRUYoI1ExPjApKSAmJiBBRygjUTQ+MCAtPiBFRigjUTE+MCkpICYmIEFHKCNRNT4wIC0+IEVGKCNRMT4wKSkgJiYgQUcoI1E2PjAgLT4gRUYoI1ExPjApKSAmJiBBRygjUTc+MCAtPiBFRigjUTE+MCkpICYmIEFHKCN0cnVlUT4wIC0+IEVGKCNmYWxzZVEgPiAwKSkKdAAbQnVpbGRpbmcgbW9ub2xpdGhpYyBOU0YuLi4KdAK+UHJvY2Vzc2luZzogKCgoKCgoKCgoKCgoKChBIChHICgoUDIgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpIGFuZCAoQSAoRyAoKFAzID4gMCkgaW1wbHkgKEUgKEYgKFAxID4gMCkpKSkpKSkgYW5kIChBIChHICgoUDQgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChQNSA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFA2ID4gMCkgaW1wbHkgKEUgKEYgKFAxID4gMCkpKSkpKSkgYW5kIChBIChH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aW1wbHkgKEUgKEYgKFAxID4gMCkpKSkpKSkgYW5kIChBIChHICgoUDYgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChQNyA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKHRydWVQID4gMCkgaW1wbHkgKEUgKEYgKGZhbHNlUCA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFEyID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkpKSkgIFNUQVRFCnQALiAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gNDUgKFJTKQp0ADdFdmFsOiAoQSAoRyAoKFEzID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkpKSAgU1RBVEUKdAAJRXZhbDogUTMKdAAUICAgICAgMC4wMDAwMDAgc2VjLgp0ABNFdmFsOiAoUTMgPiAwKSAgQVAKdAAoICAgICAgMC4wMDAwMDAgc2VjLiAgcG90ZW50aWFsIGNhcmQgPSA3CnQANUV2YWw6ICgoUTMgPiAwKSBpbXBseSAoRSAoRiAoUTEgPiAwKSkpKSAgU1RBVEUgIFBBVEgKdAAqICAgICAgMC4wMDAwMDAgc2VjLiAgcG90ZW50aWFsIGNhcmQgPSAxOTYKdAAuICAgICAgMC4wMDAwMDAgc2VjLiAgcG90ZW50aWFsIGNhcmQgPSA0NSAoUlMpCnQBvkV2YWw6ICgoKCgoKCgoKEEgKEcgKChQMiA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkgYW5kIChBIChHICgoUDMgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChQNCA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFA1ID4gMCkgaW1wbHkgKEUgKEYgKFAxID4gMCkpKSkpKSkgYW5kIChBIChHICgoUDYgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChQNyA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKHRydWVQID4gMCkgaW1wbHkgKEUgKEYgKGZhbHNlUCA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFEyID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkpKSkgYW5kIChBIChHICgoUTMgPiAwKSBpbXBseSAoRSAoRiAoUTEgPiAwKSkpKSkpKSAgU1RBVEUKdAAuICAgICAgMC4wMDAwMDAgc2VjLiAgcG90ZW50aWFsIGNhcmQgPSA0NSAoUlMpCnQAN0V2YWw6IChBIChHICgoUTQgPiAwKSBpbXBseSAoRSAoRiAoUTEgPiAwKSkpKSkpICBTVEFURQp0AAlFdmFsOiBRNAp0ABQgICAgICAwLjAwMDAwMCBzZWMuCnQAE0V2YWw6IChRNCA+IDApICBBUAp0ACggICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDcKdAA1RXZhbDogKChRNCA+IDApIGltcGx5IChFIChGIChRMSA+IDApKSkpICBTVEFURSAgUEFUSAp0ACogICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDE5Ngp0AC4gICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDQ1IChSUykKdAHuRXZhbDogKCgoKCgoKCgoKEEgKEcgKChQMiA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkgYW5kIChBIChHICgoUDMgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChQNCA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFA1ID4gMCkgaW1wbHkgKEUgKEYgKFAxID4gMCkpKSkpKSkgYW5kIChBIChHICgoUDYgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChQNyA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKHRydWVQID4gMCkgaW1wbHkgKEUgKEYgKGZhbHNlUCA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFEyID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkpKSkgYW5kIChBIChHICgoUTMgPiAwKSBpbXBseSAoRSAoRiAoUTEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChRNCA+IDApIGltcGx5IChFIChGIChRMSA+IDApKSkpKSkpICBTVEFURQp0AC4gICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDQ1IChSUykKdAA3RXZhbDogKEEgKEcgKChRNSA+IDApIGltcGx5IChFIChGIChRMSA+IDApKSkpKSkgIFNUQVRFCnQACUV2YWw6IFE1CnQAFCAgICAgIDAuMDAwMDAwIHNlYy4KdAATRXZhbDogKFE1ID4gMCkgIEFQCnQAKCAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gNwp0ADVFdmFsOiAoKFE1ID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkgIFNUQVRFICBQQVRICnQAKiAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gMTk2CnQALiAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gNDUgKFJTKQp0Ah5FdmFsOiAoKCgoKCgoKCgoKEEgKEcgKChQMiA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkgYW5kIChBIChHICgoUDMgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChQNCA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFA1ID4gMCkgaW1wbHkgKEUgKEYgKFAxID4gMCkpKSkpKSkgYW5kIChBIChHICgoUDYgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChQNyA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKHRydWVQID4gMCkgaW1wbHkgKEUgKEYgKGZhbHNlUCA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFEyID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkpKSkgYW5kIChBIChHICgoUTMgPiAwKSBpbXBseSAoRSAoRiAoUTEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChRNCA+IDApIGltcGx5IChFIChGIChRMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFE1ID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkpKSkgIFNUQVRFCnQALiAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gNDUgKFJTKQp0ADdFdmFsOiAoQSAoRyAoKFE2ID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkpKSAgU1RBVEUKdAAJRXZhbDogUTYKdAAUICAgICAgMC4wMDAwMDAgc2VjLgp0ABNFdmFsOiAoUTYgPiAwKSAgQVAKdAAoICAgICAgMC4wMDAwMDAgc2VjLiAgcG90ZW50aWFsIGNhcmQgPSA1CnQANUV2YWw6ICgoUTYgPiAwKSBpbXBseSAoRSAoRiAoUTEgPiAwKSkpKSAgU1RBVEUgIFBBVEgKdAAqICAgICAgMC4wMDAwMDAgc2VjLiAgcG90ZW50aWFsIGNhcmQgPSAxOTYKdAAuICAgICAgMC4wMDAwMDAgc2VjLiAgcG90ZW50aWFsIGNhcmQgPSA0NSAoUlMpCnQCTkV2YWw6ICgoKCgoKCgoKCgoKEEgKEcgKChQMiA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkgYW5kIChBIChHICgoUDMgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChQNCA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFA1ID4gMCkgaW1wbHkgKEUgKEYgKFAxID4gMCkpKSkpKSkgYW5kIChBIChHICgoUDYgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChQNyA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKHRydWVQID4gMCkgaW1wbHkgKEUgKEYgKGZhbHNlUCA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFEyID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkpKSkgYW5kIChBIChHICgoUTMgPiAwKSBpbXBseSAoRSAoRiAoUTEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChRNCA+IDApIGltcGx5IChFIChGIChRMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFE1ID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkpKSkgYW5kIChBIChHICgoUTYgPiAwKSBpbXBseSAoRSAoRiAoUTEgPiAwKSkpKSkpKSAgU1RBVEUKdAAuICAgICAgMC4wMDAwMDAgc2VjLiAgcG90ZW50aWFsIGNhcmQgPSA0NSAoUlMpCnQAN0V2YWw6IChBIChHICgoUTcgPiAwKSBpbXBseSAoRSAoRiAoUTEgPiAwKSkpKSkpICBTVEFURQp0AAlFdmFsOiBRNwp0ABQgICAgICAwLjAwMDAwMCBzZWMuCnQAE0V2YWw6IChRNyA+IDApICBBUAp0ACggICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDUKdAA1RXZhbDogKChRNyA+IDApIGltcGx5IChFIChGIChRMSA+IDApKSkpICBTVEFURSAgUEFUSAp0ACogICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDE5Ngp0AC4gICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDQ1IChSUykKdAJ+RXZhbDogKCgoKCgoKCgoKCgoKEEgKEcgKChQMiA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkgYW5kIChBIChHICgoUDMgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChQNCA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFA1ID4gMCkgaW1wbHkgKEUgKEYgKFAxID4gMCkpKSkpKSkgYW5kIChBIChHICgoUDYgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChQNyA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKHRydWVQID4gMCkgaW1wbHkgKEUgKEYgKGZhbHNlUCA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFEyID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkpKSkgYW5kIChBIChHICgoUTMgPiAwKSBpbXBseSAoRSAoRiAoUTEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChRNCA+IDApIGltcGx5IChFIChGIChRMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFE1ID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkpKSkgYW5kIChBIChHICgoUTYgPiAwKSBpbXBseSAoRSAoRiAoUTEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChRNyA+IDApIGltcGx5IChFIChGIChRMSA+IDApKSkpKSkpICBTVEFURQp0AC4gICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDQ1IChSUykKdAA+RXZhbDogKEEgKEcgKCh0cnVlUSA+IDApIGltcGx5IChFIChGIChmYWxzZVEgPiAwKSkpKSkpICBTVEFURQp0AAxFdmFsOiB0cnVlUQp0ABQgICAgICAwLjAwMDAwMCBzZWMuCnQAFkV2YWw6ICh0cnVlUSA+IDApICBBUAp0ACkgICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDI0CnQAIkV2YWw6IChFIChGIChmYWxzZVEgPiAwKSkpICBTVEFURQp0AA1FdmFsOiBmYWxzZVEKdAAUICAgICAgMC4wMDAwMDAgc2VjLgp0ABdFdmFsOiAoZmFsc2VRID4gMCkgIEFQCnQAKSAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gMjEKdAAgRUY6IHN0ZXA9MSwgIFNBVCBzaXplPTYxLjAwMDAwMAp0ACFFRjogc3RlcD0yLCAgU0FUIHNpemU9MTA1LjAwMDAwMAp0ACFFRjogc3RlcD0zLCAgU0FUIHNpemU9MTQ0LjAwMDAwMAp0ACFFRjogc3RlcD00LCAgU0FUIHNpemU9MTcxLjAwMDAwMAp0ACFFRjogc3RlcD01LCAgU0FUIHNpemU9MTg2LjAwMDAwMAp0ACFFRjogc3RlcD02LCAgU0FUIHNpemU9MTk0LjAwMDAwMAp0ACFFRjogc3RlcD03LCAgU0FUIHNpemU9MTk2LjAwMDAwMAp0ACFFRjogc3RlcD04LCAgU0FUIHNpemU9MTk2LjAwMDAwMAp0ACogICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDE5Ngp0ADxFdmFsOiAoKHRydWVRID4gMCkgaW1wbHkgKEUgKEYgKGZhbHNlUSA+IDApKSkpICBTVEFURSAgUEFUSAp0ACogICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDE5Ngp0AC4gICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDQ1IChSUykKdAK6RXZhbDogKCgoKCgoKCgoKCgoKChBIChHICgoUDIgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpIGFuZCAoQSAoRyAoKFAzID4gMCkgaW1wbHkgKEUgKEYgKFAxID4gMCkpKSkpKSkgYW5kIChBIChHICgoUDQgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChQNSA+IDApIGltcGx5IChFIChGIChQMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFA2ID4gMCkgaW1wbHkgKEUgKEYgKFAxID4gMCkpKSkpKSkgYW5kIChBIChHICgoUDcgPiAwKSBpbXBseSAoRSAoRiAoUDEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKCh0cnVlUCA+IDApIGltcGx5IChFIChGIChmYWxzZVAgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChRMiA+IDApIGltcGx5IChFIChGIChRMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFEzID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkpKSkgYW5kIChBIChHICgoUTQgPiAwKSBpbXBseSAoRSAoRiAoUTEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKChRNSA+IDApIGltcGx5IChFIChGIChRMSA+IDApKSkpKSkpIGFuZCAoQSAoRyAoKFE2ID4gMCkgaW1wbHkgKEUgKEYgKFExID4gMCkpKSkpKSkgYW5kIChBIChHICgoUTcgPiAwKSBpbXBseSAoRSAoRiAoUTEgPiAwKSkpKSkpKSBhbmQgKEEgKEcgKCh0cnVlUSA+IDApIGltcGx5IChFIChGIChmYWxzZVEgPiAwKSkpKSkpKSAgVE9QICBTVEFURQp0AC4g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AH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUtxAH4BS3EAfgFLcQB+AUt4</document-log>
+  </resource-list>
+</project>

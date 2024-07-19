@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="3_6" version="121">
+  <gspn name="P" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="P1" x="20.999999999999993" y="7.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="P2" x="21.0" y="17.0"/>
+      <place label-x="3.0" label-y="-1.0" name="P3" x="44.0" y="23.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P9" x="21.0" y="78.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P10" x="12.0" y="83.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="7.853981633974483" type="EXP" x="21.549999999999994" y="11.000000000000004"/>
+      <transition label-x="-1.0" label-y="-2.0" name="toWhile" nservers-x="0.5" rotation="7.853981633974483" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="33.55" y="20.0"/>
+      <transition height="4.0" label-x="0.5" name="InWhile" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.0" superpos-y="1.5" superposition-tags="isQt" text-size="VERY_LARGE" type="EXP" x="44.55" y="68.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T3" nservers-x="0.5" rotation="7.853981633974483" superpos-x="1.5" superpos-y="-2.0" superposition-tags="setT2" type="EXP" x="21.55" y="83.0"/>
+      <transition label-x="-1.5" name="T4" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="14.55" y="49.0"/>
+      <transition name="T5" nservers-x="0.5" rotation="7.853981633974483" type="EXP" x="16.55" y="11.0"/>
+      <place name="P4" x="66.0" y="60.0"/>
+      <place label-x="-2.5" name="P5" x="97.0" y="72.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P6" x="86.0" y="63.0"/>
+      <place label-x="3.0" name="P7" x="62.0" y="29.0"/>
+      <transition height="4.0" label-x="-3.5" label-y="-2.0" name="Else_p4" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.5" superposition-tags="isT1" text-size="VERY_LARGE" type="EXP" x="51.55" y="89.0"/>
+      <transition height="4.0" label-x="-3.5" label-y="2.0" name="ifT2" nservers-x="0.5" rotation="9.42477796076938" superpos-y="-4.0" superposition-tags="isT2" text-size="VERY_LARGE" type="EXP" x="76.55" y="69.0"/>
+      <transition label-x="-1.5" label-y="1.0" name="T8" nservers-x="0.5" rotation="9.42477796076938" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setPf" type="EXP" x="95.55" y="48.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="waitT1" nservers-x="0.5" rotation="9.42477796076938" superpos-x="0.5" superpos-y="-2.0" superposition-tags="isT1" text-size="VERY_LARGE" type="EXP" x="74.55" y="55.0"/>
+      <transition label-x="5.5" label-y="0.0" name="exitWhile" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="isQf" text-size="VERY_LARGE" type="EXP" x="21.55" y="62.0"/>
+      <transition label-x="-2.0" label-y="2.5" name="T11" nservers-x="0.5" rotation="9.42477796076938" superpos-y="-1.5" superposition-tags="setPt" type="EXP" x="64.55" y="12.0"/>
+      <place label-x="-3.0" label-y="-2.5" name="P8" x="21.0" y="68.0"/>
+      <transition label-x="-2.0" name="T12" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="21.55" y="72.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="P2" kind="OUTPUT" tail="T0"/>
+      <arc head="toWhile" kind="INPUT" tail="P2"/>
+      <arc head="P3" kind="OUTPUT" tail="toWhile"/>
+      <arc head="InWhile" kind="INPUT" tail="P3"/>
+      <arc head="T3" kind="INPUT" tail="P9"/>
+      <arc head="P10" kind="OUTPUT" tail="T3"/>
+      <arc head="T4" kind="INPUT" tail="P10"/>
+      <arc head="P1" kind="OUTPUT" mult-k="0.0" tail="T4">
+        <point x="14.0" y="8.0"/>
+      </arc>
+      <arc head="P1" kind="OUTPUT" tail="T5"/>
+      <arc head="T5" kind="INPUT" tail="P1"/>
+      <arc head="P4" kind="OUTPUT" tail="InWhile"/>
+      <arc head="Else_p4" kind="INPUT" tail="P4"/>
+      <arc head="P3" kind="OUTPUT" tail="Else_p4"/>
+      <arc head="exitWhile" kind="INPUT" tail="P3"/>
+      <arc head="ifT2" kind="INPUT" tail="P4"/>
+      <arc head="P5" kind="OUTPUT" tail="ifT2"/>
+      <arc head="T8" kind="INPUT" tail="P5"/>
+      <arc head="P6" kind="OUTPUT" tail="T8"/>
+      <arc head="waitT1" kind="INPUT" tail="P6"/>
+      <arc head="P7" kind="OUTPUT" tail="waitT1"/>
+      <arc head="T11" kind="INPUT" tail="P7"/>
+      <arc head="P3" kind="OUTPUT" mult-k="0.23349609375" tail="T11"/>
+      <arc head="P8" kind="OUTPUT" tail="exitWhile"/>
+      <arc head="T12" kind="INPUT" tail="P8"/>
+      <arc head="P9" kind="OUTPUT" tail="T12"/>
+    </edges>
+  </gspn>
+  <gspn name="Q" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
+    <nodes>
+      <place label-x="3.0" label-y="-3.0" marking="1" name="Q1" x="83.0" y="13.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="Q2" x="83.0" y="30.0"/>
+      <place label-x="2.5" label-y="-1.5" name="Q3" x="83.0" y="48.0"/>
+      <place label-x="-2.5" label-y="0.5" name="Q9" x="51.0" y="28.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q10" x="51.0" y="19.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="15.707963267948966" text-size="VERY_LARGE" type="EXP" x="83.55" y="23.0"/>
+      <transition height="5.0" label-x="2.0" label-y="-0.5" name="WqI" nservers-x="0.5" rotation="15.707963267948966" superpos-x="-2.5" superpos-y="-0.5" superposition-tags="setQt" type="EXP" x="83.55" y="37.5"/>
+      <transition label-x="4.5" label-y="-2.0" name="DentroWhile" nservers-x="0.5" rotation="14.137166941154069" superpos-x="-3.0" superpos-y="-0.5" superposition-tags="isPt" text-size="VERY_LARGE" type="EXP" x="64.55" y="83.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T3" nservers-x="0.5" rotation="18.84955592153876" superpos-x="3.0" superpos-y="0.0" superposition-tags="setT1" type="EXP" x="51.55" y="24.0"/>
+      <transition label-x="-1.5" name="T4" nservers-x="0.5" rotation="18.84955592153876" superpos-x="-1.5" superposition-tags="setQf" type="EXP" x="51.55" y="13.0"/>
+      <transition label-x="3.5" label-y="-0.5000000000000071" name="T5" nservers-x="0.5" rotation="14.137166941154069" type="EXP" x="89.55" y="16.0"/>
+      <place label-x="3.5" label-y="0.0" name="Q4" x="64.0" y="105.0"/>
+      <place label-x="-2.5" name="Q5" x="42.0" y="131.0"/>
+      <place label-x="-2.5" label-y="0.5" name="Q6" x="45.0" y="110.0"/>
+      <place label-x="2.0" label-y="0.5" name="Q7" x="49.0" y="80.0"/>
+      <transition label-x="3.5" label-y="0.0" name="Else_Q4" nservers-x="0.5" rotation="14.137166941154069" superpos-x="1.0" superpos-y="-1.5" superposition-tags="isT2" text-size="LARGE" type="EXP" x="81.55" y="87.0"/>
+      <transition label-x="-1.5" name="IfQ" nservers-x="0.5" rotation="14.137166941154069" superpos-x="2.5" superpos-y="1.0" superposition-tags="isT1" text-size="HEADER2" type="EXP" x="42.55" y="140.0"/>
+      <transition height="4.0" label-x="-2.0" label-y="0.0" name="T8" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setQf" type="EXP" x="42.55" y="121.0"/>
+      <transition height="6.0" label-x="-2.0" label-y="-1.0" name="W2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superpos-y="-2.0" superposition-tags="isT2" text-size="VERY_LARGE" type="EXP" x="46.55" y="92.0"/>
+      <transition height="3.0" label-x="3.5" label-y="-2.0" name="elseWhile" nservers-x="0.5" rotation="18.84955592153876" superpos-x="-1.5" superposition-tags="isPf" type="EXP" x="51.55" y="48.5"/>
+      <transition height="6.0" label-x="2.5" label-y="-1.0" name="T11" nservers-x="0.5" rotation="1.8325957145940466" superpos-x="3.5" superpos-y="2.5" superposition-tags="setQt" text-size="VERY_LARGE" type="EXP" x="52.55" y="62.0"/>
+      <place label-x="-3.0" label-y="-2.5" name="Q8" x="51.0" y="34.0"/>
+      <transition label-x="-2.0" name="T12" nservers-x="0.5" rotation="12.566370614359172" type="EXP" x="62.55" y="28.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="Q1"/>
+      <arc head="Q2" kind="OUTPUT" tail="T0"/>
+      <arc head="WqI" kind="INPUT" tail="Q2"/>
+      <arc head="Q3" kind="OUTPUT" tail="WqI"/>
+      <arc head="DentroWhile" kind="INPUT" mult-k="0.5553710937499999" tail="Q3"/>
+      <arc head="T3" kind="INPUT" tail="Q9"/>
+      <arc head="Q10" kind="OUTPUT" tail="T3"/>
+      <arc head="T4" kind="INPUT" tail="Q10"/>
+      <arc head="Q1" kind="OUTPUT" mult-k="0.0" tail="T4"/>
+      <arc head="Q1" kind="OUTPUT" tail="T5"/>
+      <arc head="T5" kind="INPUT" tail="Q1"/>
+      <arc head="Q4" kind="OUTPUT" tail="DentroWhile"/>
+      <arc head="Else_Q4" kind="INPUT" mult-k="0.15068359375000004" mult-x="3.5662697628789033" mult-y="-1.4807144268179826" tail="Q4"/>
+      <arc head="Q3" kind="OUTPUT" mult-k="0.51416015625" tail="Else_Q4"/>
+      <arc head="elseWhile" kind="INPUT" mult-k="0.39716796875000004" tail="Q3"/>
+      <arc head="IfQ" kind="INPUT" tail="Q4"/>
+      <arc head="Q5" kind="OUTPUT" tail="IfQ"/>
+      <arc head="T8" kind="INPUT" tail="Q5"/>
+      <arc head="Q6" kind="OUTPUT" tail="T8"/>
+      <arc head="W2" kind="INPUT" tail="Q6"/>
+      <arc head="Q7" kind="OUTPUT" tail="W2"/>
+      <arc head="T11" kind="INPUT" tail="Q7"/>
+      <arc head="Q3" kind="OUTPUT" mult-k="0.23349609375" tail="T11"/>
+      <arc head="Q8" kind="OUTPUT" tail="elseWhile"/>
+      <arc head="T12" kind="INPUT" tail="Q8"/>
+      <arc head="Q9" kind="OUTPUT" tail="T12"/>
+    </edges>
+  </gspn>
+  <gspn name="CP" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="1.0" label-y="2.0" name="trueP" x="20.0" y="24.0"/>
+      <place label-x="-0.5" label-y="-2.5" marking="1" name="falseP" x="20.0" y="9.0"/>
+      <transition name="T0" nservers-x="0.5" rotation="18.84955592153876" superposition-tags="setPt" type="EXP" x="15.55" y="17.0"/>
+      <transition name="T1" nservers-x="0.5" rotation="21.991148575128552" superposition-tags="setPf" type="EXP" x="25.55" y="17.0"/>
+      <transition name="T2" nservers-x="0.5" rotation="18.064157758141313" superposition-tags="isPt" type="EXP" x="26.55" y="29.0"/>
+      <transition name="T3" nservers-x="0.5" rotation="2.356194490192345" superposition-tags="setPt" type="EXP" x="15.55" y="28.0"/>
+      <transition label-x="1.0" name="T4" nservers-x="0.5" rotation="19.634954084936208" superposition-tags="isPf" type="EXP" x="16.549999999999994" y="3.0"/>
+      <transition name="T5" nservers-x="0.5" rotation="18.06415775814131" superposition-tags="setPf" type="EXP" x="25.549999999999986" y="2.999999999999993"/>
+    </nodes>
+    <edges>
+      <arc head="T2" kind="INPUT" mult-k="0.51650390625" tail="trueP"/>
+      <arc head="T3" kind="INPUT" tail="trueP"/>
+      <arc head="trueP" kind="OUTPUT" mult-k="0.21064453125000002" tail="T2"/>
+      <arc head="trueP" kind="OUTPUT" mult-k="0.17587890625" tail="T3"/>
+      <arc head="T4" kind="INPUT" mult-k="0.41572265625000004" tail="falseP"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="0.17275390625" tail="T4"/>
+      <arc head="T5" kind="INPUT" tail="falseP"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="0.18740234375" tail="T5"/>
+      <arc head="T1" kind="INPUT" tail="trueP"/>
+      <arc head="falseP" kind="OUTPUT" tail="T1"/>
+      <arc head="T0" kind="INPUT" tail="falseP"/>
+      <arc head="trueP" kind="OUTPUT" tail="T0"/>
+    </edges>
+  </gspn>
+  <gspn name="CQ" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="1.0" label-y="2.0" name="trueQ" x="28.241438680420135" y="11.046646511596713"/>
+      <place label-y="-2.5" marking="1" name="falseQ" x="21.56789062189921" y="32.50506575231926"/>
+      <transition height="6.0543740028369335" name="T0" nservers-x="0.5" rotation="3.1415926535897936" superposition-tags="setQf" type="EXP" x="18.304955299482412" y="20.111513706823565"/>
+      <transition height="5.088448176547864" name="T1" nservers-x="0.5" rotation="6.283185307179586" superposition-tags="setQt" type="EXP" x="34.34675696443356" y="22.507745901164697"/>
+      <transition name="T2" nservers-x="0.5" rotation="7.330382858376184" superposition-tags="isQt" type="EXP" x="33.741186148725966" y="2.4734324118555904"/>
+      <transition name="T3" nservers-x="0.5" rotation="7.330382858376184" superposition-tags="setQt" type="EXP" x="20.4313413953613" y="4.710041992694851"/>
+      <transition label-x="1.0" name="T4" nservers-x="0.5" rotation="7.330382858376184" superposition-tags="isQf" type="EXP" x="40.06531599157688" y="40.71708354785682"/>
+      <transition name="T5" nservers-x="0.5" rotation="8.90117918517108" superposition-tags="setQf" type="EXP" x="9.55" y="41.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="trueQ"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="falseQ"/>
+      <arc head="trueQ" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="trueQ"/>
+      <arc head="T3" kind="INPUT" tail="trueQ"/>
+      <arc head="trueQ" kind="OUTPUT" mult-k="0.0" tail="T2"/>
+      <arc head="trueQ" kind="OUTPUT" mult-k="0.0" tail="T3"/>
+      <arc head="T4" kind="INPUT" tail="falseQ"/>
+      <arc head="falseQ" kind="OUTPUT" mult-k="0.0" tail="T4"/>
+      <arc head="T5" kind="INPUT" tail="falseQ"/>
+      <arc head="falseQ" kind="OUTPUT" mult-k="0.18740234375" tail="T5"/>
+    </edges>
+  </gspn>
+  <gspn name="Turn" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="1.0" label-y="2.0" name="T_2" x="11.0" y="14.000000000000002"/>
+      <place label-x="-2.0" label-y="7.500000000000002" marking="1" name="T_1" x="26.0" y="14.999999999999998"/>
+      <transition name="T0" nservers-x="0.5" rotation="12.566370614359172" superposition-tags="setT1" type="EXP" x="18.55" y="20.0"/>
+      <transition name="T1" nservers-x="0.5" rotation="12.566370614359172" superposition-tags="setT2" type="EXP" x="18.55" y="11.0"/>
+      <transition name="T2" nservers-x="0.5" rotation="10.995574287564276" superpos-x="-2.5" superpos-y="-0.4999999999999982" superposition-tags="isT2" type="EXP" x="7.549999999999996" y="9.000000000000002"/>
+      <transition name="T3" nservers-x="0.5" rotation="12.566370614359172" superposition-tags="setT2" type="EXP" x="6.550000000000002" y="19.0"/>
+      <transition label-x="1.0" name="T4" nservers-x="0.5" rotation="10.995574287564276" superpos-x="-1.0" superpos-y="-3.0" superposition-tags="isT1" type="EXP" x="29.55" y="9.999999999999998"/>
+      <transition name="T5" nservers-x="0.5" rotation="14.137166941154069" superposition-tags="setT1" type="EXP" x="31.55" y="20.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="T_2"/>
+      <arc head="T_1" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="T_1"/>
+      <arc head="T_2" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" mult-k="0.7000976562500001" tail="T_2">
+        <point x="11.499999999999998" y="11.000000000000002"/>
+      </arc>
+      <arc head="T3" kind="INPUT" tail="T_2"/>
+      <arc head="T_2" kind="OUTPUT" mult-k="0.0" tail="T2">
+        <point x="8.5" y="13.000000000000005"/>
+      </arc>
+      <arc head="T_2" kind="OUTPUT" mult-k="0.0" tail="T3"/>
+      <arc head="T4" kind="INPUT" mult-k="1.04189453125" tail="T_1">
+        <point x="27.5" y="11.999999999999998"/>
+      </arc>
+      <arc head="T_1" kind="OUTPUT" tail="T4">
+        <point x="30.5" y="13.499999999999995"/>
+      </arc>
+      <arc head="T5" kind="INPUT" tail="T_1"/>
+      <arc head="T_1" kind="OUTPUT" mult-k="0.20908203125000002" tail="T5"/>
+    </edges>
+  </gspn>
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="P1" x="24.0" y="6.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="P2" x="32.0" y="19.0"/>
+      <place label-x="3.0" label-y="-1.0" name="P3" x="27.0" y="34.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P9" x="10.0" y="55.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P10" x="10.0" y="33.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="7.853981633974483" type="EXP" x="24.55" y="19.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T1" nservers-x="0.5" rotation="7.853981633974483" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="45.55" y="23.0"/>
+      <transition label-x="0.5" name="enterWhileP" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-3.0" superpos-y="-0.5" superposition-tags="isQt" text-size="VERY_LARGE" type="EXP" x="40.55" y="44.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T3" nservers-x="0.5" rotation="7.853981633974483" superpos-x="1.5" superpos-y="-2.0" superposition-tags="setT2" type="EXP" x="10.55" y="43.0"/>
+      <transition label-x="-1.5" name="T4" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="10.55" y="6.0"/>
+      <transition name="T5" nservers-x="0.5" rotation="7.853981633974483" type="EXP" x="18.55" y="13.0"/>
+      <place label-x="2.0" name="P4" x="41.0" y="60.0"/>
+      <place label-x="-2.5" name="P5" x="40.0" y="70.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P6" x="40.0" y="86.0"/>
+      <place label-x="3.0" label-y="-0.5" name="P7" x="54.0" y="53.0"/>
+      <transition label-x="-3.5" label-y="-0.5" name="Else_p4" nservers-x="0.5" rotation="7.853981633974483" superpos-x="1.0" superpos-y="-1.5" superposition-tags="isT1" type="EXP" x="31.55" y="51.0"/>
+      <transition label-x="-1.5" name="ifT2" nservers-x="0.5" rotation="9.42477796076938" superpos-x="4.5" superpos-y="0.0" superposition-tags="isT2" text-size="VERY_LARGE" type="EXP" x="33.55" y="66.0"/>
+      <transition label-x="-3.0" label-y="1.0" name="inIFP" nservers-x="0.5" rotation="9.42477796076938" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setPf" type="EXP" x="40.55" y="79.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="waitT1" nservers-x="0.5" rotation="9.42477796076938" superpos-x="0.5" superpos-y="-2.0" superposition-tags="isT1" text-size="VERY_LARGE" type="EXP" x="53.55" y="86.0"/>
+      <transition label-x="1.0" name="toCzP" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="isQf" text-size="HEADER1" type="EXP" x="21.55" y="76.0"/>
+      <transition label-x="-2.0" label-y="2.5" name="T11" nservers-x="0.5" rotation="7.853981633974483" superpos-y="-1.5" superposition-tags="setPt" type="EXP" x="54.55" y="34.0"/>
+      <place label-x="-3.0" label-y="-2.5" name="P8" x="10.0" y="76.0"/>
+      <transition label-x="-2.0" name="T12" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="10.55" y="63.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="P2" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="P2"/>
+      <arc head="P3" kind="OUTPUT" tail="T1"/>
+      <arc head="enterWhileP" kind="INPUT" tail="P3"/>
+      <arc head="T3" kind="INPUT" tail="P9"/>
+      <arc head="P10" kind="OUTPUT" tail="T3"/>
+      <arc head="T4" kind="INPUT" tail="P10"/>
+      <arc head="P1" kind="OUTPUT" mult-k="0.0" tail="T4"/>
+      <arc head="P1" kind="OUTPUT" tail="T5"/>
+      <arc head="T5" kind="INPUT" tail="P1"/>
+      <arc head="P4" kind="OUTPUT" tail="enterWhileP"/>
+      <arc head="Else_p4" kind="INPUT" tail="P4"/>
+      <arc head="P3" kind="OUTPUT" tail="Else_p4"/>
+      <arc head="toCzP" kind="INPUT" tail="P3"/>
+      <arc head="ifT2" kind="INPUT" tail="P4"/>
+      <arc head="P5" kind="OUTPUT" tail="ifT2"/>
+      <arc head="inIFP" kind="INPUT" tail="P5"/>
+      <arc head="P6" kind="OUTPUT" tail="inIFP"/>
+      <arc head="waitT1" kind="INPUT" tail="P6"/>
+      <arc head="P7" kind="OUTPUT" tail="waitT1"/>
+      <arc head="T11" kind="INPUT" tail="P7"/>
+      <arc head="P3" kind="OUTPUT" mult-k="0.23349609375" tail="T11"/>
+      <arc head="P8" kind="OUTPUT" tail="toCzP"/>
+      <arc head="T12" kind="INPUT" tail="P8"/>
+      <arc head="P9" kind="OUTPUT" tail="T12"/>
+    </edges>
+  </gspn>
+  <algebra2 alignment="HORIZONTAL" name="Composition" policy="BINARY_PARALLEL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <bindings-list/>
+    <place-tags/>
+    <transition-tags>
+      <tag name="setPt"/>
+      <tag name="setPf"/>
+    </transition-tags>
+    <subnet netname="PT"/>
+    <subnet netname="CP"/>
+  </algebra2>
+  <gspn name="PT_CP" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="P1" x="18.999999999999993" y="5.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="P2" x="19.0" y="15.0"/>
+      <place label-x="3.0" label-y="-1.0" name="P3" x="19.0" y="37.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P9" x="10.0" y="65.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P10" x="10.0" y="36.0"/>
+      <place name="P4" x="44.0" y="37.0"/>
+      <place label-x="-2.5" name="P5" x="62.0" y="37.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P6" x="74.0" y="27.0"/>
+      <place name="P7" x="41.0" y="28.0"/>
+      <place label-x="-3.0" label-y="-2.5" name="P8" x="20.0" y="54.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueP" x="87.0" y="22.0"/>
+      <place label-x="-0.5" label-y="-2.5" marking="1" name="falseP" x="88.0" y="9.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="7.853981633974483" type="EXP" x="19.549999999999994" y="9.000000000000004"/>
+      <transition label-x="0.5" name="T2" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-3.0" superpos-y="-0.5" superposition-tags="isQt" type="EXP" x="30.55" y="44.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T3" nservers-x="0.5" rotation="7.853981633974483" superpos-x="1.5" superpos-y="-2.0" superposition-tags="setT2" type="EXP" x="10.55" y="54.0"/>
+      <transition name="T5" nservers-x="0.5" rotation="7.853981633974483" type="EXP" x="26.55" y="5.0"/>
+      <transition label-x="-3.5" label-y="-0.5" name="Else_p4" nservers-x="0.5" rotation="7.853981633974483" superpos-x="1.0" superpos-y="-1.5" superposition-tags="isT1" type="EXP" x="32.55" y="37.0"/>
+      <transition label-x="-1.5" name="T7" nservers-x="0.5" rotation="7.853981633974483" superpos-x="2.5" superpos-y="-2.0" superposition-tags="isT2" type="EXP" x="52.55" y="37.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T9" nservers-x="0.5" rotation="7.853981633974483" superpos-x="0.5" superpos-y="-2.0" superposition-tags="isT1" type="EXP" x="56.55" y="27.0"/>
+      <transition label-x="1.0" name="T10" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="isQf" type="EXP" x="28.55" y="54.0"/>
+      <transition label-x="-2.0" name="T12" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="20.55" y="65.0"/>
+      <transition name="T2_0" nservers-x="0.5" rotation="18.064157758141313" superposition-tags="isPt" type="EXP" x="94.55" y="29.0"/>
+      <transition label-x="1.0" name="T4_0" nservers-x="0.5" rotation="19.634954084936208" superposition-tags="isPf" type="EXP" x="96.55" y="8.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="setPt_T1_plus_T0_0" nservers-x="0.5" rotation="7.853981633974483" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="25.55" y="15.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="setPt_T1_plus_T3_0" nservers-x="0.5" rotation="7.853981633974483" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="20.55" y="25.0"/>
+      <transition label-x="-2.0" label-y="2.5" name="setPt_T11_plus_T0_0" nservers-x="0.5" rotation="7.853981633974483" superpos-y="-1.5" superposition-tags="setPt" type="EXP" x="88.55" y="16.0"/>
+      <transition label-x="-2.0" label-y="2.5" name="setPt_T11_plus_T3_0" nservers-x="0.5" rotation="7.853981633974483" superpos-y="-1.5" superposition-tags="setPt" type="EXP" x="29.55" y="29.0"/>
+      <transition label-x="-1.5" name="setPf_T4_plus_T1_0" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="9.55" y="22.0"/>
+      <transition label-x="-1.5" name="setPf_T4_plus_T5_0" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="5.55" y="22.0"/>
+      <transition label-x="-1.5" label-y="1.0" name="setPf_T8_plus_T1_0" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setPf" type="EXP" x="73.55" y="37.0"/>
+      <transition label-x="-1.5" label-y="1.0" name="setPf_T8_plus_T5_0" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setPf" type="EXP" x="76.55" y="14.0"/>
+    </nodes>
+    <edges>
+      <arc head="P1" kind="OUTPUT" tail="setPf_T4_plus_T5_0">
+        <point x="12.0" y="6.0"/>
+      </arc>
+      <arc head="trueP" kind="OUTPUT" tail="setPt_T11_plus_T3_0"/>
+      <arc head="setPf_T4_plus_T1_0" kind="INPUT" tail="trueP"/>
+      <arc head="P9" kind="OUTPUT" tail="T12"/>
+      <arc head="P3" kind="OUTPUT" tail="Else_p4"/>
+      <arc head="P3" kind="OUTPUT" tail="setPt_T11_plus_T3_0"/>
+      <arc head="setPt_T1_plus_T3_0" kind="INPUT" tail="P2"/>
+      <arc head="P3" kind="OUTPUT" tail="setPt_T11_plus_T0_0"/>
+      <arc head="P10" kind="OUTPUT" tail="T3"/>
+      <arc head="setPt_T11_plus_T3_0" kind="INPUT" tail="P7"/>
+      <arc head="setPf_T8_plus_T5_0" kind="INPUT" tail="P5"/>
+      <arc head="T3" kind="INPUT" tail="P9"/>
+      <arc head="P5" kind="OUTPUT" tail="T7"/>
+      <arc head="setPt_T11_plus_T3_0" kind="INPUT" tail="trueP"/>
+      <arc head="trueP" kind="OUTPUT" tail="setPt_T1_plus_T3_0"/>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="setPt_T11_plus_T0_0" kind="INPUT" tail="falseP"/>
+      <arc head="setPf_T4_plus_T1_0" kind="INPUT" tail="P10"/>
+      <arc head="P4" kind="OUTPUT" tail="T2"/>
+      <arc head="setPf_T4_plus_T5_0" kind="INPUT" mult-k="0.6442382812500002" tail="falseP">
+        <point x="11.0" y="1.5"/>
+      </arc>
+      <arc head="T9" kind="INPUT" tail="P6"/>
+      <arc head="P1" kind="OUTPUT" tail="setPf_T4_plus_T1_0">
+        <point x="12.0" y="6.0"/>
+      </arc>
+      <arc head="T10" kind="INPUT" tail="P3"/>
+      <arc head="falseP" kind="OUTPUT" tail="setPf_T8_plus_T1_0"/>
+      <arc head="setPt_T1_plus_T0_0" kind="INPUT" tail="falseP"/>
+      <arc head="falseP" kind="OUTPUT" tail="setPf_T8_plus_T5_0"/>
+      <arc head="setPf_T4_plus_T5_0" kind="INPUT" tail="P10"/>
+      <arc head="T5" kind="INPUT" tail="P1"/>
+      <arc head="T12" kind="INPUT" tail="P8"/>
+      <arc head="setPt_T1_plus_T3_0" kind="INPUT" tail="trueP"/>
+      <arc head="T2_0" kind="INPUT" tail="trueP"/>
+      <arc head="T2" kind="INPUT" tail="P3"/>
+      <arc head="setPt_T1_plus_T0_0" kind="INPUT" tail="P2"/>
+      <arc head="T7" kind="INPUT" tail="P4"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="1.62587890625" tail="setPf_T4_plus_T5_0">
+        <point x="10.5" y="1.5"/>
+      </arc>
+      <arc head="T4_0" kind="INPUT" tail="falseP"/>
+      <arc head="P7" kind="OUTPUT" tail="T9"/>
+      <arc head="P6" kind="OUTPUT" tail="setPf_T8_plus_T5_0"/>
+      <arc head="P2" kind="OUTPUT" tail="T0"/>
+      <arc head="P3" kind="OUTPUT" tail="setPt_T1_plus_T3_0"/>
+      <arc head="setPf_T8_plus_T5_0" kind="INPUT" tail="falseP"/>
+      <arc head="setPf_T8_plus_T1_0" kind="INPUT" tail="trueP"/>
+      <arc head="trueP" kind="OUTPUT" tail="T2_0"/>
+      <arc head="P6" kind="OUTPUT" tail="setPf_T8_plus_T1_0"/>
+      <arc head="setPf_T8_plus_T1_0" kind="INPUT" tail="P5"/>
+      <arc head="P3" kind="OUTPUT" tail="setPt_T1_plus_T0_0"/>
+      <arc head="falseP" kind="OUTPUT" tail="T4_0"/>
+      <arc head="Else_p4" kind="INPUT" tail="P4"/>
+      <arc head="P1" kind="OUTPUT" tail="T5"/>
+      <arc head="setPt_T11_plus_T0_0" kind="INPUT" tail="P7"/>
+      <arc head="trueP" kind="OUTPUT" tail="setPt_T1_plus_T0_0"/>
+      <arc head="P8" kind="OUTPUT" tail="T10"/>
+      <arc head="trueP" kind="OUTPUT" tail="setPt_T11_plus_T0_0"/>
+      <arc head="falseP" kind="OUTPUT" tail="setPf_T4_plus_T1_0"/>
+    </edges>
+  </gspn>
+  <algebra2 alignment="HORIZONTAL" name="Composition 1" policy="BINARY_PARALLEL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="25">
+    <bindings-list/>
+    <place-tags/>
+    <transition-tags>
+      <tag name="setQt"/>
+      <tag name="setQf"/>
+    </transition-tags>
+    <subnet netname="Q"/>
+    <subnet netname="CQ"/>
+  </algebra2>
+  <algebra2 alignment="VERTICAL" name="Composition 2" policy="BINARY_PARALLEL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <bindings-list/>
+    <place-tags/>
+    <transition-tags>
+      <tag name="setPt"/>
+      <tag name="setPf"/>
+    </transition-tags>
+    <subnet netname="P"/>
+    <subnet netname="CP"/>
+  </algebra2>
+  <gspn name="P_CP" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="P1" x="20.999999999999993" y="7.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="P2" x="19.0" y="27.0"/>
+      <place label-x="3.0" label-y="-1.0" name="P3" x="33.0" y="48.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P9" x="24.0" y="87.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P10" x="12.0" y="73.0"/>
+      <place name="P4" x="59.0" y="53.0"/>
+      <place label-x="-2.5" name="P5" x="79.0" y="74.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P6" x="86.0" y="63.0"/>
+      <place label-x="3.0" name="P7" x="59.0" y="69.0"/>
+      <place label-x="-3.0" label-y="-2.5" name="P8" x="23.0" y="72.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueP" x="43.0" y="122.0"/>
+      <place label-x="-0.5" label-y="-2.5" marking="1" name="falseP" x="108.0" y="99.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="7.853981633974483" type="EXP" x="21.549999999999994" y="11.000000000000004"/>
+      <transition height="4.0" label-x="0.5" name="InWhile" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.0" superpos-y="1.5" superposition-tags="isQt" text-size="VERY_LARGE" type="EXP" x="54.55" y="41.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T3" nservers-x="0.5" rotation="7.853981633974483" superpos-x="1.5" superpos-y="-2.0" superposition-tags="setT2" type="EXP" x="15.55" y="87.0"/>
+      <transition name="T5" nservers-x="0.5" rotation="7.853981633974483" type="EXP" x="16.55" y="11.0"/>
+      <transition height="4.0" label-x="-3.5" label-y="-2.0" name="Else_p4" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.5" superposition-tags="isT1" text-size="VERY_LARGE" type="EXP" x="52.55" y="50.0"/>
+      <transition height="4.0" label-x="-3.5" label-y="2.0" name="ifT2" nservers-x="0.5" rotation="9.42477796076938" superpos-y="-4.0" superposition-tags="isT2" text-size="VERY_LARGE" type="EXP" x="65.55" y="57.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="waitT1" nservers-x="0.5" rotation="9.42477796076938" superpos-x="0.5" superpos-y="-2.0" superposition-tags="isT1" text-size="VERY_LARGE" type="EXP" x="75.55" y="58.0"/>
+      <transition label-x="5.5" label-y="0.0" name="exitWhile" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="isQf" text-size="VERY_LARGE" type="EXP" x="21.55" y="60.0"/>
+      <transition label-x="-2.0" name="T12" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="24.55" y="78.0"/>
+      <transition name="T2" nservers-x="0.5" rotation="18.064157758141313" superposition-tags="isPt" type="EXP" x="26.55" y="122.0"/>
+      <transition label-x="1.0" name="T4_0" nservers-x="0.5" rotation="19.634954084936208" superposition-tags="isPf" type="EXP" x="110.55" y="108.0"/>
+      <transition height="6.0" label-x="-2.5" label-y="-2.5" name="setPt_toWhile_plus_T0_0" nservers-x="0.5" rotation="7.853981633974483" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="22.55" y="44.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="toWhileP" nservers-x="0.5" rotation="7.853981633974483" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="27.55" y="40.0"/>
+      <transition height="5.0" label-x="-2.0" label-y="2.5" name="exitIfP" nservers-x="0.5" rotation="9.42477796076938" superpos-x="2.5" superpos-y="-1.5" superposition-tags="setPt" text-size="VERY_LARGE" type="EXP" x="55.55" y="88.5"/>
+      <transition label-x="-2.0" label-y="2.5" name="setPt_T11_plus_T3_0" nservers-x="0.5" rotation="9.42477796076938" superpos-y="-1.5" superposition-tags="setPt" type="EXP" x="40.55" y="53.0"/>
+      <transition label-x="-1.5" name="setPf_T4_plus_T1" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="5.55" y="92.0"/>
+      <transition label-x="-1.5" name="setPf_T4_plus_T5_0" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="12.55" y="65.0"/>
+      <transition label-x="-1.5" label-y="1.0" name="inIfP" nservers-x="0.5" rotation="9.42477796076938" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setPf" text-size="VERY_LARGE" type="EXP" x="76.55" y="107.0"/>
+      <transition label-x="5.5" label-y="-4.0" name="setPf_T8_plus_T5_0" nservers-x="0.5" rotation="9.42477796076938" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setPf" text-size="VERY_LARGE" type="EXP" x="97.55" y="81.0"/>
+    </nodes>
+    <edges>
+      <arc head="P3" kind="OUTPUT" tail="toWhileP"/>
+      <arc head="T3" kind="INPUT" tail="P9"/>
+      <arc head="P9" kind="OUTPUT" tail="T12"/>
+      <arc head="P10" kind="OUTPUT" tail="T3"/>
+      <arc head="waitT1" kind="INPUT" tail="P6"/>
+      <arc head="exitIfP" kind="INPUT" tail="P7"/>
+      <arc head="P1" kind="OUTPUT" tail="T5"/>
+      <arc head="trueP" kind="OUTPUT" tail="setPt_T11_plus_T3_0"/>
+      <arc head="setPt_toWhile_plus_T0_0" kind="INPUT" tail="falseP"/>
+      <arc head="setPt_T11_plus_T3_0" kind="INPUT" tail="trueP"/>
+      <arc head="T5" kind="INPUT" tail="P1"/>
+      <arc head="P6" kind="OUTPUT" tail="setPf_T8_plus_T5_0"/>
+      <arc head="P1" kind="OUTPUT" tail="setPf_T4_plus_T5_0">
+        <point x="14.0" y="8.0"/>
+      </arc>
+      <arc head="T2" kind="INPUT" tail="trueP"/>
+      <arc head="P5" kind="OUTPUT" tail="ifT2"/>
+      <arc head="P6" kind="OUTPUT" tail="inIfP"/>
+      <arc head="inIfP" kind="INPUT" tail="P5"/>
+      <arc head="T4_0" kind="INPUT" tail="falseP"/>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="falseP" kind="OUTPUT" tail="inIfP"/>
+      <arc head="toWhileP" kind="INPUT" tail="P2"/>
+      <arc head="setPf_T8_plus_T5_0" kind="INPUT" tail="P5"/>
+      <arc head="falseP" kind="OUTPUT" tail="setPf_T4_plus_T1"/>
+      <arc head="P3" kind="OUTPUT" tail="setPt_toWhile_plus_T0_0"/>
+      <arc head="InWhile" kind="INPUT" tail="P3"/>
+      <arc head="setPf_T4_plus_T5_0" kind="INPUT" tail="P10"/>
+      <arc head="P3" kind="OUTPUT" tail="Else_p4"/>
+      <arc head="P3" kind="OUTPUT" tail="exitIfP"/>
+      <arc head="trueP" kind="OUTPUT" tail="toWhileP"/>
+      <arc head="setPf_T4_plus_T5_0" kind="INPUT" tail="falseP"/>
+      <arc head="toWhileP" kind="INPUT" tail="trueP"/>
+      <arc head="setPf_T4_plus_T1" kind="INPUT" tail="P10"/>
+      <arc head="falseP" kind="OUTPUT" tail="setPf_T8_plus_T5_0"/>
+      <arc head="Else_p4" kind="INPUT" tail="P4"/>
+      <arc head="P3" kind="OUTPUT" tail="setPt_T11_plus_T3_0"/>
+      <arc head="setPf_T8_plus_T5_0" kind="INPUT" tail="falseP"/>
+      <arc head="exitWhile" kind="INPUT" tail="P3"/>
+      <arc head="P2" kind="OUTPUT" tail="T0"/>
+      <arc head="inIfP" kind="INPUT" tail="trueP"/>
+      <arc head="P7" kind="OUTPUT" tail="waitT1"/>
+      <arc head="exitIfP" kind="INPUT" tail="falseP"/>
+      <arc head="trueP" kind="OUTPUT" tail="T2"/>
+      <arc head="P1" kind="OUTPUT" tail="setPf_T4_plus_T1">
+        <point x="14.0" y="8.0"/>
+      </arc>
+      <arc head="trueP" kind="OUTPUT" tail="exitIfP"/>
+      <arc head="setPt_T11_plus_T3_0" kind="INPUT" tail="P7"/>
+      <arc head="P4" kind="OUTPUT" tail="InWhile"/>
+      <arc head="setPf_T4_plus_T1" kind="INPUT" tail="trueP"/>
+      <arc head="trueP" kind="OUTPUT" tail="setPt_toWhile_plus_T0_0"/>
+      <arc head="T12" kind="INPUT" tail="P8"/>
+      <arc head="falseP" kind="OUTPUT" tail="T4_0"/>
+      <arc head="ifT2" kind="INPUT" tail="P4"/>
+      <arc head="setPt_toWhile_plus_T0_0" kind="INPUT" tail="P2"/>
+      <arc head="P8" kind="OUTPUT" tail="exitWhile"/>
+      <arc head="falseP" kind="OUTPUT" tail="setPf_T4_plus_T5_0"/>
+    </edges>
+  </gspn>
+  <algebra2 alignment="HORIZONTAL" name="Composition 3" policy="BINARY_PARALLEL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="50">
+    <bindings-list/>
+    <place-tags/>
+    <transition-tags>
+      <tag name="isPf"/>
+      <tag name="isQt"/>
+      <tag name="isQf"/>
+      <tag name="isPt"/>
+    </transition-tags>
+    <subnet netname="P_CP"/>
+    <subnet netname="Q_CQ"/>
+  </algebra2>
+  <gspn name="Q_CQ" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
+    <nodes>
+      <place label-x="3.0" label-y="-3.0" marking="1" name="Q1" x="80.0" y="15.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="Q2" x="81.0" y="30.0"/>
+      <place label-x="2.5" label-y="-1.5" name="Q3" x="83.0" y="48.0"/>
+      <place label-x="-2.5" label-y="0.5" name="Q9" x="63.0" y="23.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q10" x="51.0" y="17.0"/>
+      <place label-x="3.5" label-y="0.0" name="Q4" x="64.0" y="105.0"/>
+      <place label-x="-2.5" name="Q5" x="42.0" y="131.0"/>
+      <place label-x="-2.5" label-y="0.5" name="Q6" x="47.0" y="91.0"/>
+      <place label-x="2.0" label-y="0.5" name="Q7" x="46.0" y="73.0"/>
+      <place label-x="-3.0" label-y="-2.5" name="Q8" x="51.0" y="34.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueQ" x="27.0" y="62.0"/>
+      <place label-y="-2.5" marking="1" name="falseQ" x="30.0" y="41.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="15.707963267948966" text-size="VERY_LARGE" type="EXP" x="83.55" y="23.0"/>
+      <transition label-x="4.5" label-y="-2.0" name="DentroWhile" nservers-x="0.5" rotation="14.137166941154069" superpos-x="-3.0" superpos-y="-0.5" superposition-tags="isPt" text-size="VERY_LARGE" type="EXP" x="64.55" y="83.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T3" nservers-x="0.5" rotation="-0.0" superpos-x="3.0" superpos-y="2.5" superposition-tags="setT1" type="EXP" x="50.55" y="22.0"/>
+      <transition label-x="3.5" label-y="-0.5000000000000071" name="T5" nservers-x="0.5" rotation="14.137166941154069" type="EXP" x="89.55" y="16.0"/>
+      <transition label-x="3.5" label-y="0.0" name="Else_Q4" nservers-x="0.5" rotation="14.137166941154069" superpos-x="1.0" superpos-y="-1.5" superposition-tags="isT2" text-size="LARGE" type="EXP" x="81.55" y="87.0"/>
+      <transition label-x="-1.5" name="IfQ" nservers-x="0.5" rotation="14.137166941154069" superpos-x="2.5" superpos-y="1.0" superposition-tags="isT1" text-size="HEADER2" type="EXP" x="42.55" y="140.0"/>
+      <transition height="6.0" label-x="-2.0" label-y="-1.0" name="W2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superpos-y="-2.0" superposition-tags="isT2" text-size="VERY_LARGE" type="EXP" x="48.55" y="80.0"/>
+      <transition height="3.0" label-x="3.5" label-y="-2.0" name="elseWhile" nservers-x="0.5" rotation="18.84955592153876" superpos-x="-1.5" superposition-tags="isPf" type="EXP" x="50.55" y="43.5"/>
+      <transition label-x="-2.0" name="T12" nservers-x="0.5" rotation="12.566370614359172" type="EXP" x="62.55" y="34.0"/>
+      <transition name="T2" nservers-x="0.5" rotation="7.330382858376184" superposition-tags="isQt" type="EXP" x="13.55" y="66.0"/>
+      <transition label-x="1.0" name="T4_0" nservers-x="0.5" rotation="7.330382858376184" superposition-tags="isQf" type="EXP" x="22.55" y="48.0"/>
+      <transition height="5.0" label-x="2.0" label-y="-0.5" name="setQt_WqI_plus_T1" nservers-x="0.5" rotation="15.707963267948966" superpos-x="-2.5" superpos-y="-0.5" superposition-tags="setQt" type="EXP" x="89.44837848221678" y="30.00387295058235"/>
+      <transition height="5.0" label-x="2.0" label-y="-0.5" name="setQt_WqI_plus_T3_0" nservers-x="0.5" rotation="15.707963267948966" superpos-x="-2.5" superpos-y="-0.5" superposition-tags="setQt" type="EXP" x="61.55" y="68.5"/>
+      <transition height="6.0" label-x="2.5" label-y="-1.0" name="setQt_T11_plus_T1" nservers-x="0.5" rotation="1.8325957145940466" superpos-x="3.5" superpos-y="2.5" superposition-tags="setQt" text-size="VERY_LARGE" type="EXP" x="46.55" y="58.0"/>
+      <transition height="6.0" label-x="2.5" label-y="-1.0" name="setQt_T11_plus_T3_0" nservers-x="0.5" rotation="1.8325957145940466" superpos-x="3.5" superpos-y="2.5" superposition-tags="setQt" text-size="VERY_LARGE" type="EXP" x="57.55" y="50.0"/>
+      <transition label-x="-1.5" name="setQf_T4_plus_T0_0" nservers-x="0.5" rotation="18.84955592153876" superpos-x="-1.5" superposition-tags="setQf" type="EXP" x="61.55" y="17.0"/>
+      <transition label-x="-1.5" name="setQf_T4_plus_T5_0" nservers-x="0.5" rotation="18.84955592153876" superpos-x="-1.5" superposition-tags="setQf" type="EXP" x="41.55" y="24.0"/>
+      <transition height="4.0" label-x="-2.0" label-y="0.0" name="setQf_T8_plus_T0_0" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setQf" type="EXP" x="38.55" y="101.0"/>
+      <transition height="4.0" label-x="-2.0" label-y="0.0" name="setQf_T8_plus_T5_0" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setQf" type="EXP" x="20.55" y="84.0"/>
+    </nodes>
+    <edges>
+      <arc head="Q8" kind="OUTPUT" tail="elseWhile"/>
+      <arc head="Q3" kind="OUTPUT" tail="setQt_WqI_plus_T1"/>
+      <arc head="Q9" kind="OUTPUT" tail="T12"/>
+      <arc head="setQt_WqI_plus_T3_0" kind="INPUT" tail="trueQ"/>
+      <arc head="T3" kind="INPUT" tail="Q9"/>
+      <arc head="setQt_T11_plus_T1" kind="INPUT" tail="falseQ"/>
+      <arc head="setQf_T4_plus_T0_0" kind="INPUT" tail="Q10"/>
+      <arc head="Q10" kind="OUTPUT" tail="T3"/>
+      <arc head="setQf_T8_plus_T5_0" kind="INPUT" tail="falseQ"/>
+      <arc head="Q1" kind="OUTPUT" mult-k="1.10302734375" tail="setQf_T4_plus_T5_0">
+        <point x="54.5" y="11.5"/>
+      </arc>
+      <arc head="trueQ" kind="OUTPUT" tail="setQt_T11_plus_T1"/>
+      <arc head="Q6" kind="OUTPUT" tail="setQf_T8_plus_T5_0"/>
+      <arc head="T2" kind="INPUT" tail="trueQ"/>
+      <arc head="Q3" kind="OUTPUT" tail="setQt_WqI_plus_T3_0"/>
+      <arc head="Q3" kind="OUTPUT" tail="Else_Q4"/>
+      <arc head="elseWhile" kind="INPUT" tail="Q3"/>
+      <arc head="setQt_T11_plus_T3_0" kind="INPUT" tail="Q7"/>
+      <arc head="setQt_T11_plus_T1" kind="INPUT" tail="Q7"/>
+      <arc head="falseQ" kind="OUTPUT" tail="setQf_T8_plus_T0_0"/>
+      <arc head="setQt_WqI_plus_T3_0" kind="INPUT" tail="Q2"/>
+      <arc head="Q7" kind="OUTPUT" tail="W2"/>
+      <arc head="setQf_T4_plus_T5_0" kind="INPUT" tail="Q10"/>
+      <arc head="T0" kind="INPUT" tail="Q1"/>
+      <arc head="Q2" kind="OUTPUT" tail="T0"/>
+      <arc head="T5" kind="INPUT" tail="Q1"/>
+      <arc head="trueQ" kind="OUTPUT" tail="setQt_WqI_plus_T1"/>
+      <arc head="Q1" kind="OUTPUT" tail="T5"/>
+      <arc head="W2" kind="INPUT" tail="Q6"/>
+      <arc head="falseQ" kind="OUTPUT" tail="setQf_T8_plus_T5_0"/>
+      <arc head="setQf_T8_plus_T0_0" kind="INPUT" tail="Q5"/>
+      <arc head="setQf_T4_plus_T0_0" kind="INPUT" tail="trueQ"/>
+      <arc head="setQf_T8_plus_T0_0" kind="INPUT" tail="trueQ"/>
+      <arc head="Q3" kind="OUTPUT" tail="setQt_T11_plus_T1"/>
+      <arc head="setQt_WqI_plus_T1" kind="INPUT" tail="falseQ"/>
+      <arc head="trueQ" kind="OUTPUT" tail="setQt_WqI_plus_T3_0"/>
+      <arc head="Else_Q4" kind="INPUT" tail="Q4"/>
+      <arc head="trueQ" kind="OUTPUT" tail="T2"/>
+      <arc head="Q5" kind="OUTPUT" tail="IfQ"/>
+      <arc head="Q3" kind="OUTPUT" tail="setQt_T11_plus_T3_0"/>
+      <arc head="falseQ" kind="OUTPUT" tail="setQf_T4_plus_T0_0"/>
+      <arc head="setQf_T8_plus_T5_0" kind="INPUT" tail="Q5"/>
+      <arc head="DentroWhile" kind="INPUT" tail="Q3"/>
+      <arc head="Q1" kind="OUTPUT" tail="setQf_T4_plus_T0_0"/>
+      <arc head="setQt_T11_plus_T3_0" kind="INPUT" tail="trueQ"/>
+      <arc head="Q4" kind="OUTPUT" tail="DentroWhile"/>
+      <arc head="setQf_T4_plus_T5_0" kind="INPUT" tail="falseQ"/>
+      <arc head="setQt_WqI_plus_T1" kind="INPUT" tail="Q2"/>
+      <arc head="T12" kind="INPUT" tail="Q8"/>
+      <arc head="IfQ" kind="INPUT" tail="Q4"/>
+      <arc head="trueQ" kind="OUTPUT" tail="setQt_T11_plus_T3_0"/>
+      <arc head="Q6" kind="OUTPUT" tail="setQf_T8_plus_T0_0"/>
+      <arc head="T4_0" kind="INPUT" tail="falseQ"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T4_0"/>
+      <arc head="falseQ" kind="OUTPUT" tail="setQf_T4_plus_T5_0"/>
+    </edges>
+  </gspn>
+  <gspn name="P_CP_Q_CQ" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="P1" x="20.999999999999993" y="7.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="P2" x="19.0" y="27.0"/>
+      <place label-x="3.0" label-y="-1.0" name="P3" x="33.0" y="48.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P9" x="24.0" y="87.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P10" x="12.0" y="73.0"/>
+      <place name="P4" x="59.0" y="53.0"/>
+      <place label-x="-2.5" name="P5" x="79.0" y="74.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P6" x="86.0" y="63.0"/>
+      <place label-x="3.0" name="P7" x="59.0" y="69.0"/>
+      <place label-x="-3.0" label-y="-2.5" name="P8" x="23.0" y="72.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueP" x="43.0" y="122.0"/>
+      <place label-x="-0.5" label-y="-2.5" marking="1" name="falseP" x="108.0" y="99.0"/>
+      <place label-x="3.0" label-y="-3.0" marking="1" name="Q1" x="201.0" y="15.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="Q2" x="207.0" y="25.0"/>
+      <place label-x="2.5" label-y="-1.5" name="Q3" x="201.0" y="48.0"/>
+      <place label-x="-2.5" label-y="0.5" name="Q9" x="180.0" y="31.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q10" x="169.0" y="17.0"/>
+      <place label-x="3.5" label-y="0.0" name="Q4" x="182.0" y="105.0"/>
+      <place label-x="-2.5" name="Q5" x="160.0" y="131.0"/>
+      <place label-x="-2.5" label-y="0.5" name="Q6" x="165.0" y="91.0"/>
+      <place label-x="2.0" label-y="0.5" name="Q7" x="164.0" y="73.0"/>
+      <place label-x="-3.0" label-y="-2.5" name="Q8" x="166.0" y="43.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueQ" x="145.0" y="62.0"/>
+      <place label-y="-2.5" marking="1" name="falseQ" x="148.0" y="41.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="7.853981633974483" type="EXP" x="21.549999999999994" y="11.000000000000004"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T3" nservers-x="0.5" rotation="7.853981633974483" superpos-x="1.5" superpos-y="-2.0" superposition-tags="setT2" type="EXP" x="15.55" y="87.0"/>
+      <transition name="T5" nservers-x="0.5" rotation="7.853981633974483" type="EXP" x="16.55" y="11.0"/>
+      <transition height="4.0" label-x="-3.5" label-y="-2.0" name="Else_p4" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.5" superposition-tags="isT1" text-size="VERY_LARGE" type="EXP" x="52.55" y="50.0"/>
+      <transition height="4.0" label-x="-3.5" label-y="2.0" name="ifT2" nservers-x="0.5" rotation="9.42477796076938" superpos-y="-4.0" superposition-tags="isT2" text-size="VERY_LARGE" type="EXP" x="65.55" y="57.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="waitT1" nservers-x="0.5" rotation="9.42477796076938" superpos-x="0.5" superpos-y="-2.0" superposition-tags="isT1" text-size="VERY_LARGE" type="EXP" x="75.55" y="58.0"/>
+      <transition label-x="-2.0" name="T12" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="24.55" y="78.0"/>
+      <transition height="6.0" label-x="-2.5" label-y="-2.5" name="setPt_toWhile_plus_T0_0" nservers-x="0.5" rotation="7.853981633974483" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="25.55" y="50.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="toWhileP" nservers-x="0.5" rotation="7.853981633974483" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="27.55" y="40.0"/>
+      <transition height="5.0" label-x="-2.0" label-y="2.5" name="exitIfP" nservers-x="0.5" rotation="9.42477796076938" superpos-x="2.5" superpos-y="-1.5" superposition-tags="setPt" text-size="VERY_LARGE" type="EXP" x="55.55" y="88.5"/>
+      <transition label-x="-2.0" label-y="2.5" name="setPt_T11_plus_T3_0" nservers-x="0.5" rotation="9.42477796076938" superpos-y="-1.5" superposition-tags="setPt" type="EXP" x="40.55" y="53.0"/>
+      <transition label-x="-1.5" name="setPf_T4_plus_T1" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="5.55" y="92.0"/>
+      <transition label-x="-1.5" name="setPf_T4_plus_T5_0" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="12.55" y="65.0"/>
+      <transition label-x="-1.5" label-y="1.0" name="inIfP" nservers-x="0.5" rotation="9.42477796076938" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setPf" text-size="VERY_LARGE" type="EXP" x="76.55" y="107.0"/>
+      <transition label-x="5.5" label-y="-4.0" name="setPf_T8_plus_T5_0" nservers-x="0.5" rotation="9.42477796076938" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setPf" text-size="VERY_LARGE" type="EXP" x="97.55" y="81.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0_0" nservers-x="0.5" rotation="15.707963267948966" text-size="VERY_LARGE" type="EXP" x="205.55" y="21.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T3_0" nservers-x="0.5" rotation="-0.0" superpos-x="3.0" superpos-y="2.5" superposition-tags="setT1" text-size="HEADER1" type="EXP" x="147.55" y="33.0"/>
+      <transition label-x="3.5" label-y="-0.5000000000000071" name="T5_0" nservers-x="0.5" rotation="14.137166941154069" type="EXP" x="207.55" y="16.0"/>
+      <transition label-x="3.5" label-y="0.0" name="Else_Q4" nservers-x="0.5" rotation="14.137166941154069" superpos-x="1.0" superpos-y="-1.5" superposition-tags="isT2" text-size="LARGE" type="EXP" x="199.55" y="87.0"/>
+      <transition label-x="-1.5" name="IfQ" nservers-x="0.5" rotation="14.137166941154069" superpos-x="2.5" superpos-y="1.0" superposition-tags="isT1" text-size="HEADER2" type="EXP" x="160.55" y="140.0"/>
+      <transition height="6.0" label-x="-2.0" label-y="-1.0" name="W2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superpos-y="-2.0" superposition-tags="isT2" text-size="VERY_LARGE" type="EXP" x="166.55" y="80.0"/>
+      <transition label-x="-2.0" name="T12_0" nservers-x="0.5" rotation="12.566370614359172" type="EXP" x="179.55" y="42.0"/>
+      <transition height="5.0" label-x="2.0" label-y="-0.5" name="setQt_WqI_plus_T1" nservers-x="0.5" rotation="15.707963267948966" superpos-x="-2.5" superpos-y="-0.5" superposition-tags="setQt" type="EXP" x="207.44837848221678" y="30.00387295058235"/>
+      <transition height="5.0" label-x="2.0" label-y="-0.5" name="setQt_WqI_plus_T3_0" nservers-x="0.5" rotation="15.707963267948966" superpos-x="-2.5" superpos-y="-0.5" superposition-tags="setQt" type="EXP" x="179.55" y="68.5"/>
+      <transition height="6.0" label-x="2.5" label-y="-1.0" name="setQt_T11_plus_T1" nservers-x="0.5" rotation="1.8325957145940466" superpos-x="3.5" superpos-y="2.5" superposition-tags="setQt" text-size="VERY_LARGE" type="EXP" x="164.55" y="58.0"/>
+      <transition height="6.0" label-x="2.5" label-y="-1.0" name="setQt_T11_plus_T3_0" nservers-x="0.5" rotation="1.8325957145940466" superpos-x="3.5" superpos-y="2.5" superposition-tags="setQt" text-size="VERY_LARGE" type="EXP" x="172.55" y="50.0"/>
+      <transition label-x="-1.5" name="setQf_T4_plus_T0_0" nservers-x="0.5" rotation="18.84955592153876" superpos-x="-1.5" superposition-tags="setQf" type="EXP" x="179.55" y="17.0"/>
+      <transition label-x="-1.5" name="setQf_T4_plus_T5_0" nservers-x="0.5" rotation="18.84955592153876" superpos-x="-1.5" superposition-tags="setQf" type="EXP" x="160.55" y="15.0"/>
+      <transition height="4.0" label-x="-2.0" label-y="0.0" name="setQf_T8_plus_T0_0" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setQf" type="EXP" x="156.55" y="101.0"/>
+      <transition height="4.0" label-x="-2.0" label-y="0.0" name="setQf_T8_plus_T5_0" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setQf" type="EXP" x="138.55" y="84.0"/>
+      <transition label-x="1.0" name="isPf_T4_0_plus_elseWhile" nservers-x="0.5" rotation="19.634954084936208" superposition-tags="isPf" type="EXP" x="139.55" y="75.75"/>
+      <transition height="4.0" label-x="0.5" name="isQt_InWhile_plus_T2_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-3.0" superpos-y="1.5" superposition-tags="isQt" text-size="VERY_LARGE" type="EXP" x="102.55" y="57.0"/>
+      <transition label-x="5.5" label-y="0.0" name="exitWhileP" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="isQf" text-size="VERY_LARGE" type="EXP" x="97.55" y="48.0"/>
+      <transition name="isPt_T2_plus_DentroWhile" nservers-x="0.5" rotation="18.064157758141313" superposition-tags="isPt" type="EXP" x="104.55000000000001" y="102.5"/>
+    </nodes>
+    <edges>
+      <arc head="exitWhileP" kind="INPUT" tail="falseQ"/>
+      <arc head="Q10" kind="OUTPUT" tail="T3_0"/>
+      <arc head="isQt_InWhile_plus_T2_0" kind="INPUT" tail="P3"/>
+      <arc head="isPt_T2_plus_DentroWhile" kind="INPUT" tail="Q3"/>
+      <arc head="trueP" kind="OUTPUT" tail="toWhileP"/>
+      <arc head="Q3" kind="OUTPUT" tail="setQt_T11_plus_T1"/>
+      <arc head="setQt_T11_plus_T1" kind="INPUT" tail="Q7"/>
+      <arc head="W2" kind="INPUT" tail="Q6"/>
+      <arc head="setQt_WqI_plus_T3_0" kind="INPUT" tail="trueQ"/>
+      <arc head="P3" kind="OUTPUT" tail="exitIfP"/>
+      <arc head="falseP" kind="OUTPUT" tail="setPf_T4_plus_T5_0"/>
+      <arc head="T12_0" kind="INPUT" tail="Q8"/>
+      <arc head="trueP" kind="OUTPUT" tail="setPt_toWhile_plus_T0_0"/>
+      <arc head="setQf_T8_plus_T0_0" kind="INPUT" tail="trueQ"/>
+      <arc head="exitWhileP" kind="INPUT" tail="P3"/>
+      <arc head="P9" kind="OUTPUT" tail="T12"/>
+      <arc head="Q6" kind="OUTPUT" tail="setQf_T8_plus_T5_0"/>
+      <arc head="isPt_T2_plus_DentroWhile" kind="INPUT" tail="trueP"/>
+      <arc head="T12" kind="INPUT" tail="P8"/>
+      <arc head="setPf_T4_plus_T1" kind="INPUT" tail="P10"/>
+      <arc head="Q3" kind="OUTPUT" tail="setQt_T11_plus_T3_0"/>
+      <arc head="P2" kind="OUTPUT" tail="T0"/>
+      <arc head="P3" kind="OUTPUT" tail="Else_p4"/>
+      <arc head="setQf_T4_plus_T0_0" kind="INPUT" tail="trueQ"/>
+      <arc head="trueP" kind="OUTPUT" tail="isPt_T2_plus_DentroWhile"/>
+      <arc head="T0_0" kind="INPUT" tail="Q1"/>
+      <arc head="trueQ" kind="OUTPUT" tail="setQt_T11_plus_T3_0"/>
+      <arc head="falseQ" kind="OUTPUT" tail="exitWhileP"/>
+      <arc head="Q8" kind="OUTPUT" tail="isPf_T4_0_plus_elseWhile"/>
+      <arc head="trueQ" kind="OUTPUT" tail="setQt_WqI_plus_T3_0"/>
+      <arc head="setQt_T11_plus_T3_0" kind="INPUT" tail="Q7"/>
+      <arc head="Q3" kind="OUTPUT" tail="setQt_WqI_plus_T3_0"/>
+      <arc head="trueQ" kind="OUTPUT" tail="setQt_WqI_plus_T1"/>
+      <arc head="setPt_T11_plus_T3_0" kind="INPUT" tail="P7"/>
+      <arc head="setQt_WqI_plus_T1" kind="INPUT" tail="falseQ"/>
+      <arc head="trueP" kind="OUTPUT" tail="setPt_T11_plus_T3_0"/>
+      <arc head="isPf_T4_0_plus_elseWhile" kind="INPUT" tail="Q3"/>
+      <arc head="falseP" kind="OUTPUT" tail="inIfP"/>
+      <arc head="falseP" kind="OUTPUT" tail="setPf_T4_plus_T1"/>
+      <arc head="setPf_T4_plus_T5_0" kind="INPUT" tail="falseP"/>
+      <arc head="P7" kind="OUTPUT" tail="waitT1"/>
+      <arc head="Q3" kind="OUTPUT" tail="Else_Q4"/>
+      <arc head="falseQ" kind="OUTPUT" tail="setQf_T8_plus_T0_0"/>
+      <arc head="waitT1" kind="INPUT" tail="P6"/>
+      <arc head="IfQ" kind="INPUT" tail="Q4"/>
+      <arc head="exitIfP" kind="INPUT" tail="falseP"/>
+      <arc head="Q6" kind="OUTPUT" tail="setQf_T8_plus_T0_0"/>
+      <arc head="P1" kind="OUTPUT" tail="setPf_T4_plus_T5_0">
+        <point x="14.0" y="8.0"/>
+      </arc>
+      <arc head="setPf_T8_plus_T5_0" kind="INPUT" tail="P5"/>
+      <arc head="trueQ" kind="OUTPUT" tail="isQt_InWhile_plus_T2_0"/>
+      <arc head="P10" kind="OUTPUT" tail="T3"/>
+      <arc head="Q3" kind="OUTPUT" tail="setQt_WqI_plus_T1"/>
+      <arc head="setQf_T8_plus_T0_0" kind="INPUT" tail="Q5"/>
+      <arc head="Q1" kind="OUTPUT" tail="T5_0"/>
+      <arc head="Q1" kind="OUTPUT" tail="setQf_T4_plus_T5_0">
+        <point x="172.5" y="11.5"/>
+      </arc>
+      <arc head="Q4" kind="OUTPUT" tail="isPt_T2_plus_DentroWhile"/>
+      <arc head="falseP" kind="OUTPUT" tail="setPf_T8_plus_T5_0"/>
+      <arc head="inIfP" kind="INPUT" tail="P5"/>
+      <arc head="P5" kind="OUTPUT" tail="ifT2"/>
+      <arc head="T3" kind="INPUT" tail="P9"/>
+      <arc head="setQt_T11_plus_T3_0" kind="INPUT" tail="trueQ"/>
+      <arc head="falseQ" kind="OUTPUT" tail="setQf_T4_plus_T5_0"/>
+      <arc head="setPf_T4_plus_T1" kind="INPUT" tail="trueP"/>
+      <arc head="setPt_toWhile_plus_T0_0" kind="INPUT" tail="falseP"/>
+      <arc head="Else_Q4" kind="INPUT" tail="Q4"/>
+      <arc head="setQt_T11_plus_T1" kind="INPUT" tail="falseQ"/>
+      <arc head="setPt_toWhile_plus_T0_0" kind="INPUT" tail="P2"/>
+      <arc head="falseQ" kind="OUTPUT" tail="setQf_T4_plus_T0_0"/>
+      <arc head="exitIfP" kind="INPUT" tail="P7"/>
+      <arc head="Q7" kind="OUTPUT" tail="W2"/>
+      <arc head="trueQ" kind="OUTPUT" tail="setQt_T11_plus_T1"/>
+      <arc head="falseP" kind="OUTPUT" tail="isPf_T4_0_plus_elseWhile"/>
+      <arc head="T5" kind="INPUT" tail="P1"/>
+      <arc head="setQt_WqI_plus_T3_0" kind="INPUT" tail="Q2"/>
+      <arc head="setQf_T8_plus_T5_0" kind="INPUT" tail="Q5"/>
+      <arc head="setQf_T8_plus_T5_0" kind="INPUT" tail="falseQ"/>
+      <arc head="toWhileP" kind="INPUT" tail="P2"/>
+      <arc head="Q1" kind="OUTPUT" tail="setQf_T4_plus_T0_0"/>
+      <arc head="Q2" kind="OUTPUT" tail="T0_0"/>
+      <arc head="setPt_T11_plus_T3_0" kind="INPUT" tail="trueP"/>
+      <arc head="falseQ" kind="OUTPUT" tail="setQf_T8_plus_T5_0"/>
+      <arc head="setQt_WqI_plus_T1" kind="INPUT" tail="Q2"/>
+      <arc head="setQf_T4_plus_T0_0" kind="INPUT" tail="Q10"/>
+      <arc head="T3_0" kind="INPUT" tail="Q9"/>
+      <arc head="setPf_T4_plus_T5_0" kind="INPUT" tail="P10"/>
+      <arc head="trueP" kind="OUTPUT" tail="exitIfP"/>
+      <arc head="P3" kind="OUTPUT" tail="setPt_toWhile_plus_T0_0"/>
+      <arc head="P8" kind="OUTPUT" tail="exitWhileP"/>
+      <arc head="setQf_T4_plus_T5_0" kind="INPUT" tail="falseQ"/>
+      <arc head="ifT2" kind="INPUT" tail="P4"/>
+      <arc head="Q5" kind="OUTPUT" tail="IfQ"/>
+      <arc head="P1" kind="OUTPUT" tail="setPf_T4_plus_T1">
+        <point x="14.0" y="8.0"/>
+      </arc>
+      <arc head="isPf_T4_0_plus_elseWhile" kind="INPUT" tail="falseP"/>
+      <arc head="toWhileP" kind="INPUT" tail="trueP"/>
+      <arc head="inIfP" kind="INPUT" tail="trueP"/>
+      <arc head="P3" kind="OUTPUT" tail="setPt_T11_plus_T3_0"/>
+      <arc head="Q9" kind="OUTPUT" tail="T12_0"/>
+      <arc head="Else_p4" kind="INPUT" tail="P4"/>
+      <arc head="setQf_T4_plus_T5_0" kind="INPUT" tail="Q10"/>
+      <arc head="P1" kind="OUTPUT" tail="T5"/>
+      <arc head="P6" kind="OUTPUT" tail="setPf_T8_plus_T5_0"/>
+      <arc head="setPf_T8_plus_T5_0" kind="INPUT" tail="falseP"/>
+      <arc head="P3" kind="OUTPUT" tail="toWhileP"/>
+      <arc head="T5_0" kind="INPUT" tail="Q1"/>
+      <arc head="P6" kind="OUTPUT" tail="inIfP"/>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="isQt_InWhile_plus_T2_0" kind="INPUT" tail="trueQ"/>
+      <arc head="P4" kind="OUTPUT" tail="isQt_InWhile_plus_T2_0"/>
+    </edges>
+  </gspn>
+  <algebra2 alignment="HORIZONTAL" name="Composition 4" policy="BINARY_PARALLEL" restriction="true" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <bindings-list/>
+    <place-tags/>
+    <transition-tags>
+      <tag name="setT2"/>
+      <tag name="isT1"/>
+      <tag name="isT2"/>
+      <tag name="setT1"/>
+    </transition-tags>
+    <subnet netname="P_CP_Q_CQ"/>
+    <subnet netname="Turn"/>
+  </algebra2>
+  <measures gspn-name="Sistema" log-uuid="d4d5c29c-5a04-4926-83db-68129e0ec1cf" name="CTL model checking of Sistema" rapid-type="CTL_MODEL_CHECKING" simplified-UI="true">
+    <assignments/>
+    <rgmedd2/>
+    <formulas>
+      <formula language="STAT"/>
+      <formula comment="Mutex" comment-shown="true" expr="G((#P8==0 &amp;&amp; #Q8==1)||(#P8==1 &amp;&amp; #Q8==0)||(#P8==0 &amp;&amp; #Q8==0))" language="LTL"/>
+      <formula comment="Mutex" comment-shown="true" expr="AG((#P8==0 &amp;&amp; #Q8==1)||(#P8==1 &amp;&amp; #Q8==0)||(#P8==0 &amp;&amp; #Q8==0))" language="CTL"/>
+      <formula comment="deadlock" comment-shown="true" expr=" G((#P3==1|| #Q3==1)  -&gt;  F(#P8==1|| #Q8==1)) " language="LTL"/>
+      <formula comment="deadlock" comment-shown="true" expr="AG((#P3==1|| #Q3==1)  -&gt; EF (#P8==1|| #Q8==1)) " language="CTL"/>
+      <formula comment="starvation" comment-shown="true" expr="G((#P3 ==1 -&gt;F(#P8 ==1)) &amp;&amp; (#Q3 ==1 -&gt;F(#Q8==1)))" language="LTL"/>
+      <formula comment="starvation" comment-shown="true" expr="AG((#P3 ==1 -&gt;AF(#P8 ==1) )&amp;&amp; (#Q3 ==1 -&gt;AF(#Q8==1)))" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="false 0/134">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula expr="AG(#P2 ==1)-&gt;AF(#P9&gt;0) &amp;&amp; AG(#Q2 ==1)-&gt;AF(#Q9&gt;0)" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 134/134">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula expr="AG(#P3==1|| #Q3==1)  -&gt; AF (#P8==1|| #Q8==1) " language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 134/134">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+    </formulas>
+  </measures>
+  <gspn name="Sistema" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="P1" x="20.999999999999993" y="7.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="P2" x="19.0" y="27.0"/>
+      <place label-x="5.5" label-y="-1.0" name="P3" text-size="HEADER2" x="33.0" y="48.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P9" x="26.0" y="95.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P10" x="11.0" y="79.0"/>
+      <place label-x="-2.5" label-y="0.0" name="P4" x="75.0" y="52.0"/>
+      <place label-x="-2.5" name="P5" x="84.0" y="69.0"/>
+      <place label-x="2.0" label-y="-0.5" name="P6" x="76.0" y="78.0"/>
+      <place label-x="3.0" name="P7" x="62.0" y="75.0"/>
+      <place label-x="-3.0" label-y="-2.5" name="P8" x="26.0" y="82.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueP" x="44.0" y="120.0"/>
+      <place label-x="4.5" marking="1" name="falseP" text-size="VERY_LARGE" x="93.0" y="100.0"/>
+      <place label-x="3.0" label-y="-3.0" marking="1" name="Q1" text-size="HEADER1" x="202.0" y="14.0"/>
+      <place label-x="-0.5" label-y="-3.5" name="Q2" text-size="HEADER1" x="220.0" y="32.0"/>
+      <place label-x="2.5" label-y="-1.5" name="Q3" text-size="HEADER1" x="198.0" y="48.0"/>
+      <place label-x="-2.5" label-y="1.0" name="Q9" text-size="HEADER3" x="187.0" y="28.0"/>
+      <place label-x="-1.0" label-y="2.0" name="Q10" text-size="VERY_LARGE" x="175.0" y="22.0"/>
+      <place label-x="3.5" label-y="0.0" name="Q4" x="182.0" y="114.0"/>
+      <place label-x="-2.5" name="Q5" x="161.0" y="123.0"/>
+      <place label-x="-2.5" label-y="0.5" name="Q6" text-size="HEADER1" x="162.0" y="87.0"/>
+      <place label-x="2.0" label-y="0.5" name="Q7" text-size="HEADER1" x="164.0" y="73.0"/>
+      <place label-x="-3.0" label-y="-2.5" name="Q8" text-size="VERY_LARGE" x="158.0" y="39.0"/>
+      <place label-x="3.0" label-y="0.5" name="trueQ" x="173.0" y="71.0"/>
+      <place label-y="-2.5" marking="1" name="falseQ" text-size="VERY_LARGE" x="141.0" y="47.0"/>
+      <place label-y="-2.5" name="T2" text-size="VERY_LARGE" x="133.0" y="17.0"/>
+      <place label-y="-2.5" marking="1" name="T1" x="123.0" y="115.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="7.853981633974483" type="EXP" x="21.55" y="18.0"/>
+      <transition name="T5" nservers-x="0.5" rotation="7.853981633974483" type="EXP" x="16.55" y="14.0"/>
+      <transition label-x="-2.0" name="T12" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="26.55" y="87.0"/>
+      <transition height="6.0" label-x="-2.5" label-y="-2.5" name="setPt_toWhile_plus_T0_0" nservers-x="0.5" rotation="7.853981633974483" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="24.55" y="50.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="toWhileP" nservers-x="0.5" rotation="7.853981633974483" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="36.55" y="33.0"/>
+      <transition height="5.0" label-x="2.0" label-y="4.0" name="exitIfP" nservers-x="0.5" rotation="9.42477796076938" superpos-x="2.0" superpos-y="2.0" superposition-tags="setPt" text-size="VERY_LARGE" type="EXP" x="55.55" y="88.5"/>
+      <transition label-x="-2.0" label-y="2.5" name="setPt_T11_plus_T3_0" nservers-x="0.5" rotation="9.42477796076938" superpos-y="-1.5" superposition-tags="setPt" text-size="HEADER1" type="EXP" x="46.55" y="58.0"/>
+      <transition label-x="-1.5" name="setPf_T4_plus_T1" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="5.55" y="92.0"/>
+      <transition label-x="4.0" name="setPf_T4_plus_T5_0" nservers-x="0.5" rotation="7.853981633974483" superpos-x="2.0" superposition-tags="setPf" type="EXP" x="12.55" y="65.0"/>
+      <transition label-x="2.5" label-y="-2.0" name="inIfP" nservers-x="0.5" rotation="9.42477796076938" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setPf" text-size="VERY_LARGE" type="EXP" x="76.55" y="107.0"/>
+      <transition label-x="5.0" label-y="0.0" name="setPf_T8_plus_T5_0" nservers-x="0.5" rotation="9.42477796076938" superpos-x="2.0" superpos-y="-1.5" superposition-tags="setPf" text-size="VERY_LARGE" type="EXP" x="84.55" y="87.0"/>
+      <transition label-x="1.0" label-y="-3.0" name="T0_0" nservers-x="0.5" rotation="15.707963267948966" text-size="HEADER1" type="EXP" x="205.55" y="21.0"/>
+      <transition label-x="3.5" label-y="-0.5000000000000071" name="T5_0" nservers-x="0.5" rotation="14.137166941154069" text-size="HEADER1" type="EXP" x="208.55" y="14.0"/>
+      <transition label-x="-2.0" name="T12_0" nservers-x="0.5" rotation="12.566370614359172" type="EXP" x="183.55" y="33.0"/>
+      <transition height="5.0" label-x="4.101621517783229" label-y="3.4961270494176517" name="setQt_WqI_plus_T1" nservers-x="0.5" rotation="15.707963267948966" superpos-x="2.6016215177832294" superpos-y="1.9961270494176517" superposition-tags="setQt" text-size="HEADER1" type="EXP" x="206.55" y="31.5"/>
+      <transition height="5.0" label-x="2.0" label-y="-0.5" name="setQt_WqI" nservers-x="0.5" rotation="15.707963267948966" superpos-x="-2.5" superpos-y="-0.5" superposition-tags="setQt" type="EXP" x="183.55" y="62.5"/>
+      <transition height="6.0" label-x="2.0" label-y="-2.0" name="setQt_T11_plus_T1" nservers-x="0.5" rotation="1.8325957145940466" superpos-x="2.5" superpos-y="-4.5" superposition-tags="setQt" text-size="VERY_LARGE" type="EXP" x="165.55" y="49.0"/>
+      <transition height="6.0" label-x="4.0" label-y="4.0" name="setQt_T11_plus_T3_0" nservers-x="0.5" rotation="1.8325957145940466" superpos-x="3.5" superpos-y="2.5" superposition-tags="setQt" text-size="VERY_LARGE" type="EXP" x="181.55" y="86.0"/>
+      <transition label-x="-1.5" name="setQf_T4_plus_T0_0" nservers-x="0.5" rotation="18.84955592153876" superpos-x="-1.5" superposition-tags="setQf" type="EXP" x="184.55" y="16.0"/>
+      <transition label-x="-1.5" name="setQf_T4_plus_T5_0" nservers-x="0.5" rotation="18.84955592153876" superpos-x="-1.5" superposition-tags="setQf" type="EXP" x="160.55" y="15.0"/>
+      <transition height="4.0" label-x="-2.0" label-y="0.0" name="setQf" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setQf" text-size="VERY_LARGE" type="EXP" x="161.55" y="102.0"/>
+      <transition height="4.0" label-x="-2.0" label-y="0.0" name="setQf_8" nservers-x="0.5" rotation="3.141592653589793" superpos-x="-2.5" superpos-y="-1.5" superposition-tags="setQf" type="EXP" x="153.55" y="97.0"/>
+      <transition label-x="1.0" name="isPf_T4_0_plus_elseWhile" nservers-x="0.5" rotation="19.634954084936208" superposition-tags="isPf" type="EXP" x="130.55" y="77.0"/>
+      <transition height="4.0" label-y="2.5" name="InWhileP" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.5" superposition-tags="isQt" text-size="VERY_LARGE" type="EXP" x="66.55" y="53.0"/>
+      <transition label-x="4.5" name="exitWhileP" nservers-x="0.5" rotation="7.853981633974483" superpos-x="-1.5" superposition-tags="isQf" text-size="VERY_LARGE" type="EXP" x="97.55" y="48.0"/>
+      <transition label-x="0.4999999999999858" label-y="3.0" name="isPt_T2_plus_DentroWhile" nservers-x="0.5" rotation="18.064157758141313" superpos-y="2.0" superposition-tags="isPt" text-size="VERY_LARGE" type="EXP" x="104.55" y="104.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="setT2_T3_plus_T1" nservers-x="0.5" rotation="7.853981633974483" superpos-x="1.5" superpos-y="-2.0" superposition-tags="setT2" type="EXP" x="113.55" y="82.0"/>
+      <transition label-x="5.0" label-y="-0.5" name="setT2_T3_plus_T3_1" nservers-x="0.5" rotation="7.853981633974483" superpos-x="3.0" superpos-y="-2.0" superposition-tags="setT2" text-size="LARGE" type="EXP" x="111.55" y="57.0"/>
+      <transition height="4.0" label-x="8.5" label-y="-3.0" name="isT1_Else_p4" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.0" superpos-y="-1.5" superposition-tags="isT1" text-size="VERY_LARGE" type="EXP" x="69.55" y="36.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="waitT1" nservers-x="0.5" rotation="9.42477796076938" superpos-x="0.5" superpos-y="-2.0" superposition-tags="isT1" text-size="VERY_LARGE" type="EXP" x="75.55" y="70.0"/>
+      <transition label-x="2.5" label-y="3.5" name="isT1" nservers-x="0.5" rotation="14.137166941154069" superpos-x="2.5" superpos-y="1.0" superposition-tags="isT1" text-size="HEADER2" type="EXP" x="161.55" y="137.0"/>
+      <transition height="4.0" label-y="-3.0" name="isT2" nservers-x="0.5" rotation="9.42477796076938" superpos-y="-4.0" superposition-tags="isT2" text-size="VERY_LARGE" type="EXP" x="114.55" y="29.0"/>
+      <transition label-x="3.5" label-y="0.0" name="isT2_Else_Q4_plus_T2" nservers-x="0.5" rotation="14.137166941154069" superpos-x="1.0" superpos-y="-1.5" superposition-tags="isT2" text-size="LARGE" type="EXP" x="212.55" y="48.0"/>
+      <transition height="6.0" label-x="-2.0" label-y="-1.0" name="isT2_W2_plus_T2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superpos-y="-2.0" superposition-tags="isT2" text-size="VERY_LARGE" type="EXP" x="164.55" y="79.0"/>
+      <transition height="3.0" label-x="-0.5" label-y="-3.0" name="setT1" nservers-x="0.5" rotation="-0.0" superpos-x="3.0" superpos-y="2.5" superposition-tags="setT1" text-size="HEADER1" type="EXP" x="169.55" y="25.5"/>
+      <transition label-x="-1.5" label-y="-1.9999999999999964" name="setT1Qfinale" nservers-x="0.5" rotation="-0.0" superpos-x="3.0" superpos-y="2.5" superposition-tags="setT1" text-size="HEADER1" type="EXP" x="197.55" y="25.499999999999996"/>
+    </nodes>
+    <edges>
+      <arc head="setQt_T11_plus_T3_0" kind="INPUT" tail="trueQ"/>
+      <arc head="waitT1" kind="INPUT" mult-k="0.8258789062500002" tail="P6">
+        <point x="79.0" y="73.0"/>
+      </arc>
+      <arc head="toWhileP" kind="INPUT" tail="P2"/>
+      <arc head="Q3" kind="OUTPUT" tail="setQt_T11_plus_T3_0"/>
+      <arc head="setQt_T11_plus_T3_0" kind="INPUT" mult-k="0.82373046875" tail="Q7">
+        <point x="178.0" y="80.5"/>
+      </arc>
+      <arc head="falseQ" kind="OUTPUT" tail="exitWhileP"/>
+      <arc head="Q4" kind="OUTPUT" mult-k="1.99365234375" tail="isPt_T2_plus_DentroWhile">
+        <point x="127.3716796875" y="104.217041015625"/>
+        <point x="142.7518416242664" y="104.7099949238547"/>
+      </arc>
+      <arc head="P3" kind="OUTPUT" mult-k="1.36708984375" tail="toWhileP">
+        <point x="41.0" y="42.0"/>
+      </arc>
+      <arc head="Q5" kind="OUTPUT" tail="isT1"/>
+      <arc head="P1" kind="OUTPUT" mult-k="0.6231445312500001" tail="setPf_T4_plus_T1">
+        <point x="8.0" y="25.0"/>
+        <point x="14.0" y="8.0"/>
+      </arc>
+      <arc head="setQt_WqI" kind="INPUT" mult-k="2.1663085937499997" tail="Q2">
+        <point x="224.0" y="59.0"/>
+        <point x="214.5" y="74.5"/>
+        <point x="194.5" y="75.0"/>
+      </arc>
+      <arc head="inIfP" kind="INPUT" tail="trueP"/>
+      <arc head="setQf" kind="INPUT" tail="trueQ"/>
+      <arc head="falseQ" kind="OUTPUT" mult-k="2.70263671875" tail="setQf_T4_plus_T0_0">
+        <point x="170.0" y="17.0"/>
+        <point x="163.5" y="25.5"/>
+        <point x="152.5" y="39.0"/>
+      </arc>
+      <arc head="isT1_Else_p4" kind="INPUT" mult-k="0.0" tail="T1"/>
+      <arc head="P3" kind="OUTPUT" mult-k="1.1825195312499996" tail="setPt_T11_plus_T3_0">
+        <point x="37.40986328125" y="55.4306640625"/>
+      </arc>
+      <arc head="setQf_8" kind="INPUT" tail="falseQ"/>
+      <arc head="P6" kind="OUTPUT" mult-k="0.95595703125" tail="setPf_T8_plus_T5_0">
+        <point x="74.5" y="82.5"/>
+      </arc>
+      <arc head="setQf_8" kind="INPUT" tail="Q5"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="1.5506835937499996" tail="setPf_T4_plus_T1">
+        <point x="4.0" y="109.5"/>
+        <point x="46.5" y="128.0"/>
+        <point x="91.0" y="116.5"/>
+        <point x="94.5" y="109.0"/>
+      </arc>
+      <arc head="Q3" kind="OUTPUT" mult-k="1.83837890625" tail="setQt_WqI_plus_T1">
+        <point x="190.0" y="44.0"/>
+      </arc>
+      <arc head="T5" kind="INPUT" tail="P1"/>
+      <arc head="setT1Qfinale" kind="INPUT" tail="Q9"/>
+      <arc head="T1" kind="OUTPUT" mult-k="0.6620117187500001" tail="isT1">
+        <point x="130.5" y="108.5"/>
+      </arc>
+      <arc head="Q6" kind="OUTPUT" tail="setQf"/>
+      <arc head="setPt_toWhile_plus_T0_0" kind="INPUT" mult-k="0.7149414062500002" tail="falseP">
+        <point x="39.0" y="65.0"/>
+      </arc>
+      <arc head="Q6" kind="OUTPUT" mult-k="0.9266601562500001" tail="setQf_8">
+        <point x="162.44580078125" y="93.837890625"/>
+      </arc>
+      <arc head="setPt_T11_plus_T3_0" kind="INPUT" mult-k="1.3844726562499998" tail="trueP">
+        <point x="44.0" y="108.5"/>
+      </arc>
+      <arc head="setPf_T8_plus_T5_0" kind="INPUT" tail="falseP"/>
+      <arc head="exitIfP" kind="INPUT" mult-k="0.6428710937500001" tail="falseP">
+        <point x="59.0" y="85.0"/>
+      </arc>
+      <arc head="trueP" kind="OUTPUT" tail="exitIfP"/>
+      <arc head="P5" kind="OUTPUT" tail="isT2"/>
+      <arc head="trueP" kind="OUTPUT" mult-k="1.0432617187500002" tail="isPt_T2_plus_DentroWhile">
+        <point x="77.0" y="115.0"/>
+      </arc>
+      <arc head="T5_0" kind="INPUT" tail="Q1"/>
+      <arc head="Q9" kind="OUTPUT" tail="T12_0"/>
+      <arc head="T2" kind="OUTPUT" mult-k="0.53212890625" tail="isT2"/>
+      <arc head="T1" kind="OUTPUT" mult-k="0.6342773437500001" tail="setT1">
+        <point x="139.0" y="98.0"/>
+      </arc>
+      <arc head="setQt_WqI" kind="INPUT" mult-k="1.24326171875" tail="trueQ">
+        <point x="174.5" y="67.5"/>
+      </arc>
+      <arc head="trueQ" kind="OUTPUT" tail="setQt_T11_plus_T3_0"/>
+      <arc head="Q3" kind="OUTPUT" mult-k="1.0657226562500002" tail="setQt_WqI">
+        <point x="195.5" y="57.0"/>
+      </arc>
+      <arc head="P7" kind="OUTPUT" tail="waitT1"/>
+      <arc head="setQf_T4_plus_T5_0" kind="INPUT" mult-k="1.21103515625" tail="falseQ">
+        <point x="152.5" y="39.0"/>
+      </arc>
+      <arc head="Q2" kind="OUTPUT" tail="T0_0"/>
+      <arc head="falseQ" kind="OUTPUT" tail="setQf_8"/>
+      <arc head="P6" kind="OUTPUT" mult-k="0.69873046875" tail="inIfP">
+        <point x="74.5" y="82.5"/>
+      </arc>
+      <arc head="T0_0" kind="INPUT" tail="Q1"/>
+      <arc head="setQt_WqI_plus_T1" kind="INPUT" tail="falseQ"/>
+      <arc head="setT1" kind="INPUT" tail="Q9"/>
+      <arc head="Q1" kind="OUTPUT" tail="setQf_T4_plus_T0_0"/>
+      <arc head="isT1" kind="INPUT" tail="Q4"/>
+      <arc head="falseP" kind="OUTPUT" tail="setPf_T8_plus_T5_0"/>
+      <arc head="T12" kind="INPUT" tail="P8"/>
+      <arc head="Q1" kind="OUTPUT" tail="setQf_T4_plus_T5_0">
+        <point x="172.5" y="11.5"/>
+      </arc>
+      <arc head="Q7" kind="OUTPUT" tail="isT2_W2_plus_T2"/>
+      <arc head="trueQ" kind="OUTPUT" tail="InWhileP"/>
+      <arc head="InWhileP" kind="INPUT" tail="P3"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="0.75517578125" tail="inIfP">
+        <point x="94.22431640625" y="105.37822265625"/>
+      </arc>
+      <arc head="setPf_T4_plus_T1" kind="INPUT" tail="trueP"/>
+      <arc head="setT2_T3_plus_T1" kind="INPUT" mult-k="2.071191406249999" tail="P9">
+        <point x="34.5" y="101.5"/>
+        <point x="67.0" y="96.0"/>
+      </arc>
+      <arc head="exitIfP" kind="INPUT" mult-k="0.90244140625" mult-x="-2.2202095980466154" mult-y="-1.8208285380275129" tail="P7"/>
+      <arc head="trueP" kind="OUTPUT" mult-k="1.5241210937499998" tail="toWhileP">
+        <point x="27.5" y="39.5"/>
+        <point x="44.0" y="109.0"/>
+      </arc>
+      <arc head="T1" kind="OUTPUT" mult-k="1.39560546875" tail="waitT1">
+        <point x="91.0" y="81.0"/>
+        <point x="118.0" y="107.0"/>
+      </arc>
+      <arc head="isT2_Else_Q4_plus_T2" kind="INPUT" tail="Q4"/>
+      <arc head="P1" kind="OUTPUT" mult-k="1.73974609375" tail="setPf_T4_plus_T5_0">
+        <point x="7.0" y="54.5"/>
+        <point x="8.0" y="25.0"/>
+        <point x="14.0" y="8.0"/>
+      </arc>
+      <arc head="setQt_WqI_plus_T1" kind="INPUT" tail="Q2"/>
+      <arc head="isT2_Else_Q4_plus_T2" kind="INPUT" mult-k="0.0" tail="T2"/>
+      <arc head="P8" kind="OUTPUT" tail="exitWhileP"/>
+      <arc head="setT2_T3_plus_T3_1" kind="INPUT" mult-k="1.34384765625" tail="T2">
+        <point x="124.5" y="24.5"/>
+      </arc>
+      <arc head="isPf_T4_0_plus_elseWhile" kind="INPUT" tail="falseP"/>
+      <arc head="falseQ" kind="OUTPUT" mult-k="1.1604492187499997" tail="setQf">
+        <point x="149.5" y="80.5"/>
+        <point x="146.5" y="67.0"/>
+      </arc>
+      <arc head="falseQ" kind="OUTPUT" mult-k="0.8446289062500002" tail="setQf_T4_plus_T5_0">
+        <point x="152.5" y="39.0"/>
+      </arc>
+      <arc head="setT2_T3_plus_T1" kind="INPUT" tail="T1"/>
+      <arc head="isT1_Else_p4" kind="INPUT" mult-k="1.7952148437499997" tail="P4">
+        <point x="78.0" y="49.5"/>
+      </arc>
+      <arc head="Q10" kind="OUTPUT" tail="setT1Qfinale"/>
+      <arc head="isPf_T4_0_plus_elseWhile" kind="INPUT" tail="Q3"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="1.3129882812499996" tail="setPf_T4_plus_T5_0">
+        <point x="39.5" y="65.5"/>
+      </arc>
+      <arc head="T1" kind="OUTPUT" tail="setT1Qfinale"/>
+      <arc head="trueQ" kind="OUTPUT" mult-k="0.8661132812500001" tail="setQt_WqI">
+        <point x="174.5" y="67.5"/>
+      </arc>
+      <arc head="P4" kind="OUTPUT" tail="InWhileP"/>
+      <arc head="T2" kind="OUTPUT" mult-k="0.60517578125" tail="setT2_T3_plus_T1">
+        <point x="139.5" y="29.5"/>
+      </arc>
+      <arc head="P10" kind="OUTPUT" tail="setT2_T3_plus_T3_1"/>
+      <arc head="setPf_T4_plus_T1" kind="INPUT" tail="P10"/>
+      <arc head="isT2_W2_plus_T2" kind="INPUT" mult-k="0.0" tail="T2"/>
+      <arc head="trueP" kind="OUTPUT" mult-k="0.6166992187500001" tail="setPt_T11_plus_T3_0">
+        <point x="44.0" y="108.5"/>
+      </arc>
+      <arc head="setPt_T11_plus_T3_0" kind="INPUT" mult-k="1.84970703125" tail="P7">
+        <point x="62.0" y="70.5"/>
+        <point x="56.0" y="65.0"/>
+      </arc>
+      <arc head="setQf" kind="INPUT" tail="Q5"/>
+      <arc head="inIfP" kind="INPUT" mult-k="1.10830078125" tail="P5">
+        <point x="81.0" y="86.5"/>
+      </arc>
+      <arc head="trueQ" kind="OUTPUT" mult-k="0.68701171875" tail="setQt_T11_plus_T1">
+        <point x="174.5" y="66.5"/>
+      </arc>
+      <arc head="setPt_toWhile_plus_T0_0" kind="INPUT" tail="P2"/>
+      <arc head="Q1" kind="OUTPUT" tail="T5_0"/>
+      <arc head="P1" kind="OUTPUT" tail="T5"/>
+      <arc head="isT2_W2_plus_T2" kind="INPUT" tail="Q6"/>
+      <arc head="P10" kind="OUTPUT" mult-k="2.1684570312499996" tail="setT2_T3_plus_T1">
+        <point x="107.0" y="67.0"/>
+        <point x="92.0" y="62.5"/>
+        <point x="26.0" y="77.0"/>
+      </arc>
+      <arc head="P3" kind="OUTPUT" mult-k="0.77958984375" tail="isT1_Else_p4">
+        <point x="41.0" y="42.0"/>
+      </arc>
+      <arc head="Q3" kind="OUTPUT" tail="setQt_T11_plus_T1"/>
+      <arc head="setQt_T11_plus_T1" kind="INPUT" tail="falseQ"/>
+      <arc head="isT2" kind="INPUT" mult-k="0.0" tail="T2"/>
+      <arc head="setPf_T8_plus_T5_0" kind="INPUT" mult-k="1.2116210937499998" tail="P5">
+        <point x="82.5" y="80.0"/>
+      </arc>
+      <arc head="isT1" kind="INPUT" mult-k="0.0" tail="T1">
+        <point x="130.5" y="108.5"/>
+      </arc>
+      <arc head="isPt_T2_plus_DentroWhile" kind="INPUT" mult-k="0.98271484375" tail="trueP">
+        <point x="77.0" y="115.0"/>
+      </arc>
+      <arc head="exitWhileP" kind="INPUT" tail="falseQ"/>
+      <arc head="setQf_T4_plus_T5_0" kind="INPUT" tail="Q10"/>
+      <arc head="falseP" kind="OUTPUT" tail="isPf_T4_0_plus_elseWhile"/>
+      <arc head="isT2" kind="INPUT" mult-k="1.1686523437499998" tail="P4">
+        <point x="85.5" y="50.0"/>
+      </arc>
+      <arc head="trueP" kind="OUTPUT" mult-k="2.4147460937499994" tail="setPt_toWhile_plus_T0_0">
+        <point x="33.0" y="62.0"/>
+        <point x="35.0" y="71.0"/>
+        <point x="44.0" y="108.5"/>
+      </arc>
+      <arc head="setPf_T4_plus_T5_0" kind="INPUT" mult-k="0.6377929687500001" tail="falseP">
+        <point x="39.5" y="65.5"/>
+      </arc>
+      <arc head="setT2_T3_plus_T3_1" kind="INPUT" mult-k="1.0491210937500002" tail="P9">
+        <point x="59.5" y="69.5"/>
+      </arc>
+      <arc head="T2" kind="OUTPUT" mult-k="0.66005859375" tail="isT2_W2_plus_T2"/>
+      <arc head="waitT1" kind="INPUT" mult-k="0.0" tail="T1">
+        <point x="117.5" y="106.5"/>
+        <point x="91.0" y="81.0"/>
+      </arc>
+      <arc head="toWhileP" kind="INPUT" mult-k="1.45361328125" tail="trueP">
+        <point x="44.0" y="109.0"/>
+        <point x="27.5" y="39.5"/>
+      </arc>
+      <arc head="exitWhileP" kind="INPUT" mult-k="0.89755859375" tail="P3">
+        <point x="69.0" y="46.0"/>
+      </arc>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="T1" kind="OUTPUT" mult-k="0.52021484375" tail="isT1_Else_p4"/>
+      <arc head="trueQ" kind="OUTPUT" mult-k="1.35263671875" tail="setQt_WqI_plus_T1">
+        <point x="190.0" y="44.0"/>
+        <point x="174.5" y="67.5"/>
+      </arc>
+      <arc head="isPt_T2_plus_DentroWhile" kind="INPUT" mult-k="1.2620117187500002" tail="Q3">
+        <point x="161.5" y="65.0"/>
+      </arc>
+      <arc head="Q8" kind="OUTPUT" tail="isPf_T4_0_plus_elseWhile"/>
+      <arc head="Q3" kind="OUTPUT" tail="isT2_Else_Q4_plus_T2"/>
+      <arc head="P9" kind="OUTPUT" tail="T12"/>
+      <arc head="P3" kind="OUTPUT" tail="exitIfP"/>
+      <arc head="InWhileP" kind="INPUT" tail="trueQ"/>
+      <arc head="P2" kind="OUTPUT" tail="T0"/>
+      <arc head="setQf_T4_plus_T0_0" kind="INPUT" tail="Q10"/>
+      <arc head="setPf_T4_plus_T5_0" kind="INPUT" tail="P10"/>
+      <arc head="setQt_T11_plus_T1" kind="INPUT" tail="Q7"/>
+      <arc head="T12_0" kind="INPUT" tail="Q8"/>
+      <arc head="setT1Qfinale" kind="INPUT" tail="T1"/>
+      <arc head="T2" kind="OUTPUT" mult-k="0.76572265625" tail="isT2_Else_Q4_plus_T2"/>
+      <arc head="T2" kind="OUTPUT" mult-k="0.7309570312500001" tail="setT2_T3_plus_T3_1">
+        <point x="124.5" y="24.5"/>
+      </arc>
+      <arc head="setT1" kind="INPUT" mult-k="0.6047851562500001" tail="T2">
+        <point x="164.5" y="30.0"/>
+      </arc>
+      <arc head="Q10" kind="OUTPUT" tail="setT1"/>
+      <arc head="setQf_T4_plus_T0_0" kind="INPUT" mult-k="0.54990234375" tail="trueQ">
+        <point x="181.0" y="19.5"/>
+      </arc>
+      <arc head="P3" kind="OUTPUT" mult-k="0.6868164062500001" tail="setPt_toWhile_plus_T0_0">
+        <point x="37.5" y="55.5"/>
+      </arc>
+    </edges>
+  </gspn>
+  <resource-list>
+    <document-log uuid="d4d5c29c-5a04-4926-83db-68129e0ec1cf">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAK50AOUbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxEU1BOLVRvb2wuZXhlIiAtbG9hZCAiQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM18xMFwzXzEwLUNUTCBtb2RlbCBjaGVja2luZyBvZiBTaXN0ZW1hLnNvbHV0aW9uXFNpc3RlbWEiIC1wYmFzaXMgLWRldGVjdC1leHAgLXBzZmwgLWJuZCAKdACgG1sxbRtbNG1MT0FESU5HIFBFVFJJIE5FVCBDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzEwXDNfMTAtQ1RMIG1vZGVsIGNoZWNraW5nIG9mIFNpc3RlbWEuc29sdXRpb25cU2lzdGVtYSAobmV0L2RlZikuLi4bWzIybRtbMjRtCnQAD01BUktJTkcgUEFSOiAwCnQAEFBMQUNFUzogICAgICAyNgp0AA9SQVRFIFBBUjogICAgMAp0ABBUUkFOU0lUSU9OUzogMzYKdAAPTUVBU1VSRVM6ICAgIDAKdAAoTE9BRElORyBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQAAQp0AAEKdAAeQ09NUFVUSU5HIFBMQUNFIEZMT1cgQkFTSVMuLi4KdAASTT0zNiwgTj0yNiwgTjA9MjYKdABPQ29tcHV0YXRpb24gb2YgRmxvdyBiYXNpczogY29tcGxldGVkIGluIDIxIHN0ZXBzLCB8S3w9NS4gICAgICAgICAgICAgICAgICAgICAgCnQAKUZPVU5EIDUgVkVDVE9SUyBJTiBUSEUgUExBQ0UgRkxPVyBCQVNJUy4KdAABCnQAAQp0ACdBbGwgcGxhY2VzIGFyZSBjb3ZlcmVkIGJ5IHNvbWUgUC1mbG93Lgp0AAEKdAAmVE9UQUwgVElNRTogW1VzZXIgMC4wMDBzLCBTeXMgMC4wMDBzXQp0ACdBVk9JRCBFWFBPTkVOVElBTCBHUk9XVEggT0YgU0VNSUZMT1dTLgp0AB1DT01QVVRJTkcgUExBQ0UgU0VNSUZMT1dTLi4uCnQAEk09MzYsIE49MjYsIE4wPTI2CnQATUdlbmVyYXRpb24gb2YgU2VtaWZsb3dzOiBjb21wbGV0ZWQgaW4gMjEgc3RlcHMsIHxLfD01LiAgICAgICAgICAgICAgICAgICAgICAKdAAZRk9VTkQgNSBQTEFDRSBTRU1JRkxPV1MuCnQAAQp0AAEKdAArQWxsIHBsYWNlcyBhcmUgY292ZXJlZCBieSBzb21lIFAtc2VtaWZsb3cuCnQAAQp0ACZUT1RBTCBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQALENPTVBVVElORyBQTEFDRSBCT1VORFMgRlJPTSBQLVNFTUlGTE9XUyAuLi4KdAAnG1swWBtbMzJtIFBST0NFU1MgRVhJVEVEIE5PUk1BTExZLhtbMG0KdADkG1swbUVYRUM6ICJDOlxQcm9ncmFtIEZpbGVzXEdyZWF0U1BOXGFwcFxwb3J0YWJsZV9ncmVhdHNwblxiaW5cRFNQTi1Ub29sLmV4ZSIgLWxvYWQgIkM6XFVzZXJzXFV0ZW50ZVxEZXNrdG9wXHJldGlfZGlfcGV0cmlcZXNlcmNpemlfZmluYWxlXDNfMTBcM18xMC1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgU2lzdGVtYS5zb2x1dGlvblxTaXN0ZW1hIiAtbG9hZC1ibmQgLXRpbWVvdXQgNSAtaWxwLWJuZCAKdACgG1sxbRtbNG1MT0FESU5HIFBFVFJJIE5FVCBDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzEwXDNfMTAtQ1RMIG1vZGVsIGNoZWNraW5nIG9mIFNpc3RlbWEuc29sdXRpb25cU2lzdGVtYSAobmV0L2RlZikuLi4bWzIybRtbMjRtCnQAD01BUktJTkcgUEFSOiAwCnQAEFBMQUNFUzogICAgICAyNgp0AA9SQVRFIFBBUjogICAgMAp0ABBUUkFOU0lUSU9OUzogMzYKdAAPTUVBU1VSRVM6ICAgIDAKdAAoTE9BRElORyBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQAAQp0AAEKdAAVTE9BRElORyBCTkQgRklMRSAuLi4KdAAgU2NoZWR1bGVkIHRpbWVvdXQgb2YgNSBzZWNvbmRzLgp0ACVDT01QVVRJTkcgUExBQ0UgQk9VTkRTIFVTSU5HIElMUCAuLi4KdAAYQWxsIHBsYWNlcyBhcmUgYm91bmRlZC4KcQB+ACB0ANAbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxSR01FREQ1LmV4ZSIgIkM6XFVzZXJzXFV0ZW50ZVxEZXNrdG9wXHJldGlfZGlfcGV0cmlcZXNlcmNpemlfZmluYWxlXDNfMTBcM18xMC1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgU2lzdGVtYS5zb2x1dGlvblxTaXN0ZW1hIiAtTUVUQSAtc2F0c2V0cyAtQyAKdAAgUmFuZG9tIHNlZWRzOiAxNzIwOTQ1MzM4IDExMjg4Ngp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAEUdyZWF0U1BOL01lZGRseS4KdAA4ICBDb3B5cmlnaHQgKEMpIDE5ODctMjAyMiwgVW5pdmVyc2l0eSBvZiBUb3Jpbm8sIEl0YWx5Lgp0AC8gIHdlYnNpdGU6IGh0dHBzOi8vZ2l0aHViLmNvbS9ncmVhdHNwbi9TT1VSQ0VTCnQAMSAgU2VuZCBmaWxlcyBuZXRuYW1lLm5ldCwgLmRlZiB0byBlLW1haWwgYWRkcmVzcwp0AC8gIGFtcGFyb3JlKGF0KWRpLnVuaXRvLml0IGlmIHlvdSBmaW5kIGFueSBidWcuCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAAfQmFzZWQgb24gTUVERExZIHZlcnNpb24gMC4xNy4xCnQARiAgQ29weXJpZ2h0IChDKSAyMDA5LCBJb3dhIFN0YXRlIFVuaXZlcnNpdHkgUmVzZWFyY2ggRm91bmRhdGlvbiwgSW5jLgp0AC0gIHdlYnNpdGU6IGh0dHBzOi8vYXNtaW5lci5naXRodWIuaW8vbWVkZGx5Lwp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAKVVzaW5nIHBlci1ldmVudCBzYXR1cmF0aW9uIChzYXQtcHJlZ2VuKS4KdAAQUHJvY2VzcyBJRDogODkwCnQAe01PREVMIE5BTUU6IEM6XFVzZXJzXFV0ZW50ZVxEZXNrdG9wXHJldGlfZGlfcGV0cmlcZXNlcmNpemlfZmluYWxlXDNfMTBcM18xMC1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgU2lzdGVtYS5zb2x1dGlvblxTaXN0ZW1hCnQAHSAgMjYgcGxhY2VzLCAzNiB0cmFuc2l0aW9ucy4KdAAlVXNlZCBNZW1vcnkgZm9yIGVuY29kaW5nIG5ldDogODcwMEtCCnQAhU9wZW5pbmcgZmlsZTogQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM18xMFwzXzEwLUNUTCBtb2RlbCBjaGVja2luZyBvZiBTaXN0ZW1hLnNvbHV0aW9uXFNpc3RlbWEuYm5kIE9LLgp0AIhPcGVuaW5nIGZpbGU6IEM6XFVzZXJzXFV0ZW50ZVxEZXNrdG9wXHJldGlfZGlfcGV0cmlcZXNlcmNpemlfZmluYWxlXDNfMTBcM18xMC1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgU2lzdGVtYS5zb2x1dGlvblxTaXN0ZW1hLmlscGJuZCBPSy4KdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IE1PREVMIFNUQVRJU1RJQ1MgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0ABdQTEFDRVM6ICAgICAgICAgICAgIDI2CnQAF1RSQU5TSVRJT05TOiAgICAgICAgMzYKdAAXSU5QVVQgQVJDUzogICAgICAgICA0NAp0ABdPVVRQVVQgQVJDUzogICAgICAgIDQ0CnQAFklOSElCIEFSQ1M6ICAgICAgICAgMAp0ABdURVNUIEFSQ1M6ICAgICAgICAgIDIyCnQAFk5VTSBNMCBUT0tFTlM6ICAgICAgNQp0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</document-log>
+  </resource-list>
+</project>

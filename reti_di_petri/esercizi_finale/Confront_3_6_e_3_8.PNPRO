@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="Confront_3_6_e_3_8" version="121">
+  <gspn name="3_6O" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="P1" x="7.0" y="5.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="P2" x="7.0" y="13.0"/>
+      <place label-x="-2.0" label-y="0.0" name="P3" x="7.0" y="21.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P4C" x="7.0" y="32.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P5" x="7.0" y="41.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueP" x="34.0" y="24.0"/>
+      <place label-y="-2.5" marking="1" name="falseP" x="39.0" y="39.0"/>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="Q1" x="81.0" y="4.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="Q2" x="81.0" y="12.0"/>
+      <place label-x="2.0" label-y="0.0" name="Q3" x="81.0" y="22.0"/>
+      <place label-x="-2.5" label-y="0.5" name="Q4C" x="81.0" y="31.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q5" x="81.0" y="41.0"/>
+      <place label-x="-3.0" name="trueQ" x="63.0" y="23.0"/>
+      <place label-y="-2.5" marking="1" name="falseQ" x="55.0" y="39.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="7.55" y="9.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T3" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="7.55" y="36.0"/>
+      <transition name="T5" nservers-x="0.5" type="EXP" x="14.55" y="5.0"/>
+      <transition name="T2" nservers-x="0.5" superposition-tags="isPt" type="EXP" x="30.55" y="16.0"/>
+      <transition label-x="0.5" name="T2_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-2.5" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="7.55" y="25.0"/>
+      <transition label-x="0.5" name="T2_T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.5" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="23.55" y="21.0"/>
+      <transition label-x="-1.5" name="T4_T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="11.55" y="45.0"/>
+      <transition label-x="-1.5" name="T4_T5" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="10.55" y="51.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0_0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="81.55" y="8.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T3_0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="81.55" y="36.0"/>
+      <transition name="T5_0" nservers-x="0.5" type="EXP" x="75.55" y="4.0"/>
+      <transition name="T2_0" nservers-x="0.5" rotation="1.308996938995748" superposition-tags="isQt" type="EXP" x="60.55" y="18.0"/>
+      <transition label-x="-1.0" name="T2_T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.5" superpos-y="-1.5" superposition-tags="setQt" type="EXP" x="80.55" y="26.0"/>
+      <transition label-x="-1.0" name="T2_T3_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superpos-y="-3.0" superposition-tags="setQt" type="EXP" x="75.55" y="22.0"/>
+      <transition label-x="-1.5" name="T4_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superposition-tags="setQf" type="EXP" x="81.55" y="47.0"/>
+      <transition label-x="-1.5" name="T4_T5_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.5" superposition-tags="setQf" type="EXP" x="73.55" y="51.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T1_T4" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="isQf" type="EXP" x="7.55" y="17.0"/>
+      <transition label-x="3.5" name="T4_T1_0" nservers-x="0.5" superposition-tags="isPf" type="EXP" x="81.55" y="16.0"/>
+    </nodes>
+    <edges>
+      <arc head="T4_T1" kind="INPUT" tail="P5"/>
+      <arc head="T1_T4" kind="INPUT" tail="falseQ"/>
+      <arc head="P1" kind="OUTPUT" tail="T4_T1">
+        <point x="4.0" y="49.0"/>
+        <point x="4.0" y="6.0"/>
+      </arc>
+      <arc head="Q3" kind="OUTPUT" tail="T4_T1_0"/>
+      <arc head="T2" kind="INPUT" tail="trueP"/>
+      <arc head="falseP" kind="OUTPUT" tail="T4_T1"/>
+      <arc head="T2_T1" kind="INPUT" tail="falseQ"/>
+      <arc head="trueP" kind="OUTPUT" mult-k="0.20517578125000002" tail="T2_T3"/>
+      <arc head="T4_T5_0" kind="INPUT" tail="Q5"/>
+      <arc head="T4_T5_0" kind="INPUT" tail="falseQ"/>
+      <arc head="T2_T3_0" kind="INPUT" tail="trueQ"/>
+      <arc head="T4_T0" kind="INPUT" tail="Q5"/>
+      <arc head="T5_0" kind="INPUT" tail="Q1"/>
+      <arc head="T2_T1" kind="INPUT" tail="Q3"/>
+      <arc head="T1_T4" kind="INPUT" tail="P2"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="0.37802734375" tail="T4_T5"/>
+      <arc head="trueQ" kind="OUTPUT" mult-k="0.0" tail="T2_0"/>
+      <arc head="T2_T3" kind="INPUT" tail="P3"/>
+      <arc head="Q5" kind="OUTPUT" tail="T3_0"/>
+      <arc head="P2" kind="OUTPUT" tail="T0"/>
+      <arc head="T3" kind="INPUT" tail="P4C"/>
+      <arc head="P4C" kind="OUTPUT" tail="T2_T3"/>
+      <arc head="Q1" kind="OUTPUT" tail="T4_T5_0">
+        <point x="90.5" y="48.0"/>
+        <point x="90.5" y="5.0"/>
+      </arc>
+      <arc head="T4_T1_0" kind="INPUT" tail="falseP"/>
+      <arc head="P3" kind="OUTPUT" tail="T1_T4"/>
+      <arc head="T4_T1" kind="INPUT" tail="trueP"/>
+      <arc head="P1" kind="OUTPUT" tail="T5"/>
+      <arc head="T2_T3" kind="INPUT" mult-k="0.5860351562500001" tail="trueP"/>
+      <arc head="T3_0" kind="INPUT" tail="Q4C"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="0.27314453125000004" tail="T4_T1_0"/>
+      <arc head="T2_T3_0" kind="INPUT" tail="Q3"/>
+      <arc head="P5" kind="OUTPUT" tail="T3"/>
+      <arc head="T4_T0" kind="INPUT" tail="trueQ"/>
+      <arc head="T4_T5" kind="INPUT" tail="P5"/>
+      <arc head="Q2" kind="OUTPUT" tail="T0_0"/>
+      <arc head="Q1" kind="OUTPUT" tail="T5_0"/>
+      <arc head="trueP" kind="OUTPUT" mult-k="0.32763671875" tail="T2"/>
+      <arc head="T0_0" kind="INPUT" tail="Q1"/>
+      <arc head="falseQ" kind="OUTPUT" mult-k="0.27158203125" tail="T1_T4"/>
+      <arc head="falseQ" kind="OUTPUT" mult-k="0.20966796875000004" tail="T4_T5_0"/>
+      <arc head="trueQ" kind="OUTPUT" mult-k="0.39228515625000004" tail="T2_T3_0"/>
+      <arc head="T2_T0" kind="INPUT" tail="P3"/>
+      <arc head="T5" kind="INPUT" tail="P1"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T4_T0"/>
+      <arc head="T2_T0" kind="INPUT" tail="falseP"/>
+      <arc head="Q1" kind="OUTPUT" tail="T4_T0">
+        <point x="90.5" y="48.0"/>
+        <point x="90.5" y="5.0"/>
+      </arc>
+      <arc head="Q4C" kind="OUTPUT" tail="T2_T3_0"/>
+      <arc head="trueP" kind="OUTPUT" tail="T2_T0"/>
+      <arc head="P1" kind="OUTPUT" tail="T4_T5">
+        <point x="4.0" y="49.0"/>
+        <point x="4.0" y="6.0"/>
+      </arc>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="T2_0" kind="INPUT" tail="trueQ"/>
+      <arc head="trueQ" kind="OUTPUT" tail="T2_T1"/>
+      <arc head="T4_T5" kind="INPUT" tail="falseP"/>
+      <arc head="T4_T1_0" kind="INPUT" tail="Q2"/>
+      <arc head="P4C" kind="OUTPUT" tail="T2_T0"/>
+      <arc head="Q4C" kind="OUTPUT" tail="T2_T1"/>
+    </edges>
+  </gspn>
+  <gspn name="3_8O" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="P1" x="7.0" y="5.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="P2" x="7.0" y="13.0"/>
+      <place label-x="2.0" label-y="0.0" name="P3" x="7.0" y="21.0"/>
+      <place label-x="-2.5" label-y="0.5" name="P4C" x="7.0" y="32.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P5" x="7.0" y="42.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueP" x="28.0" y="28.0"/>
+      <place label-y="-2.5" marking="1" name="falseP" x="47.0" y="25.0"/>
+      <place label-x="2.0" label-y="-0.5" marking="1" name="Q1" x="96.0" y="9.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="Q2" x="96.0" y="17.0"/>
+      <place label-x="2.0" label-y="0.0" name="Q3" x="96.0" y="27.0"/>
+      <place label-x="-2.5" label-y="0.5" name="Q4C" x="96.0" y="36.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q5" x="96.0" y="46.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueQ" x="81.0" y="28.0"/>
+      <place label-y="-2.5" marking="1" name="falseQ" x="70.0" y="39.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="7.55" y="9.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T3" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="7.55" y="37.0"/>
+      <transition name="T5" nservers-x="0.5" type="EXP" x="13.55" y="5.0"/>
+      <transition name="T2_0" nservers-x="0.5" superposition-tags="isPt" type="EXP" x="34.55" y="26.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T1_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="7.55" y="17.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T1_T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="15.55" y="25.0"/>
+      <transition label-x="-1.5" name="T4_T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="7.55" y="48.0"/>
+      <transition label-x="-1.5" name="T4_T5" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="10.55" y="51.0"/>
+      <transition label-x="-1.5" label-y="-2.0" name="T0_0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="96.55" y="13.0"/>
+      <transition label-x="-2.0" label-y="-1.0" name="T3_0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="96.55" y="41.0"/>
+      <transition name="T5_0" nservers-x="0.5" type="EXP" x="92.55" y="7.0"/>
+      <transition name="T2_0_0" nservers-x="0.5" superposition-tags="isQt" type="EXP" x="62.55" y="16.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T1_T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setQt" type="EXP" x="96.55" y="21.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T1_T3_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setQt" type="EXP" x="88.55" y="18.0"/>
+      <transition label-x="-1.5" name="T4_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superposition-tags="setQf" type="EXP" x="96.55" y="50.0"/>
+      <transition label-x="-1.5" name="T4_T5_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superposition-tags="setQf" type="EXP" x="96.55" y="56.0"/>
+      <transition label-x="0.5" name="T2_T4" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.0" superposition-tags="isQf" type="EXP" x="7.55" y="27.0"/>
+      <transition label-x="1.0" name="T4_T2" nservers-x="0.5" superposition-tags="isPf" type="EXP" x="52.55" y="21.0"/>
+    </nodes>
+    <edges>
+      <arc head="trueP" kind="OUTPUT" tail="T1_T0"/>
+      <arc head="T4_T2" kind="INPUT" tail="falseP"/>
+      <arc head="P5" kind="OUTPUT" tail="T3"/>
+      <arc head="T1_T3_0" kind="INPUT" tail="Q2"/>
+      <arc head="T1_T3_0" kind="INPUT" tail="trueQ"/>
+      <arc head="falseQ" kind="OUTPUT" mult-k="0.42373046875" tail="T4_T5_0"/>
+      <arc head="Q5" kind="OUTPUT" tail="T3_0"/>
+      <arc head="Q2" kind="OUTPUT" tail="T0_0"/>
+      <arc head="Q3" kind="OUTPUT" tail="T1_T1"/>
+      <arc head="T0_0" kind="INPUT" tail="Q1"/>
+      <arc head="trueQ" kind="OUTPUT" tail="T1_T1"/>
+      <arc head="T1_T0" kind="INPUT" tail="P2"/>
+      <arc head="Q1" kind="OUTPUT" tail="T5_0"/>
+      <arc head="Q3" kind="OUTPUT" tail="T1_T3_0"/>
+      <arc head="T3_0" kind="INPUT" tail="Q4C"/>
+      <arc head="T1_T1" kind="INPUT" tail="Q2"/>
+      <arc head="trueP" kind="OUTPUT" tail="T2_0"/>
+      <arc head="T5_0" kind="INPUT" tail="Q1"/>
+      <arc head="T2_T4" kind="INPUT" tail="P3"/>
+      <arc head="trueQ" kind="OUTPUT" tail="T2_0_0">
+        <point x="60.0" y="18.5"/>
+      </arc>
+      <arc head="T4_T5_0" kind="INPUT" tail="Q5"/>
+      <arc head="T4_T5" kind="INPUT" tail="falseP"/>
+      <arc head="Q4C" kind="OUTPUT" tail="T4_T2"/>
+      <arc head="T1_T3" kind="INPUT" tail="trueP"/>
+      <arc head="T1_T3" kind="INPUT" tail="P2"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="0.0" tail="T4_T2"/>
+      <arc head="T5" kind="INPUT" tail="P1"/>
+      <arc head="P4C" kind="OUTPUT" tail="T2_T4"/>
+      <arc head="trueP" kind="OUTPUT" tail="T1_T3"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T2_T4"/>
+      <arc head="T4_T1" kind="INPUT" tail="trueP"/>
+      <arc head="T4_T0" kind="INPUT" tail="Q5"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T4_T0"/>
+      <arc head="P3" kind="OUTPUT" tail="T1_T3"/>
+      <arc head="T2_T4" kind="INPUT" tail="falseQ"/>
+      <arc head="T3" kind="INPUT" tail="P4C"/>
+      <arc head="T2_0_0" kind="INPUT" tail="trueQ"/>
+      <arc head="T1_T1" kind="INPUT" tail="falseQ"/>
+      <arc head="Q1" kind="OUTPUT" tail="T4_T5_0">
+        <point x="105.5" y="53.0"/>
+        <point x="105.5" y="10.0"/>
+      </arc>
+      <arc head="T4_T2" kind="INPUT" tail="Q3"/>
+      <arc head="P1" kind="OUTPUT" tail="T4_T5">
+        <point x="4.0" y="49.0"/>
+        <point x="4.0" y="6.0"/>
+      </arc>
+      <arc head="P1" kind="OUTPUT" tail="T4_T1">
+        <point x="4.0" y="49.0"/>
+        <point x="4.0" y="6.0"/>
+      </arc>
+      <arc head="P2" kind="OUTPUT" tail="T0"/>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="trueQ" kind="OUTPUT" tail="T1_T3_0"/>
+      <arc head="T4_T1" kind="INPUT" tail="P5"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="0.49091796874999993" tail="T4_T5"/>
+      <arc head="falseP" kind="OUTPUT" tail="T4_T1"/>
+      <arc head="T4_T0" kind="INPUT" tail="trueQ"/>
+      <arc head="T2_0" kind="INPUT" tail="trueP"/>
+      <arc head="T1_T0" kind="INPUT" tail="falseP"/>
+      <arc head="T4_T5" kind="INPUT" tail="P5"/>
+      <arc head="Q1" kind="OUTPUT" tail="T4_T0">
+        <point x="105.5" y="53.0"/>
+        <point x="105.5" y="10.0"/>
+      </arc>
+      <arc head="P1" kind="OUTPUT" tail="T5"/>
+      <arc head="P3" kind="OUTPUT" tail="T1_T0"/>
+      <arc head="T4_T5_0" kind="INPUT" tail="falseQ"/>
+    </edges>
+  </gspn>
+  <gspn name="3_6R" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="-2.0" label-y="-1.0" marking="1" name="P1P2" x="7.0" y="5.0"/>
+      <place label-x="-2.0" label-y="0.0" name="P3" x="7.0" y="21.0"/>
+      <place label-x="-2.5" label-y="0.0" name="P4CP5" x="7.0" y="36.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueP" x="15.0" y="35.0"/>
+      <place label-y="-2.5" marking="1" name="falseP" x="39.0" y="39.0"/>
+      <place label-x="-2.0" label-y="-1.0" name="Q1Q2" x="81.0" y="4.0"/>
+      <place label-x="2.0" label-y="0.0" name="Q3" x="81.0" y="16.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q4CQ5" x="81.0" y="35.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueQ" x="65.0" y="35.0"/>
+      <place label-y="-2.5" marking="1" name="falseQ" x="55.0" y="39.0"/>
+      <transition label-x="0.5" name="T2_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.5" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="7.55" y="28.0"/>
+      <transition label-x="0.5" name="T2_T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="4.5" superpos-y="-1.0" superposition-tags="setPt" type="EXP" x="15.55" y="21.0"/>
+      <transition label-x="-1.5" name="T4_T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="11.55" y="43.0"/>
+      <transition label-x="-1.5" name="T4_T5" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="8.55" y="49.0"/>
+      <transition label-x="-1.0" name="T2_T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.5" superpos-y="-1.5" superposition-tags="setQt" type="EXP" x="81.55" y="22.0"/>
+      <transition label-x="-1.0" name="T2_T3_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superpos-y="-3.0" superposition-tags="setQt" type="EXP" x="67.55" y="20.0"/>
+      <transition label-x="-1.5" name="T4_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superposition-tags="setQf" type="EXP" x="71.55" y="39.0"/>
+      <transition label-x="-1.5" name="T4_T5_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-y="1.5" superposition-tags="setQf" type="EXP" x="81.55" y="49.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T1_T4" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.5" superpos-y="-1.0" superposition-tags="isQf" type="EXP" x="7.55" y="11.0"/>
+      <transition label-x="3.5" name="T4_T1_0" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="isPf" type="EXP" x="81.55" y="12.0"/>
+    </nodes>
+    <edges>
+      <arc head="T4_T1" kind="INPUT" tail="P4CP5"/>
+      <arc head="T1_T4" kind="INPUT" mult-k="1.15537109375" tail="falseQ">
+        <point x="42.5" y="11.5"/>
+      </arc>
+      <arc head="P1P2" kind="OUTPUT" tail="T4_T1">
+        <point x="4.0" y="49.0"/>
+        <point x="4.0" y="6.0"/>
+      </arc>
+      <arc head="Q3" kind="OUTPUT" tail="T4_T1_0"/>
+      <arc head="falseP" kind="OUTPUT" tail="T4_T1"/>
+      <arc head="T2_T1" kind="INPUT" tail="falseQ"/>
+      <arc head="trueP" kind="OUTPUT" mult-k="0.19951171875" tail="T2_T3"/>
+      <arc head="T4_T5_0" kind="INPUT" tail="Q4CQ5"/>
+      <arc head="T4_T5_0" kind="INPUT" tail="falseQ"/>
+      <arc head="T2_T3_0" kind="INPUT" tail="trueQ"/>
+      <arc head="T4_T0" kind="INPUT" tail="Q4CQ5"/>
+      <arc head="T2_T1" kind="INPUT" tail="Q3"/>
+      <arc head="T1_T4" kind="INPUT" tail="P1P2"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="0.37802734375" tail="T4_T5"/>
+      <arc head="T2_T3" kind="INPUT" tail="P3"/>
+      <arc head="P4CP5" kind="OUTPUT" tail="T2_T3"/>
+      <arc head="Q1Q2" kind="OUTPUT" mult-k="0.49990234375" tail="T4_T5_0">
+        <point x="90.5" y="48.0"/>
+        <point x="90.5" y="5.0"/>
+        <point x="86.5" y="5.0"/>
+      </arc>
+      <arc head="T4_T1_0" kind="INPUT" mult-k="1.10009765625" tail="falseP">
+        <point x="50.0" y="13.5"/>
+        <point x="50.68000070789732" y="13.001550765627893"/>
+      </arc>
+      <arc head="P3" kind="OUTPUT" tail="T1_T4"/>
+      <arc head="T4_T1" kind="INPUT" tail="trueP"/>
+      <arc head="T2_T3" kind="INPUT" mult-k="0.53134765625" tail="trueP"/>
+      <arc head="falseP" kind="OUTPUT" tail="T4_T1_0">
+        <point x="50.5" y="13.0"/>
+      </arc>
+      <arc head="T2_T3_0" kind="INPUT" tail="Q3"/>
+      <arc head="T4_T0" kind="INPUT" tail="trueQ"/>
+      <arc head="T4_T5" kind="INPUT" tail="P4CP5"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T1_T4">
+        <point x="42.5" y="11.5"/>
+      </arc>
+      <arc head="falseQ" kind="OUTPUT" mult-k="0.20966796875000004" tail="T4_T5_0"/>
+      <arc head="trueQ" kind="OUTPUT" mult-k="0.31494140625" tail="T2_T3_0"/>
+      <arc head="T2_T0" kind="INPUT" tail="P3"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T4_T0"/>
+      <arc head="T2_T0" kind="INPUT" tail="falseP"/>
+      <arc head="Q1Q2" kind="OUTPUT" mult-k="0.50009765625" tail="T4_T0">
+        <point x="91.0" y="48.0"/>
+        <point x="91.0" y="5.0"/>
+        <point x="85.5" y="5.0"/>
+      </arc>
+      <arc head="Q4CQ5" kind="OUTPUT" mult-k="0.23935546875" tail="T2_T3_0"/>
+      <arc head="trueP" kind="OUTPUT" tail="T2_T0"/>
+      <arc head="P1P2" kind="OUTPUT" mult-k="0.50009765625" tail="T4_T5">
+        <point x="4.0" y="49.5"/>
+        <point x="4.0" y="6.5"/>
+        <point x="4.5" y="6.0"/>
+      </arc>
+      <arc head="trueQ" kind="OUTPUT" tail="T2_T1"/>
+      <arc head="T4_T5" kind="INPUT" tail="falseP"/>
+      <arc head="T4_T1_0" kind="INPUT" tail="Q1Q2"/>
+      <arc head="P4CP5" kind="OUTPUT" mult-k="0.31962890625000007" tail="T2_T0"/>
+      <arc head="Q4CQ5" kind="OUTPUT" mult-k="0.40712890625" tail="T2_T1"/>
+    </edges>
+  </gspn>
+  <gspn name="3_8R" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="-2.0" label-y="-1.0" marking="1" name="P1P2" x="9.0" y="7.0"/>
+      <place label-x="2.0" label-y="0.0" name="P3" x="9.0" y="23.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P4CP5" x="9.0" y="37.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueP" x="30.0" y="30.0"/>
+      <place label-y="-2.5" marking="1" name="falseP" x="49.0" y="27.0"/>
+      <place label-x="-2.0" label-y="-1.0" marking="1" name="Q1Q2" x="98.0" y="11.0"/>
+      <place label-x="2.0" label-y="0.0" name="Q3" x="98.0" y="29.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q4CQ5" x="98.0" y="40.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueQ" x="83.0" y="30.0"/>
+      <place label-y="-2.5" marking="1" name="falseQ" x="72.0" y="41.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T1_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="9.55" y="19.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T1_T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="17.55" y="27.0"/>
+      <transition label-x="-1.5" name="T4_T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="9.55" y="50.0"/>
+      <transition label-x="-1.5" name="T4_T5" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="12.55" y="53.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T1_T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setQt" type="EXP" x="98.55" y="23.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T1_T3_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setQt" type="EXP" x="90.55" y="20.0"/>
+      <transition label-x="-1.5" name="T4_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superposition-tags="setQf" type="EXP" x="91.55" y="45.0"/>
+      <transition label-x="-1.5" name="T4_T5_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="1.5" superposition-tags="setQf" type="EXP" x="98.55" y="58.0"/>
+      <transition label-x="0.5" name="T2_T4" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.0" superposition-tags="isQf" type="EXP" x="9.55" y="29.0"/>
+      <transition label-x="1.0" name="T4_T2" nservers-x="0.5" superposition-tags="isPf" type="EXP" x="98.55" y="33.0"/>
+    </nodes>
+    <edges>
+      <arc head="trueP" kind="OUTPUT" tail="T1_T0"/>
+      <arc head="T4_T2" kind="INPUT" tail="falseP"/>
+      <arc head="T1_T3_0" kind="INPUT" tail="Q1Q2"/>
+      <arc head="T1_T3_0" kind="INPUT" tail="trueQ"/>
+      <arc head="falseQ" kind="OUTPUT" mult-k="0.42373046875" tail="T4_T5_0"/>
+      <arc head="Q3" kind="OUTPUT" tail="T1_T1"/>
+      <arc head="trueQ" kind="OUTPUT" tail="T1_T1"/>
+      <arc head="T1_T0" kind="INPUT" tail="P1P2"/>
+      <arc head="Q3" kind="OUTPUT" tail="T1_T3_0"/>
+      <arc head="T1_T1" kind="INPUT" tail="Q1Q2"/>
+      <arc head="T2_T4" kind="INPUT" tail="P3"/>
+      <arc head="T4_T5_0" kind="INPUT" tail="Q4CQ5"/>
+      <arc head="T4_T5" kind="INPUT" tail="falseP"/>
+      <arc head="Q4CQ5" kind="OUTPUT" mult-k="0.13330078125" tail="T4_T2"/>
+      <arc head="T1_T3" kind="INPUT" tail="trueP"/>
+      <arc head="T1_T3" kind="INPUT" tail="P1P2"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="0.0" tail="T4_T2"/>
+      <arc head="P4CP5" kind="OUTPUT" tail="T2_T4"/>
+      <arc head="trueP" kind="OUTPUT" tail="T1_T3"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T2_T4"/>
+      <arc head="T4_T1" kind="INPUT" tail="trueP"/>
+      <arc head="T4_T0" kind="INPUT" tail="Q4CQ5"/>
+      <arc head="falseQ" kind="OUTPUT" tail="T4_T0"/>
+      <arc head="P3" kind="OUTPUT" tail="T1_T3"/>
+      <arc head="T2_T4" kind="INPUT" tail="falseQ"/>
+      <arc head="T1_T1" kind="INPUT" tail="falseQ"/>
+      <arc head="Q1Q2" kind="OUTPUT" mult-k="0.49990234375" tail="T4_T5_0">
+        <point x="107.5" y="55.0"/>
+        <point x="107.5" y="12.0"/>
+        <point x="99.50401909208375" y="11.15831779916671"/>
+      </arc>
+      <arc head="T4_T2" kind="INPUT" tail="Q3"/>
+      <arc head="P1P2" kind="OUTPUT" tail="T4_T5">
+        <point x="6.0" y="51.0"/>
+        <point x="6.0" y="8.0"/>
+      </arc>
+      <arc head="P1P2" kind="OUTPUT" mult-k="0.49990234375" tail="T4_T1">
+        <point x="6.0" y="51.0"/>
+        <point x="6.0" y="8.0"/>
+        <point x="7.5" y="8.0"/>
+      </arc>
+      <arc head="trueQ" kind="OUTPUT" tail="T1_T3_0"/>
+      <arc head="T4_T1" kind="INPUT" tail="P4CP5"/>
+      <arc head="falseP" kind="OUTPUT" mult-k="0.49091796874999993" tail="T4_T5"/>
+      <arc head="falseP" kind="OUTPUT" tail="T4_T1"/>
+      <arc head="T4_T0" kind="INPUT" tail="trueQ"/>
+      <arc head="T1_T0" kind="INPUT" tail="falseP"/>
+      <arc head="T4_T5" kind="INPUT" tail="P4CP5"/>
+      <arc head="Q1Q2" kind="OUTPUT" tail="T4_T0">
+        <point x="107.5" y="55.0"/>
+        <point x="107.5" y="12.0"/>
+      </arc>
+      <arc head="P3" kind="OUTPUT" tail="T1_T0"/>
+      <arc head="T4_T5_0" kind="INPUT" tail="falseQ"/>
+    </edges>
+  </gspn>
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="-2.0" label-y="-1.0" name="P1P2" x="7.0" y="5.0"/>
+      <place label-x="2.0" label-y="0.0" name="P3" x="7.0" y="20.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P4CP5" x="7.0" y="42.0"/>
+      <place label-x="1.0" label-y="2.0" name="true" x="34.0" y="24.0"/>
+      <place label-y="-2.5" marking="1" name="false" x="42.0" y="43.0"/>
+      <place label-x="1.0" label-y="2.0" name="trueQ" x="74.0" y="14.0"/>
+      <place label-y="-2.5" marking="1" name="falseQ" x="58.0" y="36.0"/>
+      <place label-x="-2.0" label-y="-1.0" marking="1" name="Q1Q2" x="99.0" y="7.0"/>
+      <place label-x="2.0" label-y="0.0" name="Q3" x="99.0" y="23.0"/>
+      <place label-x="3.5" label-y="-1.5" name="Q4CQ5" x="93.0" y="48.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="setPt_T1_plus_T0_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="32.55" y="13.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="setPt_T1_plus_T3_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="0.0" superposition-tags="setPt" type="EXP" x="7.55" y="12.0"/>
+      <transition label-x="-1.5" name="setPf_T4_plus_T1_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="23.549999999999997" y="39.0"/>
+      <transition label-x="-1.5" name="setPf_T4_plus_T5_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.5" superposition-tags="setPf" type="EXP" x="29.55" y="46.0"/>
+      <transition label-x="-1.0" name="T2_0_0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.5" superpos-y="-1.5" superposition-tags="isPf" type="EXP" x="99.55" y="29.0"/>
+      <transition name="setQt_T1_plus_T1_0" nservers-x="0.5" superposition-tags="setQt" type="EXP" x="44.55" y="13.0"/>
+      <transition name="setQt_T3_plus_T1_0" nservers-x="0.5" superposition-tags="setQt" type="EXP" x="92.55" y="12.0"/>
+      <transition name="setQf_T0_plus_T4_0" nservers-x="0.5" superposition-tags="setQf" type="EXP" x="63.55" y="22.0"/>
+      <transition name="setQf_T5_plus_T4_0" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setQf" type="EXP" x="86.55" y="55.0"/>
+      <transition label-x="0.5" name="isQf_T2_plus_T4" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="-1.0" superposition-tags="isQf" type="EXP" x="7.55" y="32.0"/>
+    </nodes>
+    <edges>
+      <arc head="isQf_T2_plus_T4" kind="INPUT" tail="P3"/>
+      <arc head="Q4CQ5" kind="OUTPUT" mult-k="0.6446289062500002" tail="T2_0_0">
+        <point x="100.0" y="34.5"/>
+      </arc>
+      <arc head="Q3" kind="OUTPUT" tail="setQt_T1_plus_T1_0"/>
+      <arc head="setQt_T1_plus_T1_0" kind="INPUT" tail="Q1Q2"/>
+      <arc head="setPt_T1_plus_T3_0" kind="INPUT" tail="P1P2"/>
+      <arc head="setPt_T1_plus_T0_0" kind="INPUT" tail="P1P2"/>
+      <arc head="setQf_T5_plus_T4_0" kind="INPUT" tail="falseQ"/>
+      <arc head="setQf_T0_plus_T4_0" kind="INPUT" tail="Q4CQ5"/>
+      <arc head="setPt_T1_plus_T0_0" kind="INPUT" tail="false"/>
+      <arc head="trueQ" kind="OUTPUT" tail="setQt_T1_plus_T1_0"/>
+      <arc head="trueQ" kind="OUTPUT" tail="setQt_T3_plus_T1_0"/>
+      <arc head="falseQ" kind="OUTPUT" tail="setQf_T5_plus_T4_0"/>
+      <arc head="false" kind="OUTPUT" tail="setPf_T4_plus_T1_0"/>
+      <arc head="setPf_T4_plus_T5_0" kind="INPUT" tail="false"/>
+      <arc head="false" kind="OUTPUT" tail="setPf_T4_plus_T5_0"/>
+      <arc head="setPt_T1_plus_T3_0" kind="INPUT" tail="true"/>
+      <arc head="Q1Q2" kind="OUTPUT" tail="setQf_T5_plus_T4_0">
+        <point x="108.5" y="51.0"/>
+        <point x="108.5" y="8.0"/>
+      </arc>
+      <arc head="setQt_T3_plus_T1_0" kind="INPUT" tail="Q1Q2"/>
+      <arc head="Q1Q2" kind="OUTPUT" mult-k="0.49990234375" tail="setQf_T0_plus_T4_0">
+        <point x="108.5" y="51.0"/>
+        <point x="108.5" y="8.0"/>
+        <point x="106.0" y="8.0"/>
+      </arc>
+      <arc head="P4CP5" kind="OUTPUT" tail="isQf_T2_plus_T4"/>
+      <arc head="P3" kind="OUTPUT" tail="setPt_T1_plus_T3_0"/>
+      <arc head="Q3" kind="OUTPUT" tail="setQt_T3_plus_T1_0"/>
+      <arc head="setPf_T4_plus_T1_0" kind="INPUT" tail="P4CP5"/>
+      <arc head="falseQ" kind="OUTPUT" tail="isQf_T2_plus_T4"/>
+      <arc head="setQt_T3_plus_T1_0" kind="INPUT" tail="trueQ"/>
+      <arc head="setQt_T1_plus_T1_0" kind="INPUT" tail="falseQ"/>
+      <arc head="setQf_T5_plus_T4_0" kind="INPUT" tail="Q4CQ5"/>
+      <arc head="setPf_T4_plus_T5_0" kind="INPUT" tail="P4CP5"/>
+      <arc head="setQf_T0_plus_T4_0" kind="INPUT" tail="trueQ"/>
+      <arc head="T2_0_0" kind="INPUT" tail="Q3"/>
+      <arc head="P3" kind="OUTPUT" tail="setPt_T1_plus_T0_0"/>
+      <arc head="setPf_T4_plus_T1_0" kind="INPUT" tail="true"/>
+      <arc head="P1P2" kind="OUTPUT" tail="setPf_T4_plus_T5_0">
+        <point x="4.0" y="49.0"/>
+        <point x="4.0" y="6.0"/>
+      </arc>
+      <arc head="falseQ" kind="OUTPUT" tail="setQf_T0_plus_T4_0"/>
+      <arc head="true" kind="OUTPUT" tail="setPt_T1_plus_T3_0"/>
+      <arc head="true" kind="OUTPUT" tail="setPt_T1_plus_T0_0"/>
+      <arc head="isQf_T2_plus_T4" kind="INPUT" tail="falseQ"/>
+      <arc head="P1P2" kind="OUTPUT" tail="setPf_T4_plus_T1_0">
+        <point x="4.0" y="49.0"/>
+        <point x="4.0" y="6.0"/>
+      </arc>
+    </edges>
+  </gspn>
+</project>
