@@ -1,0 +1,203 @@
+strict digraph {
+1 -> 2
+1 -> 1
+3 -> 3
+3 -> 3
+4 -> 3
+4 -> 4
+2 -> 4
+2 -> 2
+5 -> 6
+5 -> 5
+7 -> 7
+7 -> 7
+8 -> 7
+8 -> 8
+6 -> 8
+6 -> 6
+9 -> 10
+9 -> 9
+11 -> 11
+11 -> 11
+12 -> 11
+12 -> 12
+10 -> 12
+10 -> 10
+13 -> 14
+13 -> 13
+15 -> 15
+15 -> 15
+16 -> 15
+16 -> 16
+14 -> 16
+14 -> 14
+17 -> 18
+17 -> 17
+19 -> 20
+19 -> 19
+21 -> 19
+21 -> 21
+18 -> 21
+18 -> 18
+22 -> 23
+22 -> 22
+24 -> 25
+24 -> 24
+26 -> 24
+26 -> 26
+23 -> 26
+23 -> 23
+27 -> 28
+27 -> 27
+29 -> 30
+29 -> 29
+31 -> 29
+31 -> 31
+28 -> 31
+28 -> 28
+32 -> 33
+32 -> 32
+34 -> 35
+34 -> 34
+36 -> 34
+36 -> 36
+33 -> 36
+33 -> 33
+20 -> 37
+20 -> 20
+38 -> 1
+38 -> 38
+39 -> 38
+39 -> 39
+37 -> 39
+37 -> 37
+25 -> 40
+25 -> 25
+41 -> 5
+41 -> 41
+42 -> 41
+42 -> 42
+40 -> 42
+40 -> 40
+30 -> 43
+30 -> 30
+44 -> 9
+44 -> 44
+45 -> 44
+45 -> 45
+43 -> 45
+43 -> 43
+35 -> 46
+35 -> 35
+47 -> 13
+47 -> 47
+48 -> 47
+48 -> 48
+46 -> 48
+46 -> 46
+1 -> 13
+3 -> 15
+4 -> 16
+2 -> 14
+5 -> 20
+7 -> 38
+8 -> 39
+6 -> 37
+9 -> 5
+11 -> 7
+12 -> 8
+10 -> 6
+13 -> 9
+15 -> 11
+16 -> 12
+14 -> 10
+17 -> 32
+19 -> 34
+21 -> 36
+18 -> 33
+22 -> 22
+24 -> 24
+26 -> 26
+23 -> 23
+27 -> 22
+29 -> 24
+31 -> 26
+28 -> 23
+32 -> 27
+34 -> 29
+36 -> 31
+33 -> 28
+20 -> 35
+38 -> 47
+39 -> 48
+37 -> 46
+25 -> 17
+41 -> 19
+42 -> 21
+40 -> 18
+30 -> 25
+44 -> 41
+45 -> 42
+43 -> 40
+35 -> 30
+47 -> 44
+48 -> 45
+46 -> 43
+{ rank = sink;
+  Legend [shape=none, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="2">
+     <TR>
+      <TD COLSPAN="2"><B>States Legend</B></TD>
+     </TR>
+<TR><TD><FONT COLOR="blue">1:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = back, cons.state = back</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">2:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = think, cons.state = back</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">3:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = put, cons.state = back</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">4:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = generate, cons.state = back</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">5:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = back, cons.state = get</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">6:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = think, cons.state = get</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">7:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = put, cons.state = get</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">8:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = generate, cons.state = get</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">9:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = back, cons.state = consume</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">10:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = think, cons.state = consume</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">11:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = put, cons.state = consume</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">12:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = generate, cons.state = consume</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">13:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = back, cons.state = think</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">14:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = think, cons.state = think</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">15:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = put, cons.state = think</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">16:</FONT></TD><TD><FONT COLOR="black">pos_libere = 0, pos_occupate = 2, prod.state = generate, cons.state = think</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">17:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = back, cons.state = back</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">18:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = think, cons.state = back</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">19:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = put, cons.state = back</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">20:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = back, cons.state = back</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">21:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = generate, cons.state = back</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">22:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = back, cons.state = get</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">23:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = think, cons.state = get</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">24:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = put, cons.state = get</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">25:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = back, cons.state = get</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">26:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = generate, cons.state = get</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">27:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = back, cons.state = consume</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">28:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = think, cons.state = consume</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">29:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = put, cons.state = consume</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">30:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = back, cons.state = consume</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">31:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = generate, cons.state = consume</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">32:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = back, cons.state = think</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">33:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = think, cons.state = think</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">34:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = put, cons.state = think</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">35:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = back, cons.state = think</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">36:</FONT></TD><TD><FONT COLOR="black">pos_libere = 2, pos_occupate = 0, prod.state = generate, cons.state = think</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">37:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = think, cons.state = back</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">38:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = put, cons.state = back</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">39:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = generate, cons.state = back</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">40:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = think, cons.state = get</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">41:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = put, cons.state = get</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">42:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = generate, cons.state = get</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">43:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = think, cons.state = consume</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">44:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = put, cons.state = consume</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">45:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = generate, cons.state = consume</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">46:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = think, cons.state = think</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">47:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = put, cons.state = think</FONT></TD></TR>
+<TR><TD><FONT COLOR="blue">48:</FONT></TD><TD><FONT COLOR="black">pos_libere = 1, pos_occupate = 1, prod.state = generate, cons.state = think</FONT></TD></TR>
+ </TABLE> >];
+}
+
+}

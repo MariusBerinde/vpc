@@ -1,0 +1,12 @@
+MODULE main
+VAR
+	richiesta : boolean;
+	stato:{pronto,occupato};
+ASSIGN
+	init(stato):=pronto;
+	next(stato):=
+	case
+		stato = pronto & richiesta = TRUE : occupato;
+		TRUE : {pronto,occupato};
+	esac;
+	next(richiesta):= richiesta;

@@ -1,0 +1,22 @@
+MODULE main
+VAR
+	val_attuale:{a,b,c,d};
+	stato:{sa,sb,sc,sd};
+ASSIGN
+init(stato):=sa;
+init(val_attuale):=a;
+
+next(stato):=
+	case
+	stato= sa:{sb,sc};
+	stato= sb:sd;
+	stato=sc:sd;
+	stato=sd:sa;
+	esac;
+next(val_attuale):=
+	case
+	next(stato)=sb:b;
+	next(stato)=sc:c;
+	next(stato)=sd:d;
+	next(stato)=sa:a;
+	esac;

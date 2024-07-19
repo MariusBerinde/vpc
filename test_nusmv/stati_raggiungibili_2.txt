@@ -1,0 +1,6915 @@
+system diameter: 27
+reachable states: 864 (2^9.75489) out of 3888 (2^11.9248)
+  ------- State    1 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State    2 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State    3 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State    4 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State    5 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State    6 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State    7 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State    8 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State    9 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State   10 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State   11 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State   12 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State   13 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State   14 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State   15 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State   16 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State   17 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State   18 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State   19 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State   20 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State   21 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State   22 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State   23 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State   24 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State   25 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State   26 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State   27 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State   28 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State   29 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State   30 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State   31 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State   32 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State   33 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State   34 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State   35 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State   36 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State   37 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State   38 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State   39 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State   40 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State   41 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State   42 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State   43 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State   44 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State   45 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State   46 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State   47 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State   48 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State   49 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State   50 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State   51 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State   52 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State   53 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State   54 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State   55 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State   56 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State   57 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State   58 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State   59 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State   60 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State   61 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State   62 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State   63 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State   64 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State   65 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State   66 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State   67 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State   68 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State   69 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State   70 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State   71 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State   72 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State   73 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State   74 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State   75 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State   76 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State   77 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State   78 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State   79 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State   80 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State   81 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State   82 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State   83 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State   84 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State   85 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State   86 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State   87 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State   88 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State   89 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State   90 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State   91 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State   92 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State   93 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State   94 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State   95 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State   96 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State   97 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State   98 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State   99 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  100 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  101 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  102 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  103 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  104 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  105 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  106 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  107 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  108 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  109 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  110 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  111 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  112 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  113 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  114 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  115 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  116 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  117 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  118 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  119 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  120 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  121 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  122 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  123 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  124 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  125 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  126 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  127 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  128 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  129 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  130 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  131 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  132 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  133 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  134 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  135 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  136 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  137 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  138 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  139 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  140 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  141 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  142 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  143 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  144 ------
+  pos_libere = 0
+  pos_occupate = 0
+  pos_inusate = 2
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  145 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  146 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  147 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  148 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  149 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  150 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  151 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  152 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  153 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  154 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  155 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  156 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  157 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  158 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  159 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  160 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  161 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  162 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  163 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  164 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  165 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  166 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  167 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  168 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  169 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  170 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  171 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  172 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  173 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  174 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  175 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  176 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  177 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  178 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  179 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  180 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  181 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  182 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  183 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  184 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  185 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  186 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  187 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  188 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  189 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  190 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  191 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  192 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  193 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  194 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  195 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  196 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  197 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  198 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  199 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  200 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  201 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  202 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  203 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  204 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  205 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  206 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  207 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  208 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  209 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  210 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  211 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  212 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  213 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  214 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  215 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  216 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  217 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  218 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  219 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  220 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  221 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  222 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  223 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  224 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  225 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  226 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  227 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  228 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  229 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  230 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  231 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  232 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  233 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  234 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  235 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  236 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  237 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  238 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  239 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  240 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  241 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  242 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  243 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  244 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  245 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  246 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  247 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  248 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  249 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  250 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  251 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  252 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  253 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  254 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  255 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  256 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  257 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  258 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  259 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  260 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  261 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  262 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  263 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  264 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  265 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  266 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  267 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  268 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  269 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  270 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  271 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  272 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  273 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  274 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  275 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  276 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  277 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  278 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  279 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  280 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  281 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  282 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  283 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  284 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  285 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  286 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  287 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  288 ------
+  pos_libere = 0
+  pos_occupate = 2
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  289 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  290 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  291 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  292 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  293 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  294 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  295 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  296 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  297 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  298 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  299 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  300 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  301 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  302 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  303 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  304 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  305 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  306 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  307 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  308 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  309 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  310 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  311 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  312 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  313 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  314 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  315 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  316 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  317 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  318 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  319 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  320 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  321 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  322 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  323 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  324 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  325 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  326 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  327 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  328 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  329 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  330 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  331 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  332 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  333 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  334 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  335 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  336 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  337 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  338 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  339 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  340 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  341 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  342 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  343 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  344 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  345 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  346 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  347 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  348 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  349 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  350 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  351 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  352 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  353 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  354 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  355 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  356 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  357 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  358 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  359 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  360 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  361 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  362 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  363 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  364 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  365 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  366 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  367 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  368 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  369 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  370 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  371 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  372 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  373 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  374 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  375 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  376 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  377 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  378 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  379 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  380 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  381 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  382 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  383 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  384 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  385 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  386 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  387 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  388 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  389 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  390 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  391 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  392 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  393 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  394 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  395 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  396 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  397 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  398 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  399 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  400 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  401 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  402 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  403 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  404 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  405 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  406 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  407 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  408 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  409 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  410 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  411 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  412 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  413 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  414 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  415 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  416 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  417 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  418 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  419 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  420 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  421 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  422 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  423 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  424 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  425 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  426 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  427 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  428 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  429 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  430 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  431 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  432 ------
+  pos_libere = 0
+  pos_occupate = 1
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  433 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  434 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  435 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  436 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  437 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  438 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  439 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  440 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  441 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  442 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  443 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  444 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  445 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  446 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  447 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  448 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  449 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  450 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  451 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  452 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  453 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  454 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  455 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  456 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  457 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  458 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  459 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  460 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  461 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  462 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  463 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  464 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  465 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  466 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  467 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  468 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  469 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  470 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  471 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  472 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  473 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  474 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  475 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  476 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  477 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  478 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  479 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  480 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  481 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  482 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  483 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  484 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  485 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  486 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  487 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  488 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  489 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  490 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  491 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  492 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  493 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  494 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  495 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  496 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  497 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  498 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  499 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  500 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  501 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  502 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  503 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  504 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  505 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  506 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  507 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  508 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  509 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  510 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  511 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  512 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  513 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  514 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  515 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  516 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  517 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  518 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  519 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  520 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  521 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  522 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  523 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  524 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  525 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  526 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  527 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  528 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  529 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  530 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  531 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  532 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  533 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  534 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  535 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  536 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  537 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  538 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  539 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  540 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  541 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  542 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  543 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  544 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  545 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  546 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  547 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  548 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  549 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  550 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  551 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  552 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  553 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  554 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  555 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  556 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  557 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  558 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  559 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  560 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  561 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  562 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  563 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  564 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  565 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  566 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  567 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  568 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  569 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  570 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  571 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  572 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  573 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  574 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  575 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  576 ------
+  pos_libere = 2
+  pos_occupate = 0
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  577 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  578 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  579 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  580 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  581 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  582 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  583 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  584 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  585 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  586 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  587 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  588 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  589 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  590 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  591 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  592 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  593 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  594 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  595 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  596 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  597 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  598 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  599 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  600 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  601 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  602 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  603 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  604 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  605 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  606 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  607 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  608 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  609 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  610 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  611 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  612 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  613 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  614 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  615 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  616 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  617 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  618 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  619 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  620 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  621 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  622 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  623 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  624 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  625 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  626 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  627 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  628 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  629 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  630 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  631 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  632 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  633 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  634 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  635 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  636 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  637 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  638 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  639 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  640 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  641 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  642 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  643 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  644 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  645 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  646 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  647 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  648 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  649 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  650 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  651 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  652 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  653 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  654 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  655 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  656 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  657 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  658 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  659 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  660 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  661 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  662 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  663 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  664 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  665 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  666 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  667 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  668 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  669 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  670 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  671 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  672 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  673 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  674 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  675 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  676 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  677 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  678 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  679 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  680 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  681 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  682 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  683 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  684 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  685 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  686 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  687 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  688 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  689 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  690 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  691 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  692 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  693 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  694 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  695 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  696 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  697 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  698 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  699 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  700 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  701 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  702 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  703 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  704 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  705 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  706 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  707 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  708 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  709 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  710 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  711 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  712 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  713 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  714 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  715 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  716 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  717 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  718 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  719 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  720 ------
+  pos_libere = 1
+  pos_occupate = 0
+  pos_inusate = 1
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  721 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  722 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  723 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  724 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = think
+  ------- State  725 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  726 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  727 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  728 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = think
+  ------- State  729 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  730 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  731 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  732 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = think
+  ------- State  733 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  734 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  735 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  736 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = think
+  ------- State  737 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  738 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  739 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  740 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = think
+  ------- State  741 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  742 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  743 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  744 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = think
+  ------- State  745 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  746 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  747 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  748 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = think
+  ------- State  749 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  750 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  751 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  752 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = think
+  ------- State  753 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  754 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  755 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  756 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = get
+  ------- State  757 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  758 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  759 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  760 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = get
+  ------- State  761 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  762 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  763 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  764 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = get
+  ------- State  765 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  766 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  767 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  768 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = get
+  ------- State  769 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  770 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  771 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  772 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = get
+  ------- State  773 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  774 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  775 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  776 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = get
+  ------- State  777 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  778 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  779 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  780 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = get
+  ------- State  781 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  782 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  783 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  784 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = get
+  ------- State  785 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  786 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  787 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  788 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = think
+  cons2.state = consume
+  ------- State  789 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  790 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  791 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  792 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = think
+  cons2.state = consume
+  ------- State  793 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  794 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  795 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  796 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = think
+  cons2.state = consume
+  ------- State  797 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  798 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  799 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  800 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = think
+  cons2.state = consume
+  ------- State  801 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  802 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  803 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  804 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = get
+  cons2.state = consume
+  ------- State  805 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  806 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  807 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  808 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = get
+  cons2.state = consume
+  ------- State  809 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  810 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  811 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  812 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = get
+  cons2.state = consume
+  ------- State  813 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  814 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  815 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  816 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = get
+  cons2.state = consume
+  ------- State  817 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  818 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  819 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  820 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = think
+  ------- State  821 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  822 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  823 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  824 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = think
+  ------- State  825 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  826 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  827 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  828 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = think
+  ------- State  829 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  830 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  831 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  832 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = think
+  ------- State  833 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  834 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  835 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  836 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = get
+  ------- State  837 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  838 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  839 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  840 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = get
+  ------- State  841 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  842 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  843 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  844 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = get
+  ------- State  845 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  846 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  847 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  848 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = get
+  ------- State  849 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  850 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  851 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  852 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = back
+  cons.state = consume
+  cons2.state = consume
+  ------- State  853 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  854 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  855 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  856 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = put
+  cons.state = consume
+  cons2.state = consume
+  ------- State  857 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  858 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  859 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  860 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = generate
+  cons.state = consume
+  cons2.state = consume
+  ------- State  861 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = back
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  862 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = put
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  863 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = generate
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  ------- State  864 ------
+  pos_libere = 1
+  pos_occupate = 1
+  pos_inusate = 0
+  prod.state = think
+  prod2.state = think
+  cons.state = consume
+  cons2.state = consume
+  -------------------------

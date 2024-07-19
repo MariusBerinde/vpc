@@ -1,0 +1,79 @@
+MODULE main
+VAR 
+	max_pos:{2} ; 
+	pos_libere : 0..max_pos;
+	pos_occupate : 0..max_pos;
+	pos_inusate: 0..max_pos;
+	prod : process produttore(pos_libere,pos_occupate,max_pos);
+	cons : process consumatore(pos_occupate,pos_inusate,max_pos);
+	buf : process buffer(pos_inusate,pos_libere,max_pos);
+ASSIGN
+	init(pos_libere):=2;
+	init(pos_occupate):=0;
+	init(pos_inusate):=0;
+
+MODULE produttore(libere,occupate,max_buffer)
+VAR 
+	state:{think,generate,put,back};
+ASSIGN
+init (state):=think;
+next (state):=
+	case
+	state = think : generate;
+	state = generate : put;
+	state = put & libere > 0 : back;
+	state = back : think;
+	TRUE: state;
+	esac;
+next (libere):=
+	case
+	state = put & libere > 0 & occupate < max_buffer : libere - 1;
+	TRUE: libere;
+	esac;
+
+next (occupate):=
+	case
+	state = put & libere > 0 & occupate < max_buffer : occupate + 1;
+	TRUE: occupate;
+	esac;
+
+
+MODULE consumatore(occupate,inusabili,max_buffer)
+VAR
+	state:{get,consume,think};
+ASSIGN
+init (state):=get;
+next (state):=
+	case
+	state = get & occupate > 0 : consume;
+	state = consume : think;
+	state = think : get;
+	TRUE : state;
+	esac;
+next	(inusabili):=
+	case
+	state = get & occupate > 0 & inusabili < max_buffer : inusabili + 1;
+	TRUE : inusabili;
+	esac;
+next (occupate):=
+	case 
+	state = get & occupate > 0 : occupate - 1;
+	TRUE : occupate;
+	esac;
+
+MODULE buffer(pos_sporche, libere, max_buffer)
+VAR 
+    state : {clean};
+ASSIGN
+	next(libere) := 
+		case
+		state = clean & pos_sporche > 0 & libere < max_buffer: libere + 1;
+	TRUE : libere;
+	esac;
+	    next(pos_sporche) := 
+        case
+            state = clean & pos_sporche > 0: pos_sporche - 1;
+            TRUE : pos_sporche;
+        esac;
+FAIRNESS
+running

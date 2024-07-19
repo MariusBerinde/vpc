@@ -1,0 +1,111 @@
+MODULE main
+VAR 
+	wantP:boolean;
+	wantQ:boolean;
+	turn : {1,2};
+	proc_p : process P(wantP,wantQ,turn);
+	proc_q : process Q(wantP,wantQ,turn);
+ASSIGN
+	init(wantP):=FALSE;
+	init(wantQ):=FALSE;
+	init(turn):=1;
+LTLSPEC G( (proc_p.state=p8 & proc_q.state!=q8)|(proc_p.state!=p8 & proc_q.state=q8)|(proc_p.state!=p8 & proc_q.state!=q8)) --mutex
+LTLSPEC ((proc_p.state=p3 | proc_q.state=q3)->F(proc_p.state=p8 | proc_q.state=q8)) -- assenza deadloc
+LTLSPEC ((proc_p.state=p3 ->F(proc_p.state=p8)) & (proc_q.state=q3 ->F(proc_q.state=q8))) -- starvation
+
+
+CTLSPEC AG( (proc_p.state=p8 & proc_q.state!=q8)|(proc_p.state!=p8 & proc_q.state=q8)|(proc_p.state!=p8 & proc_q.state!=q8)) --mutex
+CTLSPEC AG(((proc_p.state=p3 &wantQ=FALSE) | (proc_q.state=q3 & wantP=FALSE))->AF(proc_p.state=p8 | proc_q.state=q8))-- assenza deadloc
+CTLSPEC AG(( (proc_p.state=p3 &wantQ=FALSE)->AF(proc_p.state=p8)) & ( (proc_q.state=q3 & wantP=FALSE)->AF(proc_q.state=q8))) -- starvation
+
+
+MODULE P(wantP,wantQ,turn)
+VAR 
+	state:{p1,p2,p3,p4,p5,p6,p7,p8,p9,p10};
+ASSIGN
+init (state):=p1;
+next (state):=
+	case
+	state = p1 : {p1,p2};
+--	state = p1 : p2;
+	state = p2 : p3;
+	state = p3 & wantQ=FALSE: p8;
+	state = p3 & wantQ=TRUE: p4;
+	state = p4 & turn = 1: p3;
+	state = p4 & turn = 2: p5;
+	state = p5 : p6;
+	state = p6 & turn = 1: p7;
+	state = p6 & turn = 2: p6;
+	state = p7 : p3;
+	state = p8 : p9;
+	state = p9 : p10;
+	state = p10 : p1;
+	TRUE: state;
+	esac;
+
+next (wantP):=
+	case
+	state = p2 & wantP=FALSE:TRUE;
+	state = p2 & wantP=TRUE:TRUE;
+	state = p5 & wantP=TRUE:FALSE;
+	state = p5 & wantP=FALSE:FALSE;
+	state = p7 & wantP=FALSE:TRUE;
+	state = p7 & wantP=TRUE:TRUE;
+	state = p10 & wantP=TRUE:FALSE;
+	state = p10 & wantP=FALSE:FALSE;
+	TRUE: wantP;
+	esac;
+
+next (turn):=
+	case
+	state = p9 & turn=1:2;
+	TRUE: turn;
+	esac;
+
+FAIRNESS
+running 
+MODULE Q(wantP,wantQ,turn)
+VAR 
+	state:{q1,q2,q3,q4,q5,q6,q7,q8,q9,q10};
+ASSIGN
+init (state):=q1;
+next (state):=
+	case
+	state = q1 : {q1,q2};
+	--state = q1 : q1;
+	state = q2 : q3;
+	state = q3 & wantP=FALSE: q8;
+	state = q3 & wantP=TRUE: q4;
+	state = p4 & turn = 2: p3;
+	state = q4 & turn = 1: q5;
+	state = q5 : q6;
+	state = q6 & turn = 2: q7;
+	state = q6 & turn = 1: q6;
+	state = q7 : q3;
+	state = q8 : q9;
+	state = q9 : q10;
+	state = q10 : q1;
+	TRUE: state;
+	esac;
+
+next (wantQ):=
+	case
+	state = q2 & wantQ=FALSE:TRUE;
+	state = q5 & wantQ=TRUE:FALSE;
+	state = q7 & wantQ=FALSE:TRUE;
+	state = q10 & wantQ=TRUE:FALSE;
+	TRUE: wantQ;
+	esac;
+
+next (turn):=
+	case
+	state = q9 & turn=2:1;
+	TRUE: turn;
+	esac;
+
+
+
+
+FAIRNESS
+running --&  (state != q2) & (state != q3) & (state != q4) & (state!=q5) & (state!=q6)& (state!=q7)  & (state!=q8)& (state!=q9)& (state!=q10) & (state != p2) & (state != p3) & (state != p4) & (state!=p5) & (state!=p6)& (state!=p7) & (state!=p8)& (state!=p9)& (state!=p10)   -- per far non stare infinitamente spesso
+

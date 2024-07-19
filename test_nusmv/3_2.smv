@@ -1,0 +1,66 @@
+MODULE main
+VAR 
+	turno:{p,q}  ;
+	proc_p : process P(turno);
+	proc_q : process Q(turno);
+ASSIGN
+	init(turno):=p;
+LTLSPEC G( (proc_p.state=p3 & proc_q.state!=q3)|(proc_p.state!=p3 & proc_q.state=q3)|(proc_p.state!=p3 & proc_q.state!=q3)) --mutex
+LTLSPEC G((proc_p.state=p2 | proc_q.state=q2)->F(proc_p.state=p3 | proc_q.state=q3)) --deadlock
+LTLSPEC G((proc_p.state=p2 ->F(proc_p.state=p3)) & (proc_q.state=q2 ->F(proc_q.state=q3))) -- starvation
+
+
+CTLSPEC AG( (proc_p.state=p3 & proc_q.state!=q3)|(proc_p.state!=p3 & proc_q.state=q3)|(proc_p.state!=p3 & proc_q.state!=q3)) --mutex
+CTLSPEC AG((proc_p.state=p2 | proc_q.state=q2)->AF(proc_p.state=p3 | proc_q.state=q3)) --deadlock
+CTLSPEC AG((proc_p.state=p2 ->AF(proc_p.state=p3)) & (proc_q.state=q2 ->AF(proc_q.state=q3))) -- starvation
+
+MODULE P(turno)
+VAR 
+	state:{p1,p2,p3,p4};
+ASSIGN
+init (state):=p1;
+next (state):=
+	case
+	state = p1 : {p1,p2};
+	state = p2 & turno=p: p3;
+	state = p2 & turno=q: p2;
+	state = p3 : p4;
+	state = p4 : p1;
+	TRUE: state;
+	esac;
+next (turno):=
+	case
+	state = p4 & turno=p:q;
+	TRUE: turno;
+	esac;
+
+
+FAIRNESS
+--running   & (state != p2) & (state != p3) & (state != p4) -- per far non stare infinitamente spesso
+running    & (state != p3) & (state != p4) -- per far non stare infinitamente spesso
+
+MODULE Q(turno)
+VAR 
+	state:{q1,q2,q3,q4};
+ASSIGN
+init (state):=q1;
+next (state):=
+	case
+	state = q1 : {q1,q2};
+	state = q2 & turno=q: q3;
+	state = q2 & turno=p: q2;
+	state = q3 : q4;
+	state = q4 : q1;
+	TRUE: state;
+	esac;
+next (turno):=
+	case
+	state = q4 & turno=q:p;
+	TRUE: turno;
+	esac;
+
+
+FAIRNESS
+--running &  (state != q2) & (state != q3) & (state != q4)   -- per far non stare infinitamente spesso
+running  & (state != q3) & (state != q4)   -- per far non stare infinitamente spesso
+

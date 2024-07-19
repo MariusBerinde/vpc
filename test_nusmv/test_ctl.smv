@@ -1,0 +1,21 @@
+MODULE main
+    VAR
+    	turn:{1,2};
+	wantP:boolean;
+        p : P(wantP,turn);
+
+    ASSIGN
+        init(wantP) := TRUE;   -- Condizione iniziale per p
+        init(turn) := 1;  -- Condizione iniziale per q
+
+MODULE P(wantP,turn)
+VAR 
+	state:{p1,p2,p3}
+ASSIGN
+init (state):=p1;
+next (state):=
+	case
+	state = p1 : {p1,p2,p3,p4};
+	state = p2:p3;
+	state = p
+

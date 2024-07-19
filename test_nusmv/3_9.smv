@@ -1,0 +1,77 @@
+MODULE main
+VAR 
+	wantP:boolean;
+	wantQ:boolean;
+	proc_p : process P(wantP,wantQ);
+	proc_q : process Q(wantP,wantQ);
+ASSIGN
+	init(wantP):=FALSE;
+	init(wantQ):=FALSE;
+LTLSPEC G( (proc_p.state=p6 & proc_q.state!=q6)|(proc_p.state!=p6 & proc_q.state=q6)|(proc_p.state!=p6 & proc_q.state!=q6)) --mutex
+LTLSPEC G((proc_p.state=p3 | proc_q.state=q3)->F(proc_p.state=p6 | proc_q.state=q6)) -- assenza deadlock
+LTLSPEC G((proc_p.state=p2 ->F(proc_p.state=p6)) & (proc_q.state=q2 ->F(proc_q.state=q6))) -- starvation
+
+
+CTLSPEC AG( (proc_p.state=p6 & proc_q.state!=q6)|(proc_p.state!=p6 & proc_q.state=q6)|(proc_p.state!=p6 & proc_q.state!=q6)) --mutex
+CTLSPEC AG((proc_p.state=p3 | proc_q.state=q3)->EF(proc_p.state=p6 | proc_q.state=q6)) -- assenza deadloc
+CTLSPEC AG((proc_p.state=p2 ->EF(proc_p.state=p6)) & (proc_q.state=q2 ->EF(proc_q.state=q6))) -- starvation
+
+MODULE P(wantP,wantQ)
+VAR 
+	state:{p1,p2,p3,p4,p5,p6,p7};
+ASSIGN
+init (state):=p1;
+next (state):=
+	case
+	state = p1 : {p1,p2};
+	state = p2 : p3;
+	state = p3 & wantQ=FALSE: p6;
+	state = p3 & wantQ=TRUE: p4;
+	state = p4 : p5;
+	state = p5 : p3;
+	state = p6 : p7;
+	state = p7 : p1;
+	TRUE: state;
+	esac;
+
+next (wantP):=
+	case
+	state = p2 & wantP=FALSE:TRUE;
+	state = p4 & wantP=TRUE:FALSE;
+	state = p5 & wantP=FALSE:TRUE;
+	state = p7 & wantP=TRUE:FALSE;
+	TRUE: wantP;
+	esac;
+
+
+MODULE Q(wantP,wantQ)
+VAR 
+	state:{q1,q2,q3,q4,q5,q6,q7};
+ASSIGN
+init (state):=q1;
+next (state):=
+	case
+	state = q1 : {q1,q2};
+	state = q2 : q3;
+	state = q3 & wantP=FALSE: q6;
+	state = q3 & wantP=TRUE: q4;
+	state = q4 : q5;
+	state = q5 : q3;
+	state = q6 : q7;
+	state = q7 : q1;
+	TRUE: state;
+	esac;
+
+next (wantQ):=
+	case
+	state = q2 & wantQ=FALSE:TRUE;
+	state = q4 & wantQ=TRUE:FALSE;
+	state = q5 & wantQ=FALSE:TRUE;
+	state = q7 & wantQ=TRUE:FALSE;
+	TRUE: wantQ;
+	esac;
+
+
+
+FAIRNESS 
+running
