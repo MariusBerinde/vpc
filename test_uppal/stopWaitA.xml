@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.6//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_6.dtd'>
+<nta>
+	<declaration>// Place global declarations here.
+ chan invio_lungoSR,ricevo_lungoSR,invio_lungoRS,ricevo_lungoRS;
+int frame_l,frame_s,frame_r; //sono delle variabili per il passaggi dei dati 
+clock tt; //tempo di trasmissione
+clock mg;//messaggion globale
+int t_min=95,t_max=105;
+
+</declaration>
+	<template>
+		<name>Link</name>
+		<declaration>clock x;
+
+</declaration>
+		<location id="id0" x="-765" y="-433">
+			<name x="-773" y="-467">S</name>
+			<label kind="invariant" x="-714" y="-450">tt&lt;=t_max</label>
+		</location>
+		<location id="id1" x="-229" y="-408">
+			<name x="-238" y="-442">R</name>
+			<label kind="invariant" x="-239" y="-391">tt&lt;=t_max</label>
+		</location>
+		<location id="id2" x="-493" y="-425">
+			<name x="-501" y="-459">L</name>
+		</location>
+		<init ref="id2"/>
+		<transition id="id3">
+			<source ref="id1"/>
+			<target ref="id2"/>
+			<label kind="guard" x="-339" y="-386">tt&gt;=t_min</label>
+			<label kind="synchronisation" x="-314" y="-246">ricevo_lungoRS!</label>
+			<label kind="assignment" x="-314" y="-272">frame_s=frame_l</label>
+			<nail x="-357" y="-297"/>
+		</transition>
+		<transition id="id4">
+			<source ref="id2"/>
+			<target ref="id1"/>
+			<label kind="synchronisation" x="-289" y="-595">invio_lungoRS?</label>
+			<label kind="assignment" x="-263" y="-561">frame_l=frame_r</label>
+			<nail x="-348" y="-518"/>
+		</transition>
+		<transition id="id5">
+			<source ref="id0"/>
+			<target ref="id2"/>
+			<label kind="guard" x="-748" y="-399">tt&gt;=t_min</label>
+			<label kind="synchronisation" x="-782" y="-255">ricevo_lungoSR!</label>
+			<label kind="assignment" x="-841" y="-229">frame_r=frame_l</label>
+			<nail x="-612" y="-297"/>
+		</transition>
+		<transition id="id6">
+			<source ref="id2"/>
+			<target ref="id0"/>
+			<label kind="guard" x="-663" y="-578">tt&gt;=t_min</label>
+			<label kind="synchronisation" x="-569" y="-552">invio_lungoSR?</label>
+			<label kind="assignment" x="-612" y="-612">frame_l=frame_s,tt:=0</label>
+			<nail x="-629" y="-535"/>
+		</transition>
+	</template>
+	<template>
+		<name>Receiver</name>
+		<declaration>clock tr;
+//int [0,nr_messaggi]msg_rec=0;//sono i messaggi ricevuti
+//int [0,nr_messaggi]ack=0;//sono gli ack inviati
+
+
+int ack,msg;</declaration>
+		<location id="id7" x="-477" y="-293">
+			<name x="-629" y="-302">wait</name>
+		</location>
+		<location id="id8" x="-276" y="-294">
+			<name x="-256" y="-338">usa_messaggio</name>
+			<urgent/>
+		</location>
+		<location id="id9" x="-272" y="-134">
+			<name x="-248" y="-155">invia_ack</name>
+		</location>
+		<init ref="id7"/>
+		<transition id="id10">
+			<source ref="id8"/>
+			<target ref="id9"/>
+			<label kind="guard" x="-274" y="-248">mg&gt;=t_min</label>
+			<label kind="synchronisation" x="-278" y="-233">invio_lungoRS!</label>
+			<label kind="assignment" x="-278" y="-216">ack=msg,frame_r=ack</label>
+		</transition>
+		<transition id="id11">
+			<source ref="id7"/>
+			<target ref="id8"/>
+			<label kind="guard" x="-459" y="-327">mg&gt;=t_min</label>
+			<label kind="synchronisation" x="-390" y="-434">ricevo_lungoSR?</label>
+			<label kind="assignment" x="-410" y="-347">msg=frame_r</label>
+		</transition>
+		<transition id="id12">
+			<source ref="id9"/>
+			<target ref="id7"/>
+		</transition>
+	</template>
+	<template>
+		<name x="9" y="9">Sender</name>
+		<declaration>// Place local declarations here.
+
+
+
+int messaggio,ack=42;
+
+//int [0,nr_messaggi]messaggi=nr_messaggi;//sono i messaggi da inviare
+//int [0,nr_messaggi]ack=0;//sono gli ack rivecuti
+</declaration>
+		<location id="id13" x="-428" y="-238">
+			<name x="-463" y="-285">crea_msg</name>
+		</location>
+		<location id="id14" x="-89" y="-71">
+			<name x="-55" y="-105">wait</name>
+		</location>
+		<location id="id15" x="-89" y="-238">
+			<name x="-159" y="-275">invia</name>
+		</location>
+		<location id="id16" x="-424" y="-66">
+			<name x="-524" y="-100">leggi_ack</name>
+		</location>
+		<init ref="id13"/>
+		<transition id="id17">
+			<source ref="id16"/>
+			<target ref="id13"/>
+			<label kind="assignment" x="-426" y="-152">mg:=0</label>
+		</transition>
+		<transition id="id18">
+			<source ref="id13"/>
+			<target ref="id15"/>
+		</transition>
+		<transition id="id19">
+			<source ref="id14"/>
+			<target ref="id16"/>
+			<label kind="synchronisation" x="-327" y="-134">ricevo_lungoRS?</label>
+			<label kind="assignment" x="-336" y="-109">ack=frame_s</label>
+		</transition>
+		<transition id="id20">
+			<source ref="id15"/>
+			<target ref="id14"/>
+			<label kind="guard" x="-89" y="-188">mg&gt;=0</label>
+			<label kind="synchronisation" x="-66" y="-234">invio_lungoSR!</label>
+			<label kind="assignment" x="-229" y="-211">frame_s=messaggio, 
+
+mg:=0</label>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+//const int nr_msg=3;
+
+//Send = Sender();
+//Rec = Receiver();
+//link = Link();
+// List one or more processes to be composed into a system.
+system Sender,Link,Receiver;
+</system>
+	<queries>
+		<option key="--diagnostic" value="0"/>
+		<query>
+			<formula>A[] (Receiver.usa_messaggio imply (tt&gt;= t_min))</formula>
+			<comment>tempo minimo trasmissione messaggio</comment>
+			<result outcome="success" type="quality" timestamp="2024-05-30 18:22:10 +0200">
+				<option key="--diagnostic" value="0"/>
+			</result>
+		</query>
+		<query>
+			<formula>A[] Receiver.usa_messaggio imply (tt &lt;= t_max)</formula>
+			<comment/>
+			<result outcome="success" type="quality" timestamp="2024-05-30 18:25:07 +0200">
+				<option key="--diagnostic" value="0"/>
+			</result>
+		</query>
+		<query>
+			<formula>A&lt;&gt;(Send.invia imply Rec.invia_ack)</formula>
+			<comment/>
+			<option key="--exploration" value="0"/>
+			<result outcome="success" type="quality" timestamp="2024-05-17 16:20:19 +0200">
+				<option key="--exploration" value="0"/>
+			</result>
+		</query>
+		<query>
+			<formula>Sender.leggi_ack --&gt;(mg&gt;=t_min )</formula>
+			<comment>tempo minimo trasmissione messaggio</comment>
+			<result outcome="success" type="quality" timestamp="2024-05-30 18:24:35 +0200">
+				<option key="--diagnostic" value="0"/>
+			</result>
+		</query>
+		<query>
+			<formula>Sender.leggi_ack --&gt;(mg&lt; t_max)</formula>
+			<comment>tempo massimo trasmissione messaggio</comment>
+			<result outcome="failure" type="quality" timestamp="2024-05-30 18:24:41 +0200">
+				<option key="--diagnostic" value="0"/>
+			</result>
+		</query>
+		<query>
+			<formula>A[]not deadlock</formula>
+			<comment/>
+			<result outcome="success" type="quality" timestamp="2024-05-30 18:24:21 +0200">
+				<option key="--diagnostic" value="0"/>
+			</result>
+		</query>
+		<query>
+			<formula>A&lt;&gt;(Sender.leggi_ack imply Sender.crea_msg)</formula>
+			<comment/>
+			<result outcome="success" type="quality" timestamp="2024-05-30 18:24:16 +0200">
+				<option key="--diagnostic" value="0"/>
+			</result>
+		</query>
+	</queries>
+</nta>

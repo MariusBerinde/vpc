@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.6//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_6.dtd'>
+<nta>
+	<declaration>// Place global declarations here.
+clock x,y;
+const int  max_buff = 2;
+const int min_buff = -1;
+int [min_buff,max_buff] d = 0;</declaration>
+	<template>
+		<name x="5" y="5">Sistema</name>
+		<declaration>// Place local declarations here.
+</declaration>
+		<location id="id0" x="-509" y="-394">
+			<name x="-519" y="-428">a</name>
+		</location>
+		<location id="id1" x="-343" y="-393">
+			<name x="-353" y="-427">b</name>
+		</location>
+		<location id="id2" x="-129" y="-387">
+			<name x="-139" y="-421">c</name>
+		</location>
+		<init ref="id0"/>
+		<transition id="id3">
+			<source ref="id2"/>
+			<target ref="id1"/>
+			<label kind="guard" x="-208" y="-375">y&gt;=2 &amp;&amp; b&gt;= min_buff</label>
+			<label kind="assignment" x="-208" y="-341">y:=0,d--</label>
+			<nail x="-226" y="-296"/>
+		</transition>
+		<transition id="id4">
+			<source ref="id1"/>
+			<target ref="id2"/>
+			<label kind="guard" x="-326" y="-453">x&lt;=2 &amp;&amp; d &lt; max_buff</label>
+			<label kind="assignment" x="-326" y="-419">x:=0,d++</label>
+			<nail x="-277" y="-445"/>
+		</transition>
+		<transition id="id5">
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<label kind="guard" x="-492" y="-428">x==1</label>
+			<label kind="assignment" x="-463" y="-395">y:=0,d=1</label>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+Process = Sistema();
+// List one or more processes to be composed into a system.
+system Process;
+</system>
+	<queries>
+		<query>
+			<formula/>
+			<comment/>
+		</query>
+	</queries>
+</nta>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>// 971204, Arne, Fredrik, Kim &amp; Paul.
+// Fairmont Hotel, San Francisco.
+chan invialinkSR, invialinkRS, receivelinkSR, receivelinkRS;
+ </declaration>
+	<template>
+		<name x="32" y="16">Link</name>
+		<declaration>clock x;</declaration>
+		<location id="id0" x="153" y="-25">
+			<name x="145" y="-59">transmitSR</name>
+		</location>
+		<location id="id1" x="-374" y="-17">
+			<name x="-384" y="-51">transmitRS</name>
+		</location>
+		<location id="id2" x="-161" y="0">
+		</location>
+		<init ref="id2"/>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id2"/>
+			<label kind="synchronisation" x="-7" y="30">receivelinkSR?</label>
+			<nail x="-25" y="51"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id0"/>
+			<label kind="synchronisation" x="-143" y="-55">invialinkSR?</label>
+			<nail x="-42" y="-76"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id2"/>
+			<label kind="synchronisation" x="-356" y="0">receivelinkRS?</label>
+			<nail x="-289" y="51"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id1"/>
+			<label kind="synchronisation" x="-254" y="-55">invialinkRS?</label>
+			<nail x="-272" y="-76"/>
+		</transition>
+	</template>
+	<template>
+		<name x="32" y="16">Sender</name>
+		<declaration>clock w;</declaration>
+		<location id="id3" x="192" y="160">
+		</location>
+		<location id="id4" x="96" y="96">
+			<name x="72" y="64">idle</name>
+		</location>
+		<init ref="id4"/>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id3"/>
+			<label kind="synchronisation" x="85" y="170">invialinkSR!</label>
+			<nail x="96" y="160"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="114" y="79">receivelinkRS!</label>
+			<nail x="192" y="96"/>
+		</transition>
+	</template>
+	<template>
+		<name>Receiver</name>
+		<location id="id5" x="0" y="0">
+		</location>
+		<init ref="id5"/>
+	</template>
+	<system>
+ 
+
+Link1 = Link();
+Sender1 = Sender();
+Receiver1 = Receiver();
+
+system Link1, Sender1, Receiver1;</system>
+	<queries>
+		<query>
+			<formula>
+			</formula>
+			<comment>971204, Kim G. Larsen, Fredrik Larsson, Paul Pettersson &amp; Arne Skou,
+     at Fairmont Hotel, San Francisco, USA.
+971208, Paul, finalized, in the air between San Francisco and London.
+011015, Paul, added deadlock and livness properties.
+			</comment>
+		</query>
+		<query>
+			<formula>A[] not (Door1.open and Door2.open)
+			</formula>
+			<comment>Mutex: The two doors are never open at the same time.
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (Door1.opening imply User1.w&lt;=31) and 
+    (Door2.opening imply User2.w&lt;=31)
+			</formula>
+			<comment>Bounded Liveness: A door will open within 31 seconds.
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Door1.open
+			</formula>
+			<comment>Door 1 can open.
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Door2.open
+			</formula>
+			<comment>Door 2 can open.
+			</comment>
+		</query>
+		<query>
+			<formula>Door1.wait --&gt; Door1.open
+			</formula>
+			<comment>Liveness: Whenever a button is pushed, the corresponding door will eventually open.
+			</comment>
+		</query>
+		<query>
+			<formula>Door2.wait --&gt; Door2.open
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>A[] not deadlock
+			</formula>
+			<comment>The system is deadlock-free.
+			</comment>
+		</query>
+	</queries>
+</nta>
