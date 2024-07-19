@@ -1,0 +1,24 @@
+FORMULA: MEASURE1
+LANGUAGE: LTL
+G( (#P4C==0 && #Q4C==1)||(#P4C==1 && #Q4C==0)||(#P4C==0 && #Q4C==0))
+
+FORMULA: MEASURE2
+LANGUAGE: CTL
+AG( (#P4C==0 && #Q4C==1)||(#P4C==1 && #Q4C==0)||(#P4C==0 && #Q4C==0))
+
+FORMULA: MEASURE3
+LANGUAGE: LTL
+ G(#P3==1 -> F (#P4C==1)) && (#Q3==1 -> F (#Q4C==1))
+
+FORMULA: MEASURE4
+LANGUAGE: CTL
+ AG(#P3==1 -> AF (#P4C==1)) && (#Q3==1 -> AF (#Q4C==1))
+
+FORMULA: MEASURE5
+LANGUAGE: LTL
+G((#P3 ==1 ->F(#P4C ==1)) && (#Q3 ==1 ->F(#Q4C ==1)))
+
+FORMULA: MEASURE6
+LANGUAGE: CTL
+AG((#P3 ==1 ->AF(#P4C ==1) )&& (#Q3 ==1 ->AF(#Q4C ==1)))
+
