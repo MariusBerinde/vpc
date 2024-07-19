@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="3_2" version="121">
+  <gspn name="P" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="-0.5" label-y="-2.0" marking="1" name="P1" superpos-x="1.0" superposition-tags="nc" x="5.0" y="2.0"/>
+      <place label-x="6.0" label-y="-0.5" name="P2Wait" superposition-tags="w" x="5.0" y="10.0"/>
+      <place label-x="-2.0" label-y="0.0" name="P3C" x="5.0" y="18.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P4" x="5.0" y="27.0"/>
+      <transition label-x="-1.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="5.55" y="6.0"/>
+      <transition label-x="-1.5" name="T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="-0.5" superposition-tags="isP" type="EXP" x="5.55" y="14.0"/>
+      <transition label-x="1.5" label-y="-2.0" name="T2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="5.55" y="22.0"/>
+      <transition label-x="-1.0" name="T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setQ" type="EXP" x="5.55" y="32.0"/>
+      <transition name="T4" nservers-x="0.5" type="EXP" x="10.55" y="2.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="P2Wait" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="P2Wait"/>
+      <arc head="P3C" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="P3C"/>
+      <arc head="P4" kind="OUTPUT" tail="T2"/>
+      <arc head="T3" kind="INPUT" tail="P4"/>
+      <arc head="P1" kind="OUTPUT" tail="T3">
+        <point x="2.0" y="33.0"/>
+        <point x="2.0" y="3.0"/>
+      </arc>
+      <arc head="T4" kind="INPUT" tail="P1"/>
+      <arc head="P1" kind="OUTPUT" tail="T4"/>
+    </edges>
+  </gspn>
+  <gspn name="C" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place marking="1" name="P" x="9.0" y="7.0"/>
+      <place name="Q" x="25.0" y="8.0"/>
+      <transition name="T0" nservers-x="0.5" superposition-tags="setQ" type="EXP" x="16.55" y="4.0"/>
+      <transition name="T1" nservers-x="0.5" superposition-tags="setP" type="EXP" x="16.55" y="12.0"/>
+      <transition name="T2" nservers-x="0.5" superposition-tags="isP" type="EXP" x="5.55" y="3.0"/>
+      <transition name="T3" nservers-x="0.5" superposition-tags="setP" type="EXP" x="3.55" y="12.0"/>
+      <transition label-x="1.0" name="T4" nservers-x="0.5" superposition-tags="isQ" type="EXP" x="29.55" y="3.0"/>
+      <transition name="T5" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setQ" type="EXP" x="30.55" y="12.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="P"/>
+      <arc head="Q" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="Q"/>
+      <arc head="P" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="P"/>
+      <arc head="T3" kind="INPUT" tail="P"/>
+      <arc head="P" kind="OUTPUT" tail="T2">
+        <point x="3.0" y="5.5"/>
+      </arc>
+      <arc head="P" kind="OUTPUT" tail="T3">
+        <point x="7.0" y="14.5"/>
+      </arc>
+      <arc head="T4" kind="INPUT" tail="Q"/>
+      <arc head="Q" kind="OUTPUT" tail="T4">
+        <point x="32.5" y="8.0"/>
+      </arc>
+      <arc head="T5" kind="INPUT" tail="Q"/>
+      <arc head="Q" kind="OUTPUT" tail="T5">
+        <point x="27.5" y="13.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <gspn name="Q" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="-0.5" label-y="-2.0" marking="1" name="Q1" superpos-x="1.0" superposition-tags="nc" x="13.0" y="3.0"/>
+      <place label-x="3.5" label-y="0.0" name="Q2Wait" superposition-tags="w" x="13.0" y="11.0"/>
+      <place label-x="-2.0" label-y="0.0" name="Q3C" x="13.0" y="19.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q4" x="13.0" y="28.0"/>
+      <transition label-x="-1.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="13.55" y="7.0"/>
+      <transition label-x="-1.5" name="T1" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="-0.5" superposition-tags="isQ" type="EXP" x="13.55" y="15.0"/>
+      <transition label-x="1.5" label-y="-2.0" name="T2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="13.55" y="23.0"/>
+      <transition label-x="-1.0" name="T3" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setP" type="EXP" x="13.55" y="33.0"/>
+      <transition name="T4" nservers-x="0.5" type="EXP" x="8.55" y="3.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="Q1"/>
+      <arc head="Q2Wait" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="Q2Wait"/>
+      <arc head="Q3C" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="Q3C"/>
+      <arc head="Q4" kind="OUTPUT" tail="T2"/>
+      <arc head="T3" kind="INPUT" tail="Q4"/>
+      <arc head="Q1" kind="OUTPUT" tail="T3">
+        <point x="23.5" y="34.0"/>
+        <point x="23.5" y="3.5"/>
+      </arc>
+      <arc head="T4" kind="INPUT" tail="Q1"/>
+      <arc head="T4" kind="INPUT" tail="Q1"/>
+    </edges>
+  </gspn>
+  <gspn name="P+C" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="-0.5" label-y="-2.0" marking="1" name="P1" superpos-x="1.0" superposition-tags="nc" x="5.0" y="2.0"/>
+      <place label-x="6.0" label-y="-0.5" name="P2Wait" superposition-tags="w" x="5.0" y="9.0"/>
+      <place label-x="-2.0" label-y="0.0" name="P3C" x="5.0" y="18.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P4" x="5.0" y="27.0"/>
+      <place marking="1" name="P" x="29.0" y="7.0"/>
+      <place name="Q" x="44.0" y="7.0"/>
+      <transition label-x="-1.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="5.55" y="6.0"/>
+      <transition label-x="1.5" label-y="-2.0" name="T2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="5.55" y="22.0"/>
+      <transition name="T1" nservers-x="0.5" superposition-tags="setP" type="EXP" x="35.55" y="5.0"/>
+      <transition name="T3" nservers-x="0.5" superposition-tags="setP" type="EXP" x="30.55" y="13.0"/>
+      <transition label-x="1.0" name="T4_0" nservers-x="0.5" superposition-tags="isQ" type="EXP" x="41.55" y="2.0"/>
+      <transition label-x="-1.5" name="T1_T2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="-0.5" superposition-tags="isP" type="EXP" x="5.55" y="14.0"/>
+      <transition label-x="-1.0" name="T3_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setQ" type="EXP" x="13.55" y="27.0"/>
+      <transition label-x="-1.0" name="T3_T5" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setQ" type="EXP" x="19.55" y="36.0"/>
+    </nodes>
+    <edges>
+      <arc head="T1" kind="INPUT" tail="Q"/>
+      <arc head="Q" kind="OUTPUT" mult-k="0.45634765625000007" tail="T4_0"/>
+      <arc head="T1_T2" kind="INPUT" tail="P2Wait"/>
+      <arc head="P" kind="OUTPUT" tail="T1"/>
+      <arc head="P1" kind="OUTPUT" tail="T3_T5">
+        <point x="2.0" y="33.0"/>
+        <point x="2.0" y="3.0"/>
+      </arc>
+      <arc head="P" kind="OUTPUT" tail="T1_T2">
+        <point x="23.0" y="5.5"/>
+      </arc>
+      <arc head="T3_T0" kind="INPUT" tail="P"/>
+      <arc head="T3_T5" kind="INPUT" tail="P4"/>
+      <arc head="T2" kind="INPUT" tail="P3C"/>
+      <arc head="Q" kind="OUTPUT" tail="T3_T5">
+        <point x="47.5" y="13.0"/>
+      </arc>
+      <arc head="P4" kind="OUTPUT" tail="T2"/>
+      <arc head="Q" kind="OUTPUT" tail="T3_T0"/>
+      <arc head="P" kind="OUTPUT" tail="T3">
+        <point x="27.0" y="14.5"/>
+      </arc>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="P2Wait" kind="OUTPUT" tail="T0"/>
+      <arc head="T3" kind="INPUT" tail="P"/>
+      <arc head="T3_T5" kind="INPUT" tail="Q"/>
+      <arc head="T3_T0" kind="INPUT" tail="P4"/>
+      <arc head="P1" kind="OUTPUT" tail="T3_T0">
+        <point x="2.0" y="33.0"/>
+        <point x="2.0" y="3.0"/>
+      </arc>
+      <arc head="P3C" kind="OUTPUT" tail="T1_T2"/>
+      <arc head="T1_T2" kind="INPUT" tail="P"/>
+      <arc head="T4_0" kind="INPUT" tail="Q"/>
+    </edges>
+  </gspn>
+  <gspn name="P+C+Q" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="-0.5" label-y="-2.0" marking="1" name="P1" superpos-x="1.0" superposition-tags="nc" x="5.0" y="2.0"/>
+      <place label-x="4.0" label-y="0.0" name="P2Wait" superposition-tags="w" x="5.0" y="10.0"/>
+      <place label-x="-2.0" label-y="0.0" name="P3C" x="5.0" y="18.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P4" x="6.0" y="26.0"/>
+      <place marking="1" name="P" x="30.0" y="12.0"/>
+      <place name="Q" x="55.0" y="12.0"/>
+      <place label-x="-0.5" label-y="-2.0" marking="1" name="Q1" superpos-x="1.0" superposition-tags="nc" x="65.0" y="3.0"/>
+      <place label-x="3.5" label-y="0.0" name="Q2Wait" superposition-tags="w" x="65.0" y="11.0"/>
+      <place label-x="-2.0" label-y="0.0" name="Q3C" x="65.0" y="19.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q4" x="65.0" y="28.0"/>
+      <transition label-x="-1.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="5.55" y="6.0"/>
+      <transition label-x="1.5" label-y="-2.0" name="T2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="5.55" y="22.0"/>
+      <transition label-x="-1.5" name="T1_T2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="-0.5" superposition-tags="isP" type="EXP" x="5.55" y="14.0"/>
+      <transition label-x="-1.0" name="T3_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setQ" type="EXP" x="30.55" y="20.0"/>
+      <transition label-x="-1.0" name="T3_T5" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setQ" type="EXP" x="35.55" y="27.0"/>
+      <transition label-x="-1.0" name="T0_0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="65.55" y="7.0"/>
+      <transition label-x="1.5" label-y="-2.0" name="T2_0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="65.55" y="23.0"/>
+      <transition name="T1_T3" nservers-x="0.5" superposition-tags="setP" type="EXP" x="41.55" y="7.0"/>
+      <transition name="T3_T3" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setP" type="EXP" x="46.55" y="27.0"/>
+      <transition label-x="6.0" label-y="0.5" name="T4_0_T1" nservers-x="0.5" superposition-tags="isQ" type="EXP" x="65.55" y="15.0"/>
+      <transition label-y="-2.0" name="T4" nservers-x="0.5" type="EXP" x="10.55" y="2.0"/>
+      <transition name="T41" nservers-x="0.5" type="EXP" x="59.55" y="2.0"/>
+    </nodes>
+    <edges>
+      <arc head="T3_T3" kind="INPUT" tail="P"/>
+      <arc head="T3_T5" kind="INPUT" tail="P4"/>
+      <arc head="T1_T3" kind="INPUT" tail="Q"/>
+      <arc head="T4_0_T1" kind="INPUT" tail="Q"/>
+      <arc head="T0_0" kind="INPUT" tail="Q1"/>
+      <arc head="Q" kind="OUTPUT" mult-k="0.39033203125000004" tail="T3_T5"/>
+      <arc head="T3_T3" kind="INPUT" tail="Q4"/>
+      <arc head="P4" kind="OUTPUT" tail="T2"/>
+      <arc head="Q1" kind="OUTPUT" mult-k="0.24384765625" tail="T1_T3"/>
+      <arc head="T4_0_T1" kind="INPUT" tail="Q2Wait"/>
+      <arc head="Q" kind="OUTPUT" tail="T4_0_T1"/>
+      <arc head="T3_T0" kind="INPUT" tail="P4"/>
+      <arc head="P2Wait" kind="OUTPUT" tail="T0"/>
+      <arc head="T2_0" kind="INPUT" tail="Q3C"/>
+      <arc head="T3_T0" kind="INPUT" tail="P"/>
+      <arc head="P" kind="OUTPUT" tail="T1_T3"/>
+      <arc head="Q4" kind="OUTPUT" tail="T2_0"/>
+      <arc head="Q" kind="OUTPUT" tail="T3_T0"/>
+      <arc head="T1_T2" kind="INPUT" tail="P2Wait"/>
+      <arc head="P" kind="OUTPUT" mult-k="0.43095703125000007" tail="T1_T2"/>
+      <arc head="P" kind="OUTPUT" mult-k="0.37587890625" tail="T3_T3"/>
+      <arc head="Q1" kind="OUTPUT" tail="T3_T3">
+        <point x="79.5" y="36.5"/>
+        <point x="79.5" y="4.0"/>
+      </arc>
+      <arc head="Q2Wait" kind="OUTPUT" tail="T0_0"/>
+      <arc head="T1_T3" kind="INPUT" tail="Q4"/>
+      <arc head="P1" kind="OUTPUT" tail="T3_T5">
+        <point x="0.5" y="33.5"/>
+        <point x="0.5" y="3.5"/>
+      </arc>
+      <arc head="T3_T5" kind="INPUT" tail="Q"/>
+      <arc head="T1_T2" kind="INPUT" tail="P"/>
+      <arc head="T2" kind="INPUT" tail="P3C"/>
+      <arc head="Q3C" kind="OUTPUT" tail="T4_0_T1"/>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="P3C" kind="OUTPUT" tail="T1_T2"/>
+      <arc head="P1" kind="OUTPUT" tail="T3_T0">
+        <point x="2.0" y="33.0"/>
+        <point x="2.0" y="3.0"/>
+      </arc>
+      <arc head="T4" kind="INPUT" tail="P1"/>
+      <arc head="P1" kind="OUTPUT" tail="T4"/>
+      <arc head="T41" kind="INPUT" tail="Q1"/>
+      <arc head="Q1" kind="OUTPUT" tail="T41"/>
+    </edges>
+  </gspn>
+  <measures gspn-name="P+C+Q" log-uuid="39be6e8d-a380-41ec-b48d-028fa421305b" name="CTL model checking of P+C+Q" rapid-type="CTL_MODEL_CHECKING" simplified-UI="true">
+    <assignments/>
+    <rgmedd2/>
+    <formulas>
+      <formula language="STAT"/>
+      <formula comment="Mutex" comment-shown="true" expr="G( (#P3C==0 &amp;&amp; #Q3C==1)||(#P3C==1 &amp;&amp; #Q3C==0)||(#P3C==0 &amp;&amp; #Q3C==0))" language="LTL">
+        <result-table>
+          <mc-result failure_reason="&lt;not computed&gt;" name="MEASURE0" state="FAIL_COMPUTE">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="Mutex" comment-shown="true" expr="AG( (#P3C==0 &amp;&amp; #Q3C==1)||(#P3C==1 &amp;&amp; #Q3C==0)||(#P3C==0 &amp;&amp; #Q3C==0))" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="deadlock" comment-shown="true" expr=" ((#P2Wait==1|| #Q2Wait==1)  -&gt; F (#P3C==1|| #Q3C==1)) " language="LTL"/>
+      <formula comment="deadlock" comment-shown="true" expr="AG((#P2Wait&gt;0|| #Q2Wait&gt;0)  -&gt; AF (#P3C&gt;0|| #Q3C&gt;0)) " language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="false">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="starvation" comment-shown="true" expr="((#P2Wait ==1 -&gt;F(#P3C ==1)) &amp;&amp; (#Q2Wait ==1 -&gt;F(#Q3C ==1)))" language="LTL"/>
+      <formula comment="starvation" comment-shown="true" expr="AG((#P2Wait ==1 -&gt;EF(#P3C ==1) )&amp;&amp; (#Q2Wait ==1 -&gt;EF(#Q3C ==1)))" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 16/16">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula expr="AG( (#P3C==0 &amp;&amp; #Q3C==1)||(#P3C==1 &amp;&amp; #Q3C==0)||(#P3C==0 &amp;&amp; #Q3C==0))" language="FAIRNESS">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 16/16">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula expr="AG((#P2Wait&gt;0|| #Q2Wait&gt;0)  -&gt; EF (#P3C&gt;0|| #Q3C&gt;0)) " language="FAIRNESS">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 16/16">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula expr="AG((#P2Wait ==1 -&gt;EF(#P3C ==1) )&amp;&amp; (#Q2Wait ==1 -&gt;EF(#Q3C ==1)))" language="FAIRNESS">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 16/16">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+    </formulas>
+  </measures>
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="-0.5" label-y="-2.0" marking="1" name="P1" superpos-x="1.0" superposition-tags="nc" x="7.0" y="4.0"/>
+      <place label-x="4.0" label-y="0.0" name="P2Wait" superposition-tags="w" x="7.0" y="12.0"/>
+      <place label-x="-2.0" label-y="0.0" name="P3C" x="7.0" y="20.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P4" x="8.0" y="28.0"/>
+      <place label-x="-1.5" label-y="-4.5" marking="1" name="P" x="32.0" y="14.0"/>
+      <place name="Q" x="57.0" y="15.0"/>
+      <place label-x="-0.5" label-y="-2.0" marking="1" name="Q1" superpos-x="1.0" superposition-tags="nc" x="67.0" y="5.0"/>
+      <place label-x="3.5" label-y="0.0" name="Q2Wait" superposition-tags="w" x="67.0" y="12.0"/>
+      <place label-x="-2.0" label-y="0.0" name="Q3C" x="67.0" y="21.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q4" x="67.0" y="30.0"/>
+      <transition label-x="-1.0" name="T0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="7.55" y="8.0"/>
+      <transition label-x="1.5" label-y="-2.0" name="T2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="7.55" y="24.0"/>
+      <transition label-x="-1.5" name="T1_T2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="-0.5" superposition-tags="isP" type="EXP" x="7.55" y="16.0"/>
+      <transition label-x="-1.0" name="T3_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setQ" type="EXP" x="32.55" y="22.0"/>
+      <transition label-x="-1.0" name="T3_T5" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setQ" type="EXP" x="37.55" y="29.0"/>
+      <transition label-x="-1.0" name="T0_0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="67.55" y="9.0"/>
+      <transition label-x="1.5" label-y="-2.0" name="T2_0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="67.55" y="25.0"/>
+      <transition name="T1_T3" nservers-x="0.5" superposition-tags="setP" type="EXP" x="43.55" y="9.0"/>
+      <transition name="T3_T3" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setP" type="EXP" x="48.55" y="29.0"/>
+      <transition label-x="6.0" label-y="0.5" name="T4_0_T1" nservers-x="0.5" superposition-tags="isQ" type="EXP" x="67.55" y="17.0"/>
+      <transition label-y="-2.0" name="T4" nservers-x="0.5" type="EXP" x="12.55" y="4.0"/>
+      <transition name="T41" nservers-x="0.5" type="EXP" x="58.55" y="4.0"/>
+    </nodes>
+    <edges>
+      <arc head="T3_T3" kind="INPUT" tail="P"/>
+      <arc head="T3_T5" kind="INPUT" tail="P4"/>
+      <arc head="T1_T3" kind="INPUT" tail="Q"/>
+      <arc head="T4_0_T1" kind="INPUT" tail="Q"/>
+      <arc head="T0_0" kind="INPUT" tail="Q1"/>
+      <arc head="Q" kind="OUTPUT" mult-k="0.39033203125000004" tail="T3_T5"/>
+      <arc head="T3_T3" kind="INPUT" tail="Q4"/>
+      <arc head="P4" kind="OUTPUT" tail="T2"/>
+      <arc head="Q1" kind="OUTPUT" mult-k="0.24384765625" tail="T1_T3"/>
+      <arc head="T4_0_T1" kind="INPUT" tail="Q2Wait"/>
+      <arc head="Q" kind="OUTPUT" tail="T4_0_T1"/>
+      <arc head="T3_T0" kind="INPUT" tail="P4"/>
+      <arc head="P2Wait" kind="OUTPUT" tail="T0"/>
+      <arc head="T2_0" kind="INPUT" tail="Q3C"/>
+      <arc head="T3_T0" kind="INPUT" tail="P"/>
+      <arc head="P" kind="OUTPUT" tail="T1_T3"/>
+      <arc head="Q4" kind="OUTPUT" tail="T2_0"/>
+      <arc head="Q" kind="OUTPUT" tail="T3_T0"/>
+      <arc head="T1_T2" kind="INPUT" tail="P2Wait"/>
+      <arc head="P" kind="OUTPUT" mult-k="0.43095703125000007" tail="T1_T2"/>
+      <arc head="P" kind="OUTPUT" mult-k="0.37587890625" tail="T3_T3"/>
+      <arc head="Q1" kind="OUTPUT" tail="T3_T3">
+        <point x="81.5" y="38.5"/>
+        <point x="81.5" y="6.0"/>
+      </arc>
+      <arc head="Q2Wait" kind="OUTPUT" tail="T0_0"/>
+      <arc head="T1_T3" kind="INPUT" tail="Q4"/>
+      <arc head="P1" kind="OUTPUT" tail="T3_T5">
+        <point x="2.5" y="35.5"/>
+        <point x="2.5" y="5.5"/>
+      </arc>
+      <arc head="T3_T5" kind="INPUT" tail="Q"/>
+      <arc head="T1_T2" kind="INPUT" tail="P"/>
+      <arc head="T2" kind="INPUT" tail="P3C"/>
+      <arc head="Q3C" kind="OUTPUT" tail="T4_0_T1"/>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="P3C" kind="OUTPUT" tail="T1_T2"/>
+      <arc head="P1" kind="OUTPUT" tail="T3_T0">
+        <point x="4.0" y="35.0"/>
+        <point x="4.0" y="5.0"/>
+      </arc>
+      <arc head="T4" kind="INPUT" tail="P1"/>
+      <arc head="P1" kind="OUTPUT" tail="T4"/>
+      <arc head="T41" kind="INPUT" tail="Q1"/>
+      <arc head="Q1" kind="OUTPUT" tail="T41"/>
+    </edges>
+  </gspn>
+  <measures gspn-name="PT" log-uuid="d00e64fd-8216-42f8-8787-be1841429ccf" name="CTL model checking of PT" rapid-type="CTL_MODEL_CHECKING" simplified-UI="true">
+    <assignments/>
+    <rgmedd2/>
+    <formulas>
+      <formula language="STAT">
+        <result-table>
+          <stat-result name="STAT">
+            <bindings/>
+            <stat key="build_time" value="0 seconds."/>
+            <stat key="num_rs_nodes" value="24"/>
+            <stat key="num_tangible_markings" value="16"/>
+            <stat key="total_firings" value="36"/>
+          </stat-result>
+        </result-table>
+      </formula>
+      <formula comment="Mutex" comment-shown="true" expr="G( (#P3C==0 &amp;&amp; #Q3C==1)||(#P3C==1 &amp;&amp; #Q3C==0)||(#P3C==0 &amp;&amp; #Q3C==0))" language="LTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="Mutex" comment-shown="true" expr="AG( (#P3C==0 &amp;&amp; #Q3C==1)||(#P3C==1 &amp;&amp; #Q3C==0)||(#P3C==0 &amp;&amp; #Q3C==0))" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 16/16">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="deadlock" comment-shown="true" expr=" G((#P2Wait==1|| #Q2Wait==1)  -&gt; F (#P3C==1|| #Q3C==1)) " language="LTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="false">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="deadlock" comment-shown="true" expr="AG((#P2Wait==1|| #Q2Wait==0)  -&gt; EF (#P3C==1|| #Q3C==1)) " language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 16/16">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="starvation" comment-shown="true" expr="G((#P2Wait ==1 -&gt;F(#P3C ==1)) &amp;&amp; (#Q2Wait ==1 -&gt;F(#Q3C ==1)))" language="LTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="false">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="starvation" comment-shown="true" expr="AG((#P2Wait ==1 -&gt;EF(#P3C ==1) )&amp;&amp; (#Q2Wait ==1 -&gt;EF(#Q3C ==1)))" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 16/16">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="assenza starvation" comment-shown="true" expr="((#P2Wait &gt;0 -&gt;AF(#P3C &gt;0) )&amp;&amp; (#Q2Wait &gt;0 -&gt;AF(#Q3C&gt;0)))" language="CTLSTAR">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 6/16">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="assenza deadlock" comment-shown="true" expr="AG((#P2Wait&gt;0|| #Q2Wait&gt;0)  -&gt; EF (#P3C&gt;0|| #Q3C&gt;0)) " language="CTLSTAR">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 16/16">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula comment="Sistema Reverisibile" comment-shown="true" expr="AG(#P2Wait&gt;0 -&gt; EF(#P1&gt;0)) &amp;&amp; AG(#P3C&gt;0 -&gt; EF(#P1&gt;0)) &amp;&amp; AG(#P4&gt;0 -&gt; EF(#P1&gt;0)) &amp;&amp; AG(#P&gt;0 -&gt; EF(#Q&gt;0)) &amp;&amp; AG(#Q2Wait&gt;0 -&gt; EF(#Q1&gt;0)) &amp;&amp; AG(#Q3C&gt;0 -&gt; EF(#Q1&gt;0)) &amp;&amp; AG(#Q4&gt;0 -&gt; EF(#Q1&gt;0)) " language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 16/16">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula expr="AG(#P2Wait ==1)-&gt;AF(#P3C&gt;0)" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true 16/16">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+    </formulas>
+  </measures>
+  <gspn name="PT_ridotta" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="4.0" label-y="0.0" name="P1_P2Wait" superposition-tags="w" x="9.0" y="14.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="P4" x="10.0" y="29.0"/>
+      <place label-x="-1.5" label-y="-4.5" marking="1" name="P" x="34.0" y="16.0"/>
+      <place name="Q" x="58.0" y="12.0"/>
+      <place label-x="3.5" label-y="0.0" name="Q1_Q2Wait" superposition-tags="w" x="69.0" y="14.0"/>
+      <place label-x="-2.5" label-y="-0.5" name="Q4" x="66.0" y="26.0"/>
+      <transition label-x="-1.5" name="T1_T2" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="3.0" superpos-y="-0.5" superposition-tags="isP" type="EXP" x="9.55" y="21.0"/>
+      <transition label-x="-1.0" name="T3_T0" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setQ" type="EXP" x="35.55" y="24.0"/>
+      <transition label-x="-1.0" name="T3_T5" nservers-x="0.5" rotation="1.5707963267948966" superpos-x="2.0" superposition-tags="setQ" type="EXP" x="40.55" y="34.0"/>
+      <transition name="T1_T3" nservers-x="0.5" superposition-tags="setP" type="EXP" x="48.55" y="12.0"/>
+      <transition name="T3_T3" nservers-x="0.5" rotation="1.5707963267948966" superposition-tags="setP" type="EXP" x="63.55" y="37.0"/>
+      <transition label-x="6.0" label-y="0.5" name="T4_0_T1" nservers-x="0.5" superposition-tags="isQ" type="EXP" x="68.55" y="19.0"/>
+    </nodes>
+    <edges>
+      <arc head="T3_T3" kind="INPUT" tail="P"/>
+      <arc head="T3_T5" kind="INPUT" tail="P4"/>
+      <arc head="T1_T3" kind="INPUT" tail="Q"/>
+      <arc head="T4_0_T1" kind="INPUT" tail="Q"/>
+      <arc head="Q" kind="OUTPUT" mult-k="0.39033203125000004" tail="T3_T5"/>
+      <arc head="T3_T3" kind="INPUT" tail="Q4"/>
+      <arc head="T4_0_T1" kind="INPUT" tail="Q1_Q2Wait"/>
+      <arc head="Q" kind="OUTPUT" tail="T4_0_T1"/>
+      <arc head="T3_T0" kind="INPUT" tail="P4"/>
+      <arc head="T3_T0" kind="INPUT" tail="P"/>
+      <arc head="P" kind="OUTPUT" tail="T1_T3"/>
+      <arc head="Q" kind="OUTPUT" tail="T3_T0"/>
+      <arc head="T1_T2" kind="INPUT" tail="P1_P2Wait"/>
+      <arc head="P" kind="OUTPUT" mult-k="0.43095703125000007" tail="T1_T2"/>
+      <arc head="P" kind="OUTPUT" mult-k="0.37587890625" tail="T3_T3"/>
+      <arc head="Q1_Q2Wait" kind="OUTPUT" tail="T3_T3">
+        <point x="83.5" y="40.5"/>
+        <point x="83.5" y="8.0"/>
+      </arc>
+      <arc head="T1_T3" kind="INPUT" tail="Q4"/>
+      <arc head="P1_P2Wait" kind="OUTPUT" tail="T3_T5">
+        <point x="4.5" y="37.5"/>
+        <point x="4.5" y="7.5"/>
+      </arc>
+      <arc head="T3_T5" kind="INPUT" tail="Q"/>
+      <arc head="T1_T2" kind="INPUT" tail="P"/>
+      <arc head="Q4" kind="OUTPUT" tail="T4_0_T1"/>
+      <arc head="P4" kind="OUTPUT" tail="T1_T2"/>
+      <arc head="P1_P2Wait" kind="OUTPUT" tail="T3_T0">
+        <point x="6.0" y="37.0"/>
+        <point x="6.0" y="7.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <resource-list>
+    <document-log uuid="39be6e8d-a380-41ec-b48d-028fa421305b">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAK90AN8bWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxEU1BOLVRvb2wuZXhlIiAtbG9hZCAiQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM18yXDNfMi1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgUCtDK1Euc29sdXRpb25cUCtDK1EiIC1wYmFzaXMgLWRldGVjdC1leHAgLXBzZmwgLWJuZCAKdACaG1sxbRtbNG1MT0FESU5HIFBFVFJJIE5FVCBDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzJcM18yLUNUTCBtb2RlbCBjaGVja2luZyBvZiBQK0MrUS5zb2x1dGlvblxQK0MrUSAobmV0L2RlZikuLi4bWzIybRtbMjRtCnQAD01BUktJTkcgUEFSOiAwCnQAEFBMQUNFUzogICAgICAxMAp0AA9SQVRFIFBBUjogICAgMAp0ABBUUkFOU0lUSU9OUzogMTIKdAAPTUVBU1VSRVM6ICAgIDAKdAAoTE9BRElORyBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQAAQp0AAEKdAAeQ09NUFVUSU5HIFBMQUNFIEZMT1cgQkFTSVMuLi4KdAASTT0xMiwgTj0xMCwgTjA9MTAKdABOQ29tcHV0YXRpb24gb2YgRmxvdyBiYXNpczogY29tcGxldGVkIGluIDcgc3RlcHMsIHxLfD0zLiAgICAgICAgICAgICAgICAgICAgICAKdAApRk9VTkQgMyBWRUNUT1JTIElOIFRIRSBQTEFDRSBGTE9XIEJBU0lTLgp0AAEKdAABCnQAJ0FsbCBwbGFjZXMgYXJlIGNvdmVyZWQgYnkgc29tZSBQLWZsb3cuCnQAAQp0ACZUT1RBTCBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQAJ0FWT0lEIEVYUE9ORU5USUFMIEdST1dUSCBPRiBTRU1JRkxPV1MuCnQAHUNPTVBVVElORyBQTEFDRSBTRU1JRkxPV1MuLi4KdAASTT0xMiwgTj0xMCwgTjA9MTAKdABMR2VuZXJhdGlvbiBvZiBTZW1pZmxvd3M6IGNvbXBsZXRlZCBpbiA3IHN0ZXBzLCB8S3w9My4gICAgICAgICAgICAgICAgICAgICAgCnQAGUZPVU5EIDMgUExBQ0UgU0VNSUZMT1dTLgp0AAEKdAABCnQAK0FsbCBwbGFjZXMgYXJlIGNvdmVyZWQgYnkgc29tZSBQLXNlbWlmbG93Lgp0AAEKdAAmVE9UQUwgVElNRTogW1VzZXIgMC4wMDBzLCBTeXMgMC4wMDBzXQp0ACxDT01QVVRJTkcgUExBQ0UgQk9VTkRTIEZST00gUC1TRU1JRkxPV1MgLi4uCnQAJxtbMFgbWzMybSBQUk9DRVNTIEVYSVRFRCBOT1JNQUxMWS4bWzBtCnQA3htbMG1FWEVDOiAiQzpcUHJvZ3JhbSBGaWxlc1xHcmVhdFNQTlxhcHBccG9ydGFibGVfZ3JlYXRzcG5cYmluXERTUE4tVG9vbC5leGUiIC1sb2FkICJDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzJcM18yLUNUTCBtb2RlbCBjaGVja2luZyBvZiBQK0MrUS5zb2x1dGlvblxQK0MrUSIgLWxvYWQtYm5kIC10aW1lb3V0IDUgLWlscC1ibmQgCnQAmhtbMW0bWzRtTE9BRElORyBQRVRSSSBORVQgQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM18yXDNfMi1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgUCtDK1Euc29sdXRpb25cUCtDK1EgKG5ldC9kZWYpLi4uG1syMm0bWzI0bQp0AA9NQVJLSU5HIFBBUjogMAp0ABBQTEFDRVM6ICAgICAgMTAKdAAPUkFURSBQQVI6ICAgIDAKdAAQVFJBTlNJVElPTlM6IDEyCnQAD01FQVNVUkVTOiAgICAwCnQAKExPQURJTkcgVElNRTogW1VzZXIgMC4wMDBzLCBTeXMgMC4wMDBzXQp0AAEKdAABCnQAFUxPQURJTkcgQk5EIEZJTEUgLi4uCnQAIFNjaGVkdWxlZCB0aW1lb3V0IG9mIDUgc2Vjb25kcy4KdAAlQ09NUFVUSU5HIFBMQUNFIEJPVU5EUyBVU0lORyBJTFAgLi4uCnQAGEFsbCBwbGFjZXMgYXJlIGJvdW5kZWQuCnEAfgAgdADKG1swbUVYRUM6ICJDOlxQcm9ncmFtIEZpbGVzXEdyZWF0U1BOXGFwcFxwb3J0YWJsZV9ncmVhdHNwblxiaW5cUkdNRURENS5leGUiICJDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzJcM18yLUNUTCBtb2RlbCBjaGVja2luZyBvZiBQK0MrUS5zb2x1dGlvblxQK0MrUSIgLU1FVEEgLXNhdHNldHMgLUMgCnQAH1JhbmRvbSBzZWVkczogMTcxOTQ5OTI5NSA2MDE0Mwp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAEUdyZWF0U1BOL01lZGRseS4KdAA4ICBDb3B5cmlnaHQgKEMpIDE5ODctMjAyMiwgVW5pdmVyc2l0eSBvZiBUb3Jpbm8sIEl0YWx5Lgp0AC8gIHdlYnNpdGU6IGh0dHBzOi8vZ2l0aHViLmNvbS9ncmVhdHNwbi9TT1VSQ0VTCnQAMSAgU2VuZCBmaWxlcyBuZXRuYW1lLm5ldCwgLmRlZiB0byBlLW1haWwgYWRkcmVzcwp0AC8gIGFtcGFyb3JlKGF0KWRpLnVuaXRvLml0IGlmIHlvdSBmaW5kIGFueSBidWcuCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAAfQmFzZWQgb24gTUVERExZIHZlcnNpb24gMC4xNy4xCnQARiAgQ29weXJpZ2h0IChDKSAyMDA5LCBJb3dhIFN0YXRlIFVuaXZlcnNpdHkgUmVzZWFyY2ggRm91bmRhdGlvbiwgSW5jLgp0AC0gIHdlYnNpdGU6IGh0dHBzOi8vYXNtaW5lci5naXRodWIuaW8vbWVkZGx5Lwp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAKVVzaW5nIHBlci1ldmVudCBzYXR1cmF0aW9uIChzYXQtcHJlZ2VuKS4KdAARUHJvY2VzcyBJRDogMTE1Mgp0AHVNT0RFTCBOQU1FOiBDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzJcM18yLUNUTCBtb2RlbCBjaGVja2luZyBvZiBQK0MrUS5zb2x1dGlvblxQK0MrUQp0AB0gIDEwIHBsYWNlcywgMTIgdHJhbnNpdGlvbnMuCnQAJVVzZWQgTWVtb3J5IGZvciBlbmNvZGluZyBuZXQ6IDg3MjBLQgp0AH9PcGVuaW5nIGZpbGU6IEM6XFVzZXJzXFV0ZW50ZVxEZXNrdG9wXHJldGlfZGlfcGV0cmlcZXNlcmNpemlfZmluYWxlXDNfMlwzXzItQ1RMIG1vZGVsIGNoZWNraW5nIG9mIFArQytRLnNvbHV0aW9uXFArQytRLmJuZCBPSy4KdACCT3BlbmluZyBmaWxlOiBDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzJcM18yLUNUTCBtb2RlbCBjaGVja2luZyBvZiBQK0MrUS5zb2x1dGlvblxQK0MrUS5pbHBibmQgT0suCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSBNT0RFTCBTVEFUSVNUSUNTID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAAXUExBQ0VTOiAgICAgICAgICAgICAxMAp0ABdUUkFOU0lUSU9OUzogICAgICAgIDEyCnQAF0lOUFVUIEFSQ1M6ICAgICAgICAgMTIKdAAXT1VUUFVUIEFSQ1M6ICAgICAgICAxMgp0ABZJTkhJQiBBUkNTOiAgICAgICAgIDAKdAAWVEVTVCBBUkNTOiAgICAgICAgICA2CnQAFk5VTSBNMCBUT0tFTlM6ICAgICAgMwp0ABZJTlZBUklBTlRTOiAgICAgICAgIDMKdAAWUC1TRU1JRkxPV1M6ICAgICAgICAzCnQAFk1BWCBJTlZBUklBTlQgQ0FSRDogMQp0ABZJUyBVTkZPTERJTkc6ICAgICAgIDAKdAAXQk9VTkRFRCBQTEFDRVM6ICAgICAxMAp0ABZVTkJPVU5ERUQgUExBQ0VTOiAgIDAKdAAWTUFYIFBMQUNFIEJPVU5EOiAgICAxCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IFZBUklBQkxFIE9SREVSID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAPFZhcmlhYmxlIG9yZGVyIG1ldGhvZDogTWV0YS1oZXVyaXN0aWMgdXNpbmcgd2VpZ2h0ZWQgc2NvcmUuCnQAOk1ldGEtaGV1cmlzdGljOiBzZWxlY3RpbmcgbWV0aG9kIFNMTytGb3JjZSB3aXRoIHNjb3JlOiAzMQp0ACJUaW1lIHRvIGNvbXB1dGUgdmFyaWFibGUgb3JkZXI6IDAKdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT0gU1RBUlQgRklSSU5HIFJVTEVTIEVOQ09ESU5HID09PT09PT09PT09PT09PT09PT09PT09PT0KdAAaQ3JlYXRpbmcgYWxsIGV2ZW50IE5TRnMuLgp0ACxFbmNvZGVkIDEyIHRyYW5zaXRpb24gaW4gMSBwcmlvcml0eSBncm91cHMuCnQAGlRpbWUgdG8gYnVpbGQgYWxsIE5TRnM6IDAKdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT0gUkVBQ0hBQklMSVRZIFNFVCBHRU5FUkFUSU9OID09PT09PT09PT09PT09PT09PT09PT09PT0KdAAVU3BsaXQ6IFNwbGl0U3VidHJhY3QKdAAXU3RhcnQgUlMgY29uc3RydWN0aW9uLgp0ABZSUyBnZW5lcmF0aW9uIHRpbWU6IDAKdAAdQ29tcHV0aW5nIHZhcmlhYmxlIGJvdW5kcy4uLgp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gTUVNT1JZID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0ACogQ2FyZGluYWxpdHkoUlMpOiAgICAgICAgIDE2ICAgICAgICAgICAgIAp0ACogTWF4IHRva2VucyB4IG1hcmtpbmc6ICAgIDMgICAgICAgICAgICAgIAp0ACogTWF4IHRva2VucyBpbiBwbGFjZTogICAgIDEgICAgICAgICAgICAgIAp0ACogTWF4IHRva2VucyBpbiBsZXZlbHM6ICAgIDEgICAgICAgICAgICAgIAp0ACggVG90YWwgTWVtb3J5IFVzZWQ6ICAgICAgIDEwMjU2IEtCeXRlcy4KdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gTU9ERUwgQ0hFQ0tJTkcgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdABMTUVBU1VSRTA6CSBBRygoI1AyV2FpdCA9PTEgLT5FRigjUDNDID09MSkgKSYmICgjUTJXYWl0ID09MSAtPkVGKCNRM0MgPT0xKSkpCnQAG0J1aWxkaW5nIG1vbm9saXRoaWMgTlNGLi4uCnQAclByb2Nlc3Npbmc6IChBIChHICgoKFAyV2FpdCA9IDEpIGltcGx5IChFIChGIChQM0MgPSAxKSkpKSBhbmQgKChRMldhaXQgPSAxKSBpbXBseSAoRSAoRiAoUTNDID0gMSkpKSkpKSkgIC0+ICBib29sCnQAbkV2YWw6IChBIChHICgoKFAyV2FpdCA9IDEpIGltcGx5IChFIChGIChQM0MgPSAxKSkpKSBhbmQgKChRMldhaXQgPSAxKSBpbXBseSAoRSAoRiAoUTNDID0gMSkpKSkpKSkgIFRPUCAgU1RBVEUKdAANRXZhbDogUDJXYWl0CnQAFCAgICAgIDAuMDAwMDAwIHNlYy4KdAAXRXZhbDogKFAyV2FpdCA9IDEpICBBUAp0ACggICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDYKdAAfRXZhbDogKEUgKEYgKFAzQyA9IDEpKSkgIFNUQVRFCnQACkV2YWw6IFAzQwp0ABQgICAgICAwLjAwMDAwMCBzZWMuCnQAFEV2YWw6IChQM0MgPSAxKSAgQVAKdAAoICAgICAgMC4wMDAwMDAgc2VjLiAgcG90ZW50aWFsIGNhcmQgPSAyCnQAH0VGOiBzdGVwPTEsICBTQVQgc2l6ZT02LjAwMDAwMAp0ACBFRjogc3RlcD0yLCAgU0FUIHNpemU9MTIuMDAwMDAwCnQAIEVGOiBzdGVwPTMsICBTQVQgc2l6ZT0xNy4wMDAwMDAKdAAgRUY6IHN0ZXA9NCwgIFNBVCBzaXplPTIzLjAwMDAwMAp0ACBFRjogc3RlcD01LCAgU0FUIHNpemU9MjcuMDAwMDAwCnQAIEVGOiBzdGVwPTYsICBTQVQgc2l6ZT0zMC4wMDAwMDAKdAAgRUY6IHN0ZXA9NywgIFNBVCBzaXplPTMyLjAwMDAwMAp0ACBFRjogc3RlcD04LCAgU0FUIHNpemU9MzIuMDAwMDAwCnQAKSAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gMzIKdAA6RXZhbDogKChQMldhaXQgPSAxKSBpbXBseSAoRSAoRiAoUDNDID0gMSkpKSkgIFNUQVRFICBQQVRICnQAKSAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gMzIKdAANRXZhbDogUTJXYWl0CnQAFCAgICAgIDAuMDAwMDAwIHNlYy4KdAAXRXZhbDogKFEyV2FpdCA9IDEpICBBUAp0ACggICAgICAwLjAwMDAwMCBzZWMuICBwb3RlbnRpYWwgY2FyZCA9IDYKdAAfRXZhbDogKEUgKEYgKFEzQyA9IDEpKSkgIFNUQVRFCnQACkV2YWw6IFEzQwp0ABQgICAgICAwLjAwMDAwMCBzZWMuCnQAFEV2YWw6IChRM0MgPSAxKSAgQVAKdAAoICAgICAgMC4wMDAwMDAgc2VjLiAgcG90ZW50aWFsIGNhcmQgPSAyCnQAH0VGOiBzdGVwPTEsICBTQVQgc2l6ZT02LjAwMDAwMAp0ACBFRjogc3RlcD0yLCAgU0FUIHNpemU9MTIuMDAwMDAwCnQAIEVGOiBzdGVwPTMsICBTQVQgc2l6ZT0xNy4wMDAwMDAKdAAgRUY6IHN0ZXA9NCwgIFNBVCBzaXplPTIzLjAwMDAwMAp0ACBFRjogc3RlcD01LCAgU0FUIHNpemU9MjcuMDAwMDAwCnQAIEVGOiBzdGVwPTYsICBTQVQgc2l6ZT0zMC4wMDAwMDAKdAAgRUY6IHN0ZXA9NywgIFNBVCBzaXplPTMyLjAwMDAwMAp0ACBFRjogc3RlcD04LCAgU0FUIHNpemU9MzIuMDAwMDAwCnQAKSAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gMzIKdAA6RXZhbDogKChRMldhaXQgPSAxKSBpbXBseSAoRSAoRiAoUTNDID0gMSkpKSkgIFNUQVRFICBQQVRICnQAKSAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gMzIKdABnRXZhbDogKCgoUDJXYWl0ID0gMSkgaW1wbHkgKEUgKEYgKFAzQyA9IDEpKSkpIGFuZCAoKFEyV2FpdCA9IDEpIGltcGx5IChFIChGIChRM0MgPSAxKSkpKSkgIFNUQVRFICBQQVRICnQAKSAgICAgIDAuMDAwMDAwIHNlYy4gIHBvdGVudGlhbCBjYXJkID0gMzIKdAAuICAgICAgMC4wMDAwMDAgc2VjLiAgcG90ZW50aWFsIGNhcmQgPSAxNiAoUlMpCnQAAQp0AFAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnQAEkZvcm11bGE6IE1FQVNVUkUwCnQAXiAgKEEgKEcgKCgoUDJXYWl0ID0gMSkgaW1wbHkgKEUgKEYgKFAzQyA9IDEpKSkpIGFuZCAoKFEyV2FpdCA9IDEpIGltcGx5IChFIChGIChRM0MgPSAxKSkpKSkpKQp0ABJMYW5ndWFnZTogQ1RMU1RBUgp0ABVFdmFsdWF0aW9uOiB0cnVlICAgIAp0AAdTQVQ9MTYKdAAbRXZhbHVhdGlvbiB0aW1lOiAwLjAwMCBzZWMKdABQLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp0AAEKdAAWRm9ybXVsYSBjYWNoZSBzaXplOiAwCnQABE9rLgp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IFRJTUUgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0ACUgVmFyaWFibGUgb3JkZXIgVGltZTogICAwLjAwMCAgIHNlYy4KdAAlIFJTIEdlbmVyYXRpb24gVGltZTogICAgMC4wMDAgICBzZWMuCnQAJSBUb3RhbCBSUyBUaW1lOiAgICAgICAgIDAuMDAwICAgc2VjLgp0ACUgU3RhdGlzdGljcyBUaW1lOiAgICAgICAwLjAwMCAgIHNlYy4KdAAlIE1vZGVsIENoZWNraW5nIFRpbWU6ICAgMC4wMDAgICBzZWMuCnQAJSBUb3RhbCBUaW1lOiAgICAgICAgICAgIDAuMDAwICAgc2VjLgp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnEAfgAgeHNxAH4AAHcEAAAAr3NyABFqYXZhLmxhbmcuQm9vbGVhbs0gcoDVnPruAgABWgAFdmFsdWV4cAFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALFxAH4AsXEAfgCxcQB+ALF4</document-log>
+    <document-log uuid="d00e64fd-8216-42f8-8787-be1841429ccf">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAJl0ANkbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxEU1BOLVRvb2wuZXhlIiAtbG9hZCAiQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM18yXDNfMi1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgUFQuc29sdXRpb25cUFQiIC1wYmFzaXMgLWRldGVjdC1leHAgLXBzZmwgLWJuZCAKdACUG1sxbRtbNG1MT0FESU5HIFBFVFJJIE5FVCBDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzJcM18yLUNUTCBtb2RlbCBjaGVja2luZyBvZiBQVC5zb2x1dGlvblxQVCAobmV0L2RlZikuLi4bWzIybRtbMjRtCnQAD01BUktJTkcgUEFSOiAwCnQAEFBMQUNFUzogICAgICAxMAp0AA9SQVRFIFBBUjogICAgMAp0ABBUUkFOU0lUSU9OUzogMTIKdAAPTUVBU1VSRVM6ICAgIDAKdAAoTE9BRElORyBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQAAQp0AAEKdAAeQ09NUFVUSU5HIFBMQUNFIEZMT1cgQkFTSVMuLi4KdAASTT0xMiwgTj0xMCwgTjA9MTAKdABOQ29tcHV0YXRpb24gb2YgRmxvdyBiYXNpczogY29tcGxldGVkIGluIDcgc3RlcHMsIHxLfD0zLiAgICAgICAgICAgICAgICAgICAgICAKdAApRk9VTkQgMyBWRUNUT1JTIElOIFRIRSBQTEFDRSBGTE9XIEJBU0lTLgp0AAEKdAABCnQAJ0FsbCBwbGFjZXMgYXJlIGNvdmVyZWQgYnkgc29tZSBQLWZsb3cuCnQAAQp0ACZUT1RBTCBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQAJ0FWT0lEIEVYUE9ORU5USUFMIEdST1dUSCBPRiBTRU1JRkxPV1MuCnQAHUNPTVBVVElORyBQTEFDRSBTRU1JRkxPV1MuLi4KdAASTT0xMiwgTj0xMCwgTjA9MTAKdABMR2VuZXJhdGlvbiBvZiBTZW1pZmxvd3M6IGNvbXBsZXRlZCBpbiA3IHN0ZXBzLCB8S3w9My4gICAgICAgICAgICAgICAgICAgICAgCnQAGUZPVU5EIDMgUExBQ0UgU0VNSUZMT1dTLgp0AAEKdAABCnQAK0FsbCBwbGFjZXMgYXJlIGNvdmVyZWQgYnkgc29tZSBQLXNlbWlmbG93Lgp0AAEKdAAmVE9UQUwgVElNRTogW1VzZXIgMC4wMDBzLCBTeXMgMC4wMDBzXQp0ACxDT01QVVRJTkcgUExBQ0UgQk9VTkRTIEZST00gUC1TRU1JRkxPV1MgLi4uCnQAJxtbMFgbWzMybSBQUk9DRVNTIEVYSVRFRCBOT1JNQUxMWS4bWzBtCnQA2BtbMG1FWEVDOiAiQzpcUHJvZ3JhbSBGaWxlc1xHcmVhdFNQTlxhcHBccG9ydGFibGVfZ3JlYXRzcG5cYmluXERTUE4tVG9vbC5leGUiIC1sb2FkICJDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzJcM18yLUNUTCBtb2RlbCBjaGVja2luZyBvZiBQVC5zb2x1dGlvblxQVCIgLWxvYWQtYm5kIC10aW1lb3V0IDUgLWlscC1ibmQgCnQAlBtbMW0bWzRtTE9BRElORyBQRVRSSSBORVQgQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM18yXDNfMi1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgUFQuc29sdXRpb25cUFQgKG5ldC9kZWYpLi4uG1syMm0bWzI0bQp0AA9NQVJLSU5HIFBBUjogMAp0ABBQTEFDRVM6ICAgICAgMTAKdAAPUkFURSBQQVI6ICAgIDAKdAAQVFJBTlNJVElPTlM6IDEyCnQAD01FQVNVUkVTOiAgICAwCnQAKExPQURJTkcgVElNRTogW1VzZXIgMC4wMDBzLCBTeXMgMC4wMDBzXQp0AAEKdAABCnQAFUxPQURJTkcgQk5EIEZJTEUgLi4uCnQAIFNjaGVkdWxlZCB0aW1lb3V0IG9mIDUgc2Vjb25kcy4KdAAlQ09NUFVUSU5HIFBMQUNFIEJPVU5EUyBVU0lORyBJTFAgLi4uCnQAGEFsbCBwbGFjZXMgYXJlIGJvdW5kZWQuCnEAfgAgdADEG1swbUVYRUM6ICJDOlxQcm9ncmFtIEZpbGVzXEdyZWF0U1BOXGFwcFxwb3J0YWJsZV9ncmVhdHNwblxiaW5cUkdNRURENS5leGUiICJDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzJcM18yLUNUTCBtb2RlbCBjaGVja2luZyBvZiBQVC5zb2x1dGlvblxQVCIgLU1FVEEgLXNhdHNldHMgLUMgCnQAIFJhbmRvbSBzZWVkczogMTcyMDk0NDkyOCA3NjA5NjcKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0ABFHcmVhdFNQTi9NZWRkbHkuCnQAOCAgQ29weXJpZ2h0IChDKSAxOTg3LTIwMjIsIFVuaXZlcnNpdHkgb2YgVG9yaW5vLCBJdGFseS4KdAAvICB3ZWJzaXRlOiBodHRwczovL2dpdGh1Yi5jb20vZ3JlYXRzcG4vU09VUkNFUwp0ADEgIFNlbmQgZmlsZXMgbmV0bmFtZS5uZXQsIC5kZWYgdG8gZS1tYWlsIGFkZHJlc3MKdAAvICBhbXBhcm9yZShhdClkaS51bml0by5pdCBpZiB5b3UgZmluZCBhbnkgYnVnLgp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAH0Jhc2VkIG9uIE1FRERMWSB2ZXJzaW9uIDAuMTcuMQp0AEYgIENvcHlyaWdodCAoQykgMjAwOSwgSW93YSBTdGF0ZSBVbml2ZXJzaXR5IFJlc2VhcmNoIEZvdW5kYXRpb24sIEluYy4KdAAtICB3ZWJzaXRlOiBodHRwczovL2FzbWluZXIuZ2l0aHViLmlvL21lZGRseS8KdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0AClVc2luZyBwZXItZXZlbnQgc2F0dXJhdGlvbiAoc2F0LXByZWdlbikuCnQAEVByb2Nlc3MgSUQ6IDE3NjAKdABvTU9ERUwgTkFNRTogQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM18yXDNfMi1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgUFQuc29sdXRpb25cUFQKdAAdICAxMCBwbGFjZXMsIDEyIHRyYW5zaXRpb25zLgp0ACVVc2VkIE1lbW9yeSBmb3IgZW5jb2RpbmcgbmV0OiA4NjcyS0IKdAB5T3BlbmluZyBmaWxlOiBDOlxVc2Vyc1xVdGVudGVcRGVza3RvcFxyZXRpX2RpX3BldHJpXGVzZXJjaXppX2ZpbmFsZVwzXzJcM18yLUNUTCBtb2RlbCBjaGVja2luZyBvZiBQVC5zb2x1dGlvblxQVC5ibmQgT0suCnQAfE9wZW5pbmcgZmlsZTogQzpcVXNlcnNcVXRlbnRlXERlc2t0b3BccmV0aV9kaV9wZXRyaVxlc2VyY2l6aV9maW5hbGVcM18yXDNfMi1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgUFQuc29sdXRpb25cUFQuaWxwYm5kIE9LLgp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gTU9ERUwgU1RBVElTVElDUyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAF1BMQUNFUzogICAgICAgICAgICAgMTAKdAAXVFJBTlNJVElPTlM6ICAgICAgICAxMgp0ABdJTlBVVCBBUkNTOiAgICAgICAgIDEyCnQAF09VVFBVVCBBUkNTOiAgICAgICAgMTIKdAAWSU5ISUIgQVJDUzogICAgICAgICAwCnQAFlRFU1QgQVJDUzogICAgICAgICAgNgp0ABZOVU0gTTAgVE9LRU5TOiAgICAgIDMKdAAWSU5WQVJJQU5UUzogICAgICAgICAzCnQAFlAtU0VNSUZMT1dTOiAgICAgICAgMwp0ABZNQVggSU5WQVJJQU5UIENBUkQ6IDEKdAAWSVMgVU5GT0xESU5HOiAgICAgICAwCnQAF0JPVU5ERUQgUExBQ0VTOiAgICAgMTAKdAAWVU5CT1VOREVEIFBMQUNFUzogICAwCnQAFk1BWCBQTEFDRSBCT1VORDogICAgMQp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSBWQVJJQUJMRSBPUkRFUiA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0ADxWYXJpYWJsZSBvcmRlciBtZXRob2Q6IE1ldGEtaGV1cmlzdGljIHVzaW5nIHdlaWdodGVkIHNjb3JlLgp0ADpNZXRhLWhldXJpc3RpYzogc2VsZWN0aW5nIG1ldGhvZCBTTE8rRm9yY2Ugd2l0aCBzY29yZTogMzEKdAAiVGltZSB0byBjb21wdXRlIHZhcmlhYmxlIG9yZGVyOiAwCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09IFNUQVJUIEZJUklORyBSVUxFUyBFTkNPRElORyA9PT09PT09PT09PT09PT09PT09PT09PT09CnQAGkNyZWF0aW5nIGFsbCBldmVudCBOU0ZzLi4KdAAsRW5jb2RlZCAxMiB0cmFuc2l0aW9uIGluIDEgcHJpb3JpdHkgZ3JvdXBzLgp0ABpUaW1lIHRvIGJ1aWxkIGFsbCBOU0ZzOiAwCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09IFJFQUNIQUJJTElUWSBTRVQgR0VORVJBVElPTiA9PT09PT09PT09PT09PT09PT09PT09PT09CnQAFVNwbGl0OiBTcGxpdFN1YnRyYWN0CnQAF1N0YXJ0IFJTIGNvbnN0cnVjdGlvbi4KdAAWUlMgZ2VuZXJhdGlvbiB0aW1lOiAwCnQAHUNvbXB1dGluZyB2YXJpYWJsZSBib3VuZHMuLi4KdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IE1FTU9SWSA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAAqIENhcmRpbmFsaXR5KFJTKTogICAgICAgICAxNiAgICAgICAgICAgICAKdAAqIE1heCB0b2tlbnMgeCBtYXJraW5nOiAgICAzICAgICAgICAgICAgICAKdAAqIE1heCB0b2tl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</document-log>
+  </resource-list>
+</project>
